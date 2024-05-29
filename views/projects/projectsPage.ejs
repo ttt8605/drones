@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Rarrres FPV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="/stylesheets/header2.css">
+   <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/homepage.css">
+    
+</head>
+<body>
+  <header>          
+
+<nav class="navbar navbar-expand-md" id="meniu1">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="title" href="/projects">Rarrrres FPV</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="hyperlinks">
+      <div class="navbar-nav">
+        <%if(!currentUser){ %>
+            <a class="nav-link active" id="hl" aria-current="page" href="/login">Login</a>
+              <a class="nav-link active" id="hl" aria-current="page" href="/register">Register</a>
+            <% }else{ %>
+              <a class="nav-link active" id="hl" aria-current="page" href="/logout">Logout</a>
+            <% } %>
+          <a class="nav-link active" id="hl" aria-current="page" href="/drones">drones</a>
+          <a class="nav-link active" id="hl" href="/projects">home</a>
+          <%if(!currentUser){ %>
+          <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">contact me</a></button>
+          <% }else{ %>
+            <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact/all">contact me</a></button>
+            <% } %>
+      </div>
+    </div>
+  </div> 
+</nav>
+
+<nav class="navbar  fixed-top" id="meniu2">
+  <div class="container-fluid" >
+    <a class="navbar-brand" id="title" href="/projects">Rarrrres FPV</a>
+    <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+     <div class="offcanvas-body">
+       
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <%if(!currentUser){ %>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/register">Register</a>
+                </li>
+                <% }else{ %>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
+                </li>
+                <% } %>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/projects" id="fastlinksMobile">home</a>
+                </li>
+                <% if(!currentUser){ %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact" id="fastlinksMobile">Contact</a>
+                </li>
+                <% }else{ %>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact/all" id="fastlinksMobile">Contact</a>
+                  </li>
+                <% } %>
+    
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container" id="description">
+  <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
+     <p class="profileText"> Lorem ipsum dolor sit amet consectetur. Vitae maecenas interdum volutpat in posuere in orci volutpat donec. Praesent blandit consectetur sodales ridiculus</p>
+     </div>
+
+    </header>
+
+    
+    <main>
+            
+            <div  class="projectIntro">
+           <div>
+            <h2 class="projectTitle">A detailed look into my work</h2>
+            <a  id="Ylink" class=" link-light link-underline-opacity-0 "  href="https://www.youtube.com/@Raresfpv">check out my youtube channel  &rarr;</a>
+        </div>
+        <div></div>
+     </div>
+   
+     <% let x = 1; %>
+     <section class="visibleImages">
+         <% for (let project of projects) { %>
+             <% if (x < 7) { %>
+                 <% if (x != 3) { %>
+                     <% if (x % 2 === 1) { %>
+                         <div class="twoImgRow">
+                     <% } %>
+                     <div class="img2">
+                         <h1 class="img2Text"><%= project.name %></h1>
+                         <a href="/projects/<%= project._id %>"><button class="img2Button">&rarr;</button></a>
+                     </div>
+                     <% if (x % 2 === 0) { %>
+                         </div> <!-- Close twoImgRow div -->
+                     <% } %>
+                 <% } else { %>
+                     <div class="img1">
+                         <h1 class="img1Text"><%= project.name %></h1>
+                         <a href="/projects/<%= project._id %>"><button class="img1Button">&rarr;</button></a>
+                     </div>
+                 <% x++;} %>
+             <% } else { %>
+                 <% if (x === 7) { %>
+                    </section>
+                     <button id="toggle-btn" class="AddMoreButton">Show more</button>
+                     <section id="my-section" class="AddMoreSection">
+                 <% } %>
+                 <% if (x % 2 === 1) { %>
+                     <div class="twoImgRow">
+                       
+                 <% } %>
+                 <div class="img2">
+                     <h1 class="img2Text"><%= project.name %></h1>
+                     <a href="/projects/<%= project._id %>"><button class="img2Button">&rarr;</button></a>
+                 </div>
+                 <% if (x % 2 === 0 ) { %>
+                     </div> <!-- Close twoImgRow div -->
+                   
+                 <% } %>
+             <% } %>
+             <% x++; %>
+         <% } %>
+     </section>
+     
+
+                     <div class="letsWork">
+                       <div>
+                           <h2 class="proposal">Lets work together</h2>
+                            <button class="contact-link"><a id="contactButton" href="/contact">contact me</a></button>
+                           </div>
+                        <div></div>
+                    </div>
+              
+
+             <div class="container-fluid" id="footer">
+                 <p class="footerText">2024 © Rarrrres FPV - All rights reserved</p>
+
+                   <div class="social">
+                      <a href="https://www.facebook.com/"><img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/6d1200f9cd9b2cbb04d04ad431bdd3b96e87de7b/poze/facebook.svg" alt="" class="media"></a> 
+                      <a href="https://www.instagram.com/"><img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/6d1200f9cd9b2cbb04d04ad431bdd3b96e87de7b/poze/instagram.svg" alt="" class="media"></a>
+                      <a href="https://www.linkedin.com/"><img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/6d1200f9cd9b2cbb04d04ad431bdd3b96e87de7b/poze/in.svg" alt="" class="media"></a>
+                      <a href="https://www.youtube.com/"><img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/6d1200f9cd9b2cbb04d04ad431bdd3b96e87de7b/poze/youtube.svg" alt="" class="media"></a>
+                   </div>
+              </div>
+                         
+    </main>
+
+</body>
+    
+<script src="/javascripts/styling.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

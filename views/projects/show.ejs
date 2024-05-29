@@ -1,0 +1,69 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/projects.css">
+  <link rel="stylesheet" href="/stylesheets/individualDrone.css">
+</head>
+<% layout('/layouts/boilerplate') %>
+      <div class="container" id="profile">
+        <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
+       </div>
+
+        
+       <div class="container">
+            <section class="projectSection">
+                <div class="leftDiv"> </div>
+                
+                <div class="rightDiv">
+                    <div class="a">
+                      <div>
+                        <h3 class="projectName "><%=project.name %></h3>
+                      </div>
+                      <div class="editDelete">
+                        <% if(currentUser){ %>
+                          <div class="edit">
+                          <button class="btn btn-warning"><a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/projects/<%=project._id%>/edit">Edit</a></button> 
+                         </div>
+                          <div>
+                        <form action="/projects/<%=project._id%>?_method=DELETE" method="POST">
+                          <button class="btn btn-danger">Delete</button>
+                          </form>
+                          </div>
+                          <% } %> 
+                      </div>
+                    </div>
+
+                    <!-- <div class="secondDiv"> -->
+                        <div class="lowerSection">
+                          <h4 class="drone ">Description:</h4>
+                          <p class="description"><%= project.description %></p>
+                        </div>
+                    <!-- </div> -->
+                </div>
+              </section>
+            </div>
+            
+            <div class="droneUsed">  
+                 <div></div>
+                 <div class="accordion" id="accordionExample">
+                  <div class="accordion-item" id="accordion">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Drones Used
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul>
+                          <% for(let drone of project.drones){ %>
+                            <li><a href="../drones/<%=drone._id%>"><%= drone.name %></a></li>
+                         <% } %>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+             </div>
+
+            </div>
+          
+                  
+ 

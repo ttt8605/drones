@@ -1,0 +1,135 @@
+<% layout('/layouts/boilerplate') %>
+<head>
+  <link rel="stylesheet" href="/stylesheets/dronepage.css">
+</head>
+<div class="container" id="profile">
+  <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
+</div>
+
+
+  <div class="container" id="wrapper">
+
+<!-- first -->
+
+
+<% let x = 1; %>
+<% for(let drone of drones){ %>
+  <% if(x%2 == 1){ %>
+  <section class="droneSection">
+  
+    <a href="/drones/<%=drone._id %>" id="link">
+      <div class="leftDiv">
+          <div class="a mb-3" id="a">
+            <h3 class="droneName"><%=drone.name %> &rarr;</h3>
+              <h4 class="droneWidth"><%= drone.size %></h4>
+          </div>
+        <img src="<%=drone.images[0].url%>"class="d-block w-100" alt="">
+      </div>
+      <div class="rightDiv">
+        <div>
+
+        </div>
+          <div class="secondDiv">
+              <div class="upperSection">
+                <div class="leftSide-upperSection">
+                  <h3 class="FirstTitle"><%=drone.battery %> battery</h3>
+                  <h4 class="SecondTitle">engine power</h4>
+                </div>
+                <div class="rightSide-upperSection">
+                  <h3 class="FirstTitle"><%=drone.video %></h3>
+                  <h4 class="SecondTitle">camera system</h4>
+                </div>
+              </div>
+              <div class="lowerSection">
+                <p><%= drone.description %></p>
+              </div>
+          </div>
+      </div>
+    </a>
+    </section>
+  
+
+<%} else{ %>
+  <!-- second -->
+  <section class="droneSection">
+  
+    <a href="/drones/<%=drone._id %>" id="link">
+     
+      <div class="rightDiv" id="rightDiv">
+        <div>
+
+        </div>
+          <div class="secondDiv">
+              <div class="upperSection">
+                <div class="leftSide-upperSection">
+                  <h3 class="FirstTitle"><%=drone.battery %> battery</h3>
+                  <h4 class="SecondTitle">engine power</h4>
+                </div>
+                <div class="rightSide-upperSection">
+                  <h3 class="FirstTitle"><%=drone.video %></h3>
+                  <h4 class="SecondTitle">camera system</h4>
+                </div>
+              </div>
+              <div class="lowerSection">
+                <p><%= drone.description %></p>
+              </div>
+          </div>
+      </div>
+      <div class="leftDiv">
+        <div class="names-size">
+        <div class="a mb-3" id="a">
+          <h3 class="droneName"><%=drone.name %> &rarr;</h3>
+            <h4 class="droneWidth"><%= drone.size %></h4>
+        </div>
+        <div></div>
+        </div>
+      <img src="<%=drone.images[0].url%>"class="d-block w-100" alt="">
+    </div>
+    </a>
+    </section>
+  
+
+<%} %>
+<% x+=1; %>
+  <% } %>
+
+ <!-- small screens -->
+<% for(let drone of drones){ %>
+    <section class="droneSection2">
+      <a href="/drones/<%=drone._id %>">
+    
+      <div class="leftDiv">
+        <div class="a mb-3" id="a">
+          <h3 class="droneName"><%=drone.name %> &rarr;</h3>
+            <h4 class="droneWidth"><%= drone.size %></h4>
+        </div>
+      <img src="<%=drone.images[0].url%>"class="d-block w-100" alt="">
+    </div>
+        <div class="rightDiv">
+         
+            <div class="secondDiv">
+                <div class="upperSection">
+                  <div class="leftSide-upperSection" >
+                    <h3 class="FirstTitle"><%=drone.battery %> Battery</h3>
+                    <h4 class="SecondTitle">engine power</h4>
+                  </div>
+                  <div class="rightSide-upperSection">
+                    <h3 class="FirstTitle"><%=drone.video %></h3>
+                    <h4 class="SecondTitle">camera system</h4>
+                  </div>
+                </div>
+                <div class="lowerSection">
+                  <p><%= drone.description %></p>
+                </div>
+            </div>
+        </div>
+      </a>
+      </section>
+
+
+    <%} %>
+
+  
+  
+</div>
+

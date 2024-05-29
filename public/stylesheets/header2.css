@@ -1,0 +1,29 @@
+body{
+    background-color: #252525 !important;
+}
+
+nav{
+    background-color: #373737;
+}
+
+#offcanvasNavbar{
+    font-family:'Russo One';
+    color: #f2f2f2 !important;
+}
+
+.offcanvas-header{
+    height: 100px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #373737 !important;
+}
+
+.offcanvas-body{
+    padding-top: 0px;
+}
+
+.navbar-brand{
+    color: #373737;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+}

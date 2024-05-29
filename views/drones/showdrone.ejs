@@ -1,0 +1,119 @@
+<% layout('/layouts/boilerplate') %>
+<head>
+  <link rel="stylesheet" href="/stylesheets/individualDrone.css">
+</head>
+<div class="container" id="profile">
+  <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
+</div>
+
+<div class="container" id="wrapper">
+  <div class="droneSection">
+    <section id="drone1">
+      <div class="leftDiv">
+        <section>
+          <div class="a">
+            <div>
+              <h3 class="droneName text-light"><%= drone.name %></h3>
+              <h4 class="droneWidth text-light"><%= drone.size %></h4>
+            </div>
+            <div class="editDelete">
+              <% if (currentUser) { %>
+                <div class="edit">
+                  <button class="btn btn-warning">
+                    <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/drones/<%= drone._id %>/edit">Edit</a>
+                  </button>
+                </div>
+                <div>
+                  <form action="/drones/<%= drone._id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete</button>
+                  </form>
+                </div>
+              <% } %>
+            </div>
+          </div>
+
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% drone.images.forEach((img, i) => {  %>
+                <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
+                    <img src="<%=img.url%>" class="d-block w-100" alt="">
+                </div>
+                <% }) %>
+        
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <div class="rightDiv">
+        <div class="secondDiv">
+          <div class="upperSection">
+            <div class="leftSide-upperSection">
+              <h3 class="FirstTitle"><%= drone.battery %> battery</h3>
+              <h4 class="SecondTitle">Engine power</h4>
+            </div>
+            <div class="rightSide-upperSection">
+              <h3 class="FirstTitle"><%= drone.video %></h3>
+              <h4 class="SecondTitle">Camera system</h4>
+            </div>
+          </div>
+          <div class="lowerSection">
+            <p><%= drone.description %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="drone2">
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item" id="accordion">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Technical Details
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul>
+                <% drone.specification.split('\n').forEach(function(spec) { %>
+                  <li><%= spec %></li>
+                <% }); %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item" id="accordion">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Included In
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <div class="Manipulating">
+                <div>
+                  <ul>
+                    <% for (let project of drone.projects) { %>
+                      <li><a href="../projects/<%= project._id %>"><%= project.name %></a></li>
+                    <% } %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

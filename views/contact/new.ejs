@@ -1,0 +1,45 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/contact.css">
+</head>
+<% layout('/layouts/boilerplate') %>
+     
+     <div class="container" id="profile">
+        <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
+       </div>
+
+           <div class="mainpart">
+         <div class="container1">
+                <h1 id="text">Whether you have a question, want to<br>
+                     collaborate, or just fancy a friendly<br>
+                     chat, feel free to reach out👋 </h1>
+            </div>
+
+            <div class="container2">
+              <form action="/contact" method="POST" novalidate class="validated-form" >
+  
+                <div class="mb-3" id="input">
+                  <label for="name" class="form-label">Your name</label>
+                  <input type="text" class="form-control" placeholder="Your name" name="name" id="name" required>
+                </div>
+                <div class="mb-3" id="input">
+                  <label for="email" class="form-label">Your email</label>
+                  <input type="email" class="form-control" placeholder="123@gmail.com" id="email" name="email" required>
+                </div>
+                <div class="mb-3" id="input">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject" required>
+                </div>
+                <div class="mb-3" id="input">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea rows="10" cols="25"  class="form-control" id="message" name="message" required></textarea>
+                </div>
+  
+                <div class="container3">
+                 <button id="button">Submit &rarr;</button>
+                </div>
+
+              </form>
+            </div>
+            </div>
+  
+

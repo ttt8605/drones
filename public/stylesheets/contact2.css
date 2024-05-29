@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+main{
+    /* position: relative;
+    top: 60px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 130px;
+  
+}
+.offcanvas-body{
+   margin-top: 50px;
+   background-color: #212529;
+}
+
+.nav-item{
+   margin-top: 20px;
+}
+
+#fastlinksMobile{
+   font-family:'Roboto', sans-serif;
+   font-weight: 500;
+   font-size: larger;
+   color: #f2f2f2 !important;
+}
+
+/* menu queries */
+#meniu1{
+   display: block;
+   width: 100%;
+}
+
+#meniu2{
+    display: none;
+}
+
+#fastLinks{
+     text-decoration: none;
+     color: #373737;
+     font-family: 'Roboto',sans-serif;
+     font-weight: 300;
+     font-size:17px;
+}
+
+#profile{
+   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.profile{
+    height: 310px;
+    width: 310px;
+}
+
+#text {
+    color: #3A8AC3;
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 33px;
+}
+
+#input {
+    color:#3A8AC3;
+}
+
+#button {
+    background-color: #FFD166;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+}
+
+#meniu1{
+    display: block;
+}
+
+#meniu2{
+    display: none;
+}
+
+.container1{
+    margin-top: 140px;
+    margin-right: 150px;
+}
+
+.container2{
+   width: 360px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainpart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-bottom: 150px;
+}
+
+#message{
+    resize: none;
+}
+
+
+/* ---- FOOTER ---- */
+#footer{
+    display: none;
+
+}
+
+.footerText{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(217, 217, 217, 0.5);
+}
+
+   .social{
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    /* align-content: center; */
+   }  
+
+    p{
+   margin-top: 0;
+   margin-bottom: 0rem;  
+  } 
+
+
+  /* GENERAL ELEMENTS */
+@media(max-width: 1222px) {
+    .profile {
+    height: 290px;
+    width: 290px;
+    }
+}
+
+@media(max-width:1024px){
+.social{
+    width: 215px;
+}
+#but{
+    margin-right: 40px;
+}
+}
+
+@media(max-width:911px){
+    #meniu1{
+        display: none;
+    }
+    
+    #meniu2{               
+         display: block;
+     }
+
+     #toggle {
+        margin-top: 10px;
+        margin-right: 15px;
+        background-color: #d9d9d9;
+    }
+
+    #closeBtn {
+      background-color: #d9d9d9;
+    }
+
+     .container-fluid{
+        background-color: #373737 ;
+        width: 100%;
+        height: 90px;
+     }
+
+     #list {
+        background-color: #373737;
+    }
+    #noughty-div{
+       
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+
+    .social{
+      width: 220px;
+    }
+
+}
+
+@media(max-width:767px){
+     .social{
+        width: 200px;
+     }
+
+     #contactButton{
+        font-size: large;
+     }
+ }
+
+@media(max-width:674px){
+    .fastLinks{
+         font-size: 13px;
+    }
+
+    #title {
+        font-size: 35px;
+        position: relative;
+        left: 25px;
+        top: 4px;
+    }
+    
+    .profile{
+         height: 270px;
+         width: 270px;
+         /* margin-left: 90px; */
+    }
+
+    #contactButton{
+        font-size: large;
+     }
+
+     .footerText{
+      font-size: 13px;
+      margin-top: 35px;
+     }
+
+     .social{
+      width: 200px;
+      margin-top: 20px;
+     }
+
+     .media{
+      width: 22px;
+     }
+}
+
+/* @media(max-width:560px){
+    .social{
+      margin-top: 7px;
+    }
+    
+    .footerText{
+    margin-top: 20px;
+    }
+    } */
+
+@media(max-width: 550px) {
+    .footerText{
+        font-size: 12px;
+       }
+
+       #footer{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+     } 
+
+     .social{
+        margin-top: 10px;
+        width: 190px;
+     }
+
+    .media{
+     width: 19px;
+     }
+     #buttons{
+        justify-content: space-evenly;
+     }
+     #but{
+        margin-right: 10px;
+     }
+}
+
+@media(max-width:450px){
+/* TEST */
+    /* header{
+        height: 90px;
+    } */
+
+    #meniu2{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    #title{
+        font-size: 30px;
+    }
+
+    .fastLinks{
+         margin-right: 13px;
+         font-size: 12px;
+    }
+
+     .profile{
+         height: 190px;  
+         width: 190px; 
+     }
+}
+
+
+/* SPECIFIC ELEMEMENTS */
+@media(max-width: 1199px){
+    .container1{
+        margin-bottom: 60px;
+        margin-left: 175px; 
+    }
+    }
+    
+@media (max-width: 991px) {
+    #text{
+        font-size: 28px;
+       }
+
+    .container1  {
+       /* position: relative;
+       top: -60px;  */
+       margin-right: 40px;  
+       margin-top: 130px; 
+       margin-left: 50px; 
+       margin-bottom: 60px;
+    } 
+    
+   .container2 {
+       width: 400px;
+   } 
+
+}
+
+@media(max-width: 767px) {
+    #text {
+      font-size: 25px;
+   }
+
+   .container1{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+}
+
+@media(max-width: 530px) {
+    #text{
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 480px){
+      .container2 {
+        width: 370px;
+    }
+
+}
+@media(max-width: 464px) {
+   #text {
+    font-size: 22px;
+   }
+
+    #button {
+    width: 120px;
+    height: 50px;
+    }
+}
+
+@media(max-width: 430px) {
+    #text {
+        font-size: 20px;
+       }
+
+    .container2 {
+        width: 310px;
+    }
+}
+
+
+@media(max-width: 360px) {
+    #text {
+        font-size: 18px;
+       }
+
+    .container2 {
+        width: 300px;
+    }
+}

@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+  background-color: #252525;
+}
+body {
+    margin-top: 0; /* Reset default margin */
+    padding-top: 0; /* Reset default padding */
+}
+
+main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+header{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     /* margin-top: 20px; */
+     position: relative;
+     background-color: #373737 ;
+     width: 100%;
+     height: 630px;
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+}
+
+.offcanvas-body{
+    margin-top: 50px;
+    background-color: #373737;
+}
+
+.nav-item{
+    margin-top: 20px;
+}
+
+#fastlinksMobile{
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: larger;
+    color: #f2f2f2 !important;
+}
+.offcanvas-body{
+    margin-top: 50px;
+    background-color: #212529;
+ }
+
+/* menu queries */
+#meniu1{
+    display: block;
+    width: 100%;
+}
+
+#description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#meniu2{
+    display: none;
+}
+
+.media{
+     margin-left: 20px;
+     color: #3A8AC3;
+}
+
+#fastLinks{
+     text-decoration: none;
+     color: #373737;
+     font-family: 'Roboto',sans-serif;
+     font-weight: 300;
+     font-size:17px;
+}
+
+/* .but1{
+     background-color: #FFD166;
+     color: #252525;
+     border-radius: 12px;
+     width: 116px;
+     height: 40px;
+     border-style: none;
+} */
+
+/* hr{
+  color: #f2f2f2;
+  width: 50%;
+} */
+
+#description {
+    width: 70%;
+    height: 490px;
+  }
+
+.profile{
+    height: 310px;
+    width: 310px;
+    margin-top: 8px;
+    margin-right: 60px;
+}
+
+.profileText{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #f2f2f2;
+    width: 650px;
+    margin-top: 30px;
+    margin-right: 20px;
+    position: relative;
+    left: 50px;
+}
+
+.projectIntro{
+    margin-top: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    position: relative;
+    left: -35px;
+    /* margin-left: 10px; */
+}
+
+.projectTitle{
+    margin-top: 15px;
+    color: #3A8AC3;
+    font-size: 2.4em;
+}
+
+.twoImgRow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.img1{
+    background-color: #9AD2FA;
+    width: 100%;
+    height: 455px;
+    margin-top: 130px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    background-image: url('https://raw.githubusercontent.com/ttt8605/Rarresfpv/main/poze/wp10467075.jpg');    /* rezolva path urile pt poze */
+    background-size: cover; /* You can use other values like 'contain' or specific dimensions */
+    background-position: center; /* You can adjust the positioning as needed */
+    background-repeat: no-repeat; /* Prevent the image from repeating if it's smaller than the div */
+  }
+
+
+  .img1Text{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #f2f2f2;
+    position: relative;
+    top: 385px;
+    width: 150px;
+    margin-left: 50px;
+}
+
+.img1Button{
+    font-family: 'Roboto',sans-serif;
+    color: #f2f2f2;
+    background-color: transparent;
+    border-style: none;
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+    top: 375px;
+    margin-right: 50px;
+}
+
+
+.img2{
+    background-color: #9AD2FA;
+    width: 600px;
+   height: 460px;
+    margin-top: 80px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-image: url('https://raw.githubusercontent.com/ttt8605/Rarresfpv/main/poze/wp10467165.jpg');
+    background-size: cover; /* You can use other values like 'contain' or specific dimensions */
+    background-position: center; /* You can adjust the positioning as needed */
+    background-repeat: no-repeat; /* Prevent the image from repeating if it's smaller than the div */
+  }
+  
+  .img2:first-child{
+   margin-right: 5px;
+}
+
+  .img2Button{
+    font-family: 'Roboto',sans-serif;
+    color: #f2f2f2;
+    background-color: transparent;
+    border-style: none;
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+   top: 185px;
+}
+
+.img2Text{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #f2f2f2;
+    position: relative;
+    width: 70%;
+    top: 190px;
+}
+
+.AddMoreButton{
+    border-style: none;
+    background-color: #3A8AC3;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    color: #f2f2f2;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+  .AddMoreSection{
+    width: 90%;
+    max-height: 0; /* Initially hide the section */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 1s ease; /* Add transition for smooth animation */
+}
+
+.visibleImages{
+    width: 90%;
+}
+
+.smallSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.letsWork {
+    margin-top: 130px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    position: relative;
+    left: -35px;
+    margin-bottom: 150px;
+}
+
+.proposal {
+    font-family:'Russo One';
+    margin-top: 15px;
+    color: #3A8AC3;
+    font-size: 2.5em;
+}
+
+.contact-link{
+    margin-top: 10px;
+    border-style: none;
+    background-color: #FFD166;
+    width: 125px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#contactButton{
+    color:#252525 !important;
+    background-color: #FFD166;
+    text-decoration: none !important;
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size:larger;
+}
+
+
+
+/* ---- FOOTER ---- */
+#footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #373737;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerText{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(217, 217, 217, 0.5);
+}
+
+   .social{
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+   }
+
+  p{
+   margin-top: 0;
+   margin-bottom: 0rem;  
+  }
+
+
+
+/* ---- MEDIA QUERIES ---- */
+@media(max-width: 1400px){
+    .img2{
+        width: 500px;
+        height: 450px;
+    }
+}
+
+@media(max-width: 1230px){
+    /* .img2{
+        width: 500px;
+        height: 450px;
+    } */
+
+    .projectIntro {
+      position: relative;
+      left: -5px;
+    }
+
+    .letsWork {
+        position: relative;
+        left: -5px;
+    }
+}
+
+@media(max-width: 1222px) {
+    .profileText{
+        font-size: 19px;
+    }
+
+    .profile {
+    height: 240px;
+    width: 240px;
+    position: relative;
+    left: -30px;
+    }
+}
+
+/* @media(max-width: 1187px){
+ /* .profile{
+    height: 220px;
+    width: 220px;
+ } */
+
+ /* .profileText {
+    font-size: 19px;
+ } 
+} */
+
+@media(max-width:1024px){
+/* .profileText{
+  font-size: 20px;
+} */
+
+.social{
+    width: 215px;
+}
+}
+
+@media(max-width: 991px) {
+  /* .profile{
+    height: 200px;
+    width: 200px;
+  } */
+
+  .profileText{
+    font-size: 18px;
+  }
+
+  #title{
+    position:relative;
+    left: 60px;
+ }
+}
+
+@media(max-width:911px){
+    #meniu1{
+        display: none;
+    }
+    
+    #meniu2{               
+         display: block;
+         border-bottom-left-radius: 20px;
+         border-bottom-right-radius: 20px;
+     }
+
+     #toggle {
+        margin-top: 10px;
+        margin-right: 15px;
+        background-color: #f2f2f2;
+    }
+
+    #closeBtn {
+      background-color: #f2f2f2;
+    }
+    
+     .container-fluid{
+        background-color: none ;
+        width: 100%;
+        height: 90px;
+     }
+
+     #title {
+        font-size: 45px;
+        position: relative;
+        left: 47px;
+        top: 8px;
+    }
+
+    .profile{
+        margin-left: 95px;
+    }
+
+    .profileText{
+        font-size: 17px;
+        width: 500px;
+        margin-top: 30px; 
+        position: relative; 
+        left: 0px;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    #description{
+        flex-direction: column;
+        margin-top: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .social{
+      width: 220px;
+
+    }
+}
+
+@media(max-width:767px){
+     #closeBtn {
+       background-color: #FFD166;
+     }
+ 
+     #list {
+         background-color: #373737;
+     }
+
+     .social{
+        width: 200px;
+     }
+
+     #contactButton{
+        font-size: large;
+     }
+
+     .img1Text{
+        font-size: 17px;
+     }
+ }
+
+
+@media(max-width:674px){
+    .fastLinks{
+         font-size: 13px;
+    }
+    
+    #title {
+        font-size: 35px;
+        position: relative;
+        left: 25px;
+        top: 4px;
+    }
+
+    header{
+        height: 550px;
+    }
+    
+    .profile{
+        height: 240px;
+         width: 240px;
+    }
+
+    .profileText{
+        font-size: 15px;
+    }
+
+  .img2:first-child{
+    margin-right: 0px;
+  }
+
+    .img2Button{
+         width:83px ;
+    }
+
+    .projectIntro{
+        margin-top: 70px;
+        position: relative;
+        left: 10px;
+        display: flex;
+        /* justify-content: start;
+        align-items: center; */
+        flex-direction: row;
+        width: 90%;
+    }
+    
+    .projectTitle{
+        font-size: 30px;
+    }
+
+    #letsWork{
+        margin-top: 70px;
+        position: relative;
+        left: 10px;
+    }
+
+    .proposal{
+        font-size: 2em;
+     }
+
+    #contactButton{
+        font-size: large;
+     }
+
+    #Ylink{
+        font-size: 15px;
+    }
+    
+    .img2{
+        width: 441px;
+        height: 307px;
+    }
+
+    
+
+    .twoImgRow{
+        margin-top: 30px;
+    }
+
+    .img2Button{
+        top: 110px;
+    }
+
+    .img2Text{
+        top: 121px;
+        font-size: 17px;
+        margin-left: 27px;
+    }
+ 
+     .AddMoreButton{
+        width: 125px;
+        height: 40px;
+     }
+
+      #footer {
+     margin-top: 30px;
+     }
+
+     .footerText{
+      font-size: 13px;
+   
+     }
+
+     .social{
+      width: 200px;
+  
+     }
+
+     .media{
+      width: 22px;
+     }
+}
+
+/* @media(max-width: 630px) {
+    .footerText{
+        font-size: 14px;
+      }
+ 
+      .social{
+       width: 180px;
+       position: relative;
+       top: 34px;
+       left: 30px;
+       margin-left: 10px;
+      }
+ 
+      .media{
+         width: 20px;
+      }
+} */
+
+/* @media(max-width: 600px) {
+    #footer{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footerText{
+        font-size: 14px;
+      }
+ 
+      .social{
+       width: 180px;
+       /* position: relative;
+       top: 34px;
+       left: 30px; */
+       /* margin-left: 10px; 
+      }
+ 
+      .media{
+         width: 20px;
+      }
+} */
+
+@media(max-width: 550px) {
+    .footerText{
+        font-size: 12px;
+       }
+
+       #footer{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+     } 
+
+     .social{
+        margin-top: 20px;
+        width: 190px;
+     }
+
+    .media{
+     width: 19px;
+     }
+
+     .img1Text{
+        top: 388px;
+        margin-left: 30px;
+     }
+     .img1Button{
+        margin-right:27px ;
+     }
+    }
+
+@media(max-width: 500px){
+    .profileText{
+        width: 370px;
+        font-size: 14px;
+    }
+
+    .projectTitle{
+        font-size: 25px;
+    }
+
+    .proposal{
+        font-size: 1.9em;
+     }
+}
+
+@media(max-width:450px){
+    #meniu2{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    } 
+
+    header{
+        height: 500px;
+    }
+
+    .container-fluid{
+        height: 87px;
+    }
+
+    #title{
+        font-size: 30px;
+    }
+
+    .fastLinks{
+         margin-right: 13px;
+         font-size: 12px;
+    }
+
+     .profile{
+         margin-top: 17px;
+         height: 180px;   
+     }
+
+     .profileText {
+         font-size: 13px;
+         width: 297px;
+         margin-top: 0px;
+         text-align: center;
+     }
+
+     .projectIntro{
+        position: relative;
+        left: 17px;
+    }
+    
+    .projectTitle{
+        font-size: 20px;
+    }
+
+    #Ylink {
+        font-size: 13px;
+    }
+
+    #letsWork{
+        margin-top: 70px;
+        position: relative;
+        left: 17px;
+    }
+
+    .proposal{
+        font-size: 1.8em;
+     }
+     
+     .img1 {
+         height: 315px;
+         margin-top: 54px;
+     }
+
+     .img1Text {
+         font-size: 15px;
+         position: relative;
+         top: 266px;
+         left: 0px;
+     }
+     .img1Button{
+        top: 250px;
+
+     }
+    .img2 {
+         height: 215px;
+         width: 85%;
+         margin-top: 45px;
+     }
+
+     .img2Text {
+        font-size: 14px;
+        top: 84px;
+         left: 0px;
+     }
+
+     .img2Button {
+        font-size: 30px;
+         top: 82px;
+         left: 0px;
+     }
+}
