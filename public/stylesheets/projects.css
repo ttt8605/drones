@@ -78,10 +78,6 @@ header{
     width: 500px;
     height: 400px;
     border-radius: 20px;
-    background-image: url('https://press.porsche.com/download/prod/presse_pag/PressBasicData.nsf/Download?OpenAgent&attachmentid=2485133&show=1');    /* rezolva path urile pt poze */
-    background-size: cover; /* You can use other values like 'contain' or specific dimensions */
-    background-position: center; /* You can adjust the positioning as needed */
-    background-repeat: no-repeat; /* Prevent the image from repeating if it's smaller than the div */
     margin-top: 20px;
 }
 

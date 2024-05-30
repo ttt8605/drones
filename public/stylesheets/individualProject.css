@@ -36,16 +36,10 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 20px;
  }
- @media(min-width: 1400px) {
-    #accordionExample{
-        margin: 51px;
-     }
-}
+
     
  #accordion{
-    margin-top: 20px;
     width: 500px;
     border-radius: 20px;
     /* border-style: solid;
@@ -158,6 +152,7 @@ header{
     align-items: center;
     justify-content: space-evenly;
     margin-top: 60px;
+    width: 100%;
    
 }
 .droneSection2{
@@ -177,6 +172,10 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    width: 100%;
+}
+.empty{
+    width: 500px;
 }
 
 .leftDiv{
@@ -302,7 +301,7 @@ a{
     font-weight: 500;
     font-size: medium;
     margin-left: 32px;
-    margin-top: 62px;
+    margin-top: 36px;
     color: #f2f2f2;
 }
 
@@ -507,15 +506,15 @@ a{
 }
 
 .SecondTitle{
-    font-size: 1.1em;
+    font-size: 1.6em;
 }
 
 .lowerSection{
     width: 90%;
     font-size: small;
     position: relative;
-    margin-left: 14px !important;
-    margin-top: 14px !important;
+    margin-left: 21px !important;
+    margin-top: 23px !important;
  
 }
 
@@ -573,7 +572,7 @@ p{
     }
 
     .SecondTitle {
-        font-size: 0.9em;
+        font-size: 1.4em;
     }
     .a {
         width: 264px;
