@@ -45,7 +45,8 @@ module.exports.droneCreateRequest = async (req, res, next) => {
 }
 
 module.exports.droneEditForm = async(req,res)=>{
-    const{id}=req.params;
+    try{
+            const{id}=req.params;
     const drone = await Drone.findById(id);
     if(req.isAuthenticated()){
         if(!drone){
@@ -58,6 +59,11 @@ module.exports.droneEditForm = async(req,res)=>{
         req.flash('error',"Uppps we couldn't find that page, but we think u might like this one ");
         res.redirect(`/drones/${drone._id}`);
     }
+    }catch(error){
+        req.flash('error', "Ups we couldn't find the drone")
+        res.redirect('/drones')
+    }
+
 }
 
 module.exports.droneEditRequest = async(req,res)=>{
@@ -80,14 +86,19 @@ module.exports.droneEditRequest = async(req,res)=>{
 
 
 module.exports.droneInvidualPage =  async(req,res)=>{
-    const drone = await Drone.findById(req.params.id).populate('projects');
+    try{
+          const drone = await Drone.findById(req.params.id).populate('projects');
     if(!drone){
         req.flash('error',"Ups we couldn't find that drone");
         return res.redirect('/drones')
     }else{
         res.render('drones/showdrone',{drone})
     }
-    
+    }catch(error){
+        req.flash('error', "Ups we couldn't find the drone")
+        res.redirect('/drones')
+    }
+  
 }
 
 module.exports.droneDeleteRequest =  async(req,res)=>{

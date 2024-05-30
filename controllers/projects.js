@@ -1,6 +1,6 @@
 const Project = require('../models/projects');
 const Drone = require('../models/drone');
-
+const ExpressError =require('../utils/ExpressErrors');
 const {cloudinary}=require("../cloudinary")
 
 
@@ -47,19 +47,22 @@ module.exports.projectPublicPage = async(req,res)=>{
 }
 
 
-module.exports.projectInvidualPublicPage = async(req,res)=>{
-    const project = await Project.findById(req.params.id).populate('drones');
-    if(!project){
-        req.flash('error',"Ups we couldn't find that project");
-        return res.redirect('/projects')
-    }else{
-        res.render('projects/show',{project});
+module.exports.projectInvidualPublicPage = async (req, res, next) => {
+    try {
+        const project = await Project.findById(req.params.id).populate('drones');
+        if (!project) {
+            req.flash('error', "Oops, we couldn't find that project");
+            return res.redirect('/projects');
+        }
+        res.render('projects/show', { project });
+    } catch (error) {
+        next(new ExpressError('Project Not Found', 404));
     }
-   
-}
+};
 
-module.exports.projectEditForm =  async(req,res)=>{
-    const { id }=req.params;
+module.exports.projectEditForm =  async(req,res,next)=>{
+    try{
+         const { id }=req.params;
     const project = await Project.findById(id);
     const drones = await Drone.find({})
     
@@ -74,6 +77,10 @@ module.exports.projectEditForm =  async(req,res)=>{
         req.flash('error',"Uppps we couldn't find that page, but we think u might like this one ");
         res.redirect(`/projects/${project._id}`);
     }
+    }catch(error){
+        next(new ExpressError('Project Not Found', 404));
+    }
+   
    
 }
 
