@@ -110,7 +110,11 @@ header{
 }
 .w-100{
     border-radius: 20px;
+    width: 500px; /* Set the width you desire */
+    height: 334px; /* Set the height you desire */
+    object-fit: cover; /* Maintain aspect ratio */
 }
+
 
 .rightDiv{
     width: 500px;  

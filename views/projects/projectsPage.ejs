@@ -62,6 +62,12 @@
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones/new">Add Dr</a>
+    </li>
+    <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/projects/new">Add Pr</a>
+               </li>
                 <% } %>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
@@ -110,17 +116,28 @@
                      <% if (x % 2 === 1) { %>
                          <div class="twoImgRow">
                      <% } %>
+                     
                      <div class="img2">
+                      <a class="imagesLink" href="/projects/<%= project._id %>">
+                        <img class="picture" src="<%=project.images[0].url %>" alt="">
+                        <div class="textAndButton">
                          <h1 class="img2Text"><%= project.name %></h1>
-                         <a href="/projects/<%= project._id %>"><button class="img2Button">&rarr;</button></a>
+                         <button class="img2Button">&rarr;</button>
+                         </div>
+                        </a>
                      </div>
                      <% if (x % 2 === 0) { %>
                          </div> <!-- Close twoImgRow div -->
                      <% } %>
                  <% } else { %>
                      <div class="img1">
-                         <h1 class="img1Text"><%= project.name %></h1>
-                         <a href="/projects/<%= project._id %>"><button class="img1Button">&rarr;</button></a>
+                      <a class="imagesLink1" href="/projects/<%= project._id %>">
+                      <img src="<%=project.images[0].url %>" class="picture1" alt="">
+                      <div class="textAndButton1">
+                        <h1 class="img1Text"><%= project.name %></h1>
+                       <button class="img1Button">&rarr;</button>
+                      </div>
+                         </a>
                      </div>
                  <% x++;} %>
              <% } else { %>
@@ -134,8 +151,13 @@
                        
                  <% } %>
                  <div class="img2">
+                  <a class="imagesLink" href="/projects/<%= project._id %>">
+                    <img class="picture" src="<%=project.images[0].url %>" alt="">
+                    <div class="textAndButton">
                      <h1 class="img2Text"><%= project.name %></h1>
-                     <a href="/projects/<%= project._id %>"><button class="img2Button">&rarr;</button></a>
+                     <button class="img2Button">&rarr;</button>
+                     </div>
+                    </a>
                  </div>
                  <% if (x % 2 === 0 ) { %>
                      </div> <!-- Close twoImgRow div -->
