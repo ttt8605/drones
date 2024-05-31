@@ -1,5 +1,6 @@
 const mongoose =  require('mongoose');
-const Drone = require('./drone')
+const Drone = require('./drone');
+const { link } = require('joi');
 const{Schema}=mongoose;
 
 const ImageSchema = new Schema({
@@ -21,6 +22,9 @@ const projectsSchema = new Schema({
         required:true
     },
     images:[ImageSchema],
+    link:{
+        type:String,
+    },
     drones:[
         {
             type: Schema.Types.ObjectId,

@@ -293,6 +293,10 @@ a{
     color: rgba(217, 217, 217, 0.5);
     font-size: 1.5em;
 }
+.YoutubeLink{
+       color: rgba(217, 217, 217, 0.5);
+       font-size: 1.2em;
+}
 
 .lowerSection{
     width: 90%;
@@ -539,12 +543,15 @@ p{
     }
     .secondDiv {
         width: 300px;
-        height: 295px;
+        height: 307px;
         margin-left: 36px;
         margin-top: 83px;
     }
     #drone1{
-        margin-bottom: 85px;
+        margin-bottom: 96px;
+    }
+    #accordionExample{
+        width:300px;
     }
 
     .w-100{
@@ -560,9 +567,12 @@ p{
     }
     .secondDiv {
         width: 277px;
-        height: 273px;
+        height: 300px;
         margin-left: -11px;
         margin-top: 86px;
+    }
+    .lowerSection:nth-last-child(1){
+        margin-top:4px !important;
     }
     #accordion{
        width: 277px;

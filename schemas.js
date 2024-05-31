@@ -16,6 +16,7 @@ module.exports.droneSchema = Joi.object({
     name: Joi.string().required(),
     description:Joi.string().required(),
     drones: Joi.array().items(Joi.string()) ,
+    link: Joi.string().required(),
     deleteImages:Joi.array()
    }).required()
 
