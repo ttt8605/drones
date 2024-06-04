@@ -1,0 +1,90 @@
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.err-message{
+    color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.err-link{
+    color: #8d8d8d;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 1.7rem;
+}
+.numbers:first-child{
+    position: relative;
+    left: 55px;
+
+}
+.test{
+    width: 400px;
+}
+
+
+.text{
+   position: relative;
+   bottom: 113px;
+}
+
+@media(max-width:1200px){
+   .err-message{
+    font-size: 2.5rem;
+   }
+   .text{
+    bottom: 116px;
+   }
+}
+@media(max-width:1000px){
+    .err-message{
+        font-size: 2.0rem;
+    }
+    .err-link{
+        font-size: 1.5rem;
+    }
+    .test{
+        width: 370px;
+    }
+}
+
+@media(max-width:700px){
+    .content{
+        align-items: center;
+    }
+    .err-message{
+        text-align: center;
+    }
+    .err-link{
+        text-align: center;
+    }
+}
+@media(max-width:500px){
+    .test{
+        width: 310px;
+    }
+    .err-message{
+        font-size: 1.6rem;
+    }
+    .err-link{
+        font-size: 1.2rem;
+    }
+}
+@media(max-width:400px){
+    .test{
+        width: 280px;
+    }
+    .text{
+        bottom: 98px;
+    }
+    .err-message{
+        font-size: 1.4rem;
+    }
+    .err-link{
+        font-size: 1.1rem;
+    }
+}

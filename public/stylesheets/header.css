@@ -22,7 +22,24 @@
     text-decoration: none !important;
     color: #f2f2f2;
 }
-
+/* cancel the default burger button from bootstrap */
+.burger{
+    width: 40px;
+}
+.navbar-toggler{
+    border: 0px !important;
+    border-color: transparent !important;
+}
+button:focus{
+    outline: 0px;
+}
+#toggle{
+    background-color: transparent !important;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+/* --- */
 #hyperlinks{
     color: #f2f2f2;
     /* margin-right: 100px;
@@ -154,9 +171,7 @@
 
 
 @media(max-width:767px){
-      #toggle{
-        background-color: #f2f2f2;
-     } 
+  
  
      #closeBtn {
        background-color: #f2f2f2;

@@ -56,7 +56,9 @@ module.exports.projectInvidualPublicPage = async (req, res, next) => {
         }
         res.render('projects/show', { project });
     } catch (error) {
+        req.flash('error',"Ups we couldn't find that project")
         next(new ExpressError('Project Not Found', 404));
+        
     }
 };
 
@@ -78,6 +80,7 @@ module.exports.projectEditForm =  async(req,res,next)=>{
         res.redirect(`/projects/${project._id}`);
     }
     }catch(error){
+        req.flash('error',"Ups we couldn't find that project")
         next(new ExpressError('Project Not Found', 404));
     }
    

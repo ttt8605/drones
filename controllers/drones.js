@@ -60,8 +60,8 @@ module.exports.droneEditForm = async(req,res)=>{
         res.redirect(`/drones/${drone._id}`);
     }
     }catch(error){
-        req.flash('error', "Ups we couldn't find the drone")
-        res.redirect('/drones')
+        req.flash('error', "Ups we couldn't find that drone")
+        res.redirect('/*')
     }
 
 }
@@ -95,8 +95,8 @@ module.exports.droneInvidualPage =  async(req,res)=>{
         res.render('drones/showdrone',{drone})
     }
     }catch(error){
-        req.flash('error', "Ups we couldn't find the drone")
-        res.redirect('/drones')
+        req.flash('error', "Ups we couldn't find that drone")
+        res.redirect('/*')
     }
   
 }
