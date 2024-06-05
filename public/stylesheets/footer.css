@@ -13,6 +13,10 @@
     margin-top: 100px;
    
 }
+.media{
+    width: 30px;
+    height: 30px;
+}
 
 .footerText{
     font-family: 'Roboto',sans-serif;
@@ -108,7 +112,8 @@
                 width: 190px;
              }
         
-            .media{
-             width: 19px;
-             }
+             .media{
+                width: 25px;
+                margin-left: 0px;
+                }
         }

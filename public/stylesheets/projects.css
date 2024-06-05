@@ -213,7 +213,6 @@ a{
    margin-bottom: 0rem;  
   }
 
-
 /* GENERAL ELEMENTS */
 @media(max-width: 1222px) {
     .profile {
@@ -472,6 +471,7 @@ p{
     margin-top:110px ;
     margin-bottom: 100px;
 }
+
 }
 
 @media(max-width: 500px){
@@ -482,6 +482,8 @@ p{
     .proposal {
         font-size: 2em;
       }
+
+     
   
     
 }
