@@ -4,13 +4,16 @@
 <% layout('/layouts/boilerplate') %>
 
 
-    <div class="row mb-3">
-        <h1 class="text-center mb-4">New Drone</h1>
-        <div class="col-10 offset-1 mt-3"> 
+    <div class="row mb-4">
+      <div class="col-md-6 offset-md-3">
+        <div class="card shadow">
+        <div class="card-body">
+        <h2 class="text-center mb-4 text">New Drone</h2>
+        
 <form action="/drones" method="POST" novalidate class="validated-form" enctype="multipart/form-data" >
     <div class=" mb-3">
-     <label for="name" class="form-label text-light">Name of the drone</label>
-     <input type="text" name="name" id="name" class="form-control" placeholder="dronename" required>
+     <label for="name" class="form-label text">Name of the drone</label>
+     <input type="text" name="name" id="name" class="form-control" placeholder="dronename" autofocus required>
      <div class="valid-feedback">
       Looks good!
      </div>
@@ -24,14 +27,14 @@
     <div class="mb-3">
       <div class="form-file custom-file">
           <input type="file" class="form-file-input" id="image" name="image" multiple>
-          <label class="form-file-label" for="image">
+          <label class="form-file-label text" for="image">
               <span class="form-file-text custom-file-label">Choose image(s)...</span>
               <span class="form-file-button">Browse</span>
           </label>
       </div>
   </div>
     <div class=" mb-3">
-        <label for="size" class="form-label text-light">Size of the drone</label>
+        <label for="size" class="form-label text ">Size of the drone</label>
         <select class="form-select" name="size" aria-label="Default select example">
           <%for(let size of sizes){  %>
             <option value="<%= size %>"><%= size  %></option>
@@ -39,7 +42,7 @@
           </select>
        </div>
        <div class=" mb-3">
-        <label for="batery" class="form-label text-light">Power output of the battery</label>
+        <label for="batery" class="form-label text">Power output of the battery</label>
         <select class="form-select" name="battery" aria-label="Default select example">
           <% for (let battery of batteries) { %>
             <option value="<%= battery %>"><%= battery %></option>
@@ -47,7 +50,7 @@
         </select>
     </div>
        <div class=" mb-3">
-        <label for="video" class="form-label text-light">Video type</label>
+        <label for="video" class="form-label text">Video type</label>
         <select class="form-select" name="video" aria-label="Default select example">
           <%for(let video of videos){  %>
             <option value="<%= video %>"><%= video %></option>
@@ -56,21 +59,21 @@
        </div>
 
        <div class="mb-3">
-        <label class="form-label text-light" for="description">Description</label>
-        <textarea class="form-control" name="description" id="description" aria-label="Description" rows="5" maxlength="250" required></textarea>
+        <label class="form-label text" for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" aria-label="Description" rows="6" maxlength="250" required></textarea>
         <div class="valid-feedback">
           Looks good!
          </div>
       </div>
       <div class="mb-3">
-        <label class="form-label text-light" for="specification">Specification</label>
+        <label class="form-label text" for="specification">Specification</label>
         <textarea class="form-control" name="specification" id="specification" aria-label="Specification" rows="10" maxlength="250"  required></textarea>
         <div class="valid-feedback">
           Looks good!
          </div>
       </div>
       <div class="mb-3">
-        <button class="btn btn-success">Add Drone</button>
+        <button class="btn btn-success btn-block">Add Drone</button>
         </div>
 
 </form>

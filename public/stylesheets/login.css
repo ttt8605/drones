@@ -23,6 +23,11 @@ h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 500
 }
+.card-title{
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700
+}
 
 .offcanvas-body{
     margin-top: 50px;

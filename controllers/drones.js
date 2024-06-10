@@ -1,7 +1,7 @@
 const Drone = require('../models/drone');
 const Project = require('../models/projects');
 
-const sizes = ['1inch','2inch','3inch','4inch','5inch','6inch','7inch','8inch'];
+const sizes = ['1inch','2inch','3inch','4inch','5inch','6inch','7inch','8inch','9inch'];
 const batteries =  ['1s','2s','3s','4s','5s','6s','7s','8s'];
 const videos = ['Analog','Digital'];
 const {cloudinary}=require("../cloudinary")

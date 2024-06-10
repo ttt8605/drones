@@ -3,13 +3,15 @@
   </head>
 
 <% layout('/layouts/boilerplate') %>
-    <div class="row mb-3">
-        <h1 class="text-center mb-4"> Editing <%= drone.name %></h1>
-        <div class="col-10 offset-1 mt-3"> 
+<div class="row">
+  <div class="col-md-6 offset-md-3 mb-4">
+      <div class="card shadow">
+          <div class="card-body">
+              <h2 class="text-center card-title mb-4">Edit Drone</h2>
 <form action="/drones/<%=drone._id %>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data" >
     <div class=" mb-3">
-     <label for="name" class="form-label text-light">Name of the drone</label>
-     <input type="text" name="name" id="name" class="form-control" placeholder="dronename" value="<%=drone.name %>" required>
+     <label for="name" class="form-label text">Name of the drone</label>
+     <input type="text" name="name" id="name" class="form-control" placeholder="dronename" value="<%=drone.name %>" autofocus required>
      <div class="valid-feedback">
       Looks good!
      </div>
@@ -29,7 +31,7 @@
      </div>
  </div>
     <div class=" mb-3">
-        <label for="size" class="form-label text-light">Size of the drone</label>
+        <label for="size" class="form-label text">Size of the drone</label>
         <select class="form-select" name="size" aria-label="Default select example" >
             <%for(let size of sizes){  %>
                 <option value="<%= size  %>" <%= drone.size === size ? 'selected' : ''  %>><%= size %></option>
@@ -37,7 +39,7 @@
           </select>
        </div>
        <div class=" mb-3">
-        <label for="batery" class="form-label text-light">Power output of the battery</label>
+        <label for="batery" class="form-label text">Power output of the battery</label>
         <select class="form-select" name="battery" aria-label="Default select example" >
             <%for(let battery of batteries){  %>
                 <option value="<%= battery %>" <%= drone.battery === battery ? 'selected' : ''  %>><%= battery %></option>
@@ -45,7 +47,7 @@
           </select>
        </div>
        <div class=" mb-3">
-        <label for="video" class="form-label text-light">Video type</label>
+        <label for="video" class="form-label text">Video type</label>
         <select class="form-select" name="video" aria-label="Default select example" >
             <%for(let video of videos){  %>
                 <option value="<%= video %>" <%= drone.video === video ? 'selected' : ''  %>><%= video%></option>
@@ -53,32 +55,32 @@
           </select>
        </div>
        <div class="mb-3">
-        <label class="form-label text-light" for="description">Description</label>
-        <textarea class="form-control" name="description" id="description" aria-label="Description" rows="5" required><%=drone.description %></textarea>
+        <label class="form-label text" for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" aria-label="Description" rows="10" required><%=drone.description %></textarea>
         <div class="valid-feedback">
           Looks good!
          </div>
       </div>
       <div class="mb-3">
-        <label class="form-label text-light" for="specification">Specification</label>
+        <label class="form-label text" for="specification">Specification</label>
         <textarea class="form-control" name="specification" id="specification" aria-label="Specification" rows="10" required ><%=drone.specification %></textarea>
         <div class="valid-feedback">
           Looks good!
          </div>
       </div>
-      <div class="mb-3 mt-4">
-        <h6 class="text-light mb-3">Choose the images you want to delete:</h6>
+      <div class="mb-4 mt-4">
+        <h6 class="text mb-3">Choose the images you want to delete:</h6>
         <% drone.images.forEach(function(img,i){ %>
           <img src="<%=img.thumbnail%>" class="img-thumbnail" alt="">
           <div class="form-check-inline md-3">
             <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename %>">
-             <label class="text-light" for="image-<%=i%>">Delete</label>
+             <label class="text" for="image-<%=i%>">Delete</label>
          </div>
         
           <% }) %>
       </div>
       <div class="mb-3">
-        <button class="btn btn-success">Edit Drone</button>
+        <button class="btn btn-success btn-block">Edit Drone</button>
         </div>
 
 </form>
