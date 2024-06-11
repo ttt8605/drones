@@ -15,6 +15,7 @@ const ExpressError = require('./utils/ExpressErrors');
 const path = require('path');
 const methodOverride = require('method-override');
 const mongoSanitize = require('express-mongo-sanitize');
+const helmet = require('helmet');
 
 // Setting up mongoose/mongodb
 const mongoose = require('mongoose');
@@ -36,6 +37,8 @@ app.use(express.static('public'));
 app.engine('ejs', ejsMate);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(helmet({contentSecurityPolicy:false}));
 
 // Parse incoming requests with URL-encoded payloads
 app.use(express.urlencoded({ extended: true }));
