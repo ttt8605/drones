@@ -4,7 +4,8 @@ const extension = (joi) => ({
    type: 'string',
    base: joi.string(),
    messages: {
-       'string.escapeHTML': '{{#label}} must not include HTML!'
+       'string.escapeHTML': '{{#label}} must not include HTML!',
+       'string.noURL': '{{#label}} must not include a URL!'
    },
    rules: {
        escapeHTML: {
@@ -16,7 +17,16 @@ const extension = (joi) => ({
                if (clean !== value) return helpers.error('string.escapeHTML', { value })
                return clean;
            }
-       }
+       },
+       noURL: {
+        validate(value, helpers) {
+            const urlPattern = /(https?:\/\/[^\s]+)/g;
+            if (urlPattern.test(value)) {
+                return helpers.error('string.noURL', { value });
+            }
+            return value;
+        }
+    }
    }
 });
 
@@ -44,8 +54,8 @@ module.exports.droneSchema = Joi.object({
 
 
    module.exports.ContactSchema = Joi.object({
-      name:Joi.string().required().escapeHTML(),
+      name:Joi.string().required().escapeHTML().noURL(),
       email:Joi.string().email().required().escapeHTML(),
-      subject:Joi.string().required().escapeHTML(),
-      message:Joi.string().required().escapeHTML()
+      subject:Joi.string().required().escapeHTML().noURL(),
+      message:Joi.string().required().escapeHTML().noURL()
    }).required()
