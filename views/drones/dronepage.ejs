@@ -130,6 +130,13 @@
     <%} %>
 
   
-  
+    <script>
+      const NavElements = document.getElementsByName('Drone');
+        
+        // Loop through each element and add the class
+        NavElements.forEach(element => {
+          element.classList.add('border-bottom', 'border-light-subtle');
+        });
+      </script>
 </div>
 

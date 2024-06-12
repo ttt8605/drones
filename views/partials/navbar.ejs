@@ -13,15 +13,15 @@
               <a class="nav-link active" id="hl" aria-current="page" href="/register">Register</a>
             <% }else{ %>
               <a class="nav-link active" id="hl" aria-current="page" href="/logout">Logout</a>
-              <a class="nav-link active" id="hl" aria-current="page" href="/drones/new">Add Dr</a>
-              <a class="nav-link active" id="hl" aria-current="page" href="/projects/new">Add Pr</a>
+              <a class="nav-link active" id="hl" name="addDrone" aria-current="page" href="/drones/new">Add Dr</a>
+              <a class="nav-link active" id="hl" name="addProject" aria-current="page" href="/projects/new">Add Pr</a>
             <% } %>
-          <a class="nav-link active" id="hl" aria-current="page" href="/drones">drones</a>
-          <a class="nav-link active" id="hl" href="/projects">home</a>
+          <a class="nav-link active" id="hl" aria-current="page" name="Drone" href="/drones">Drones</a>
+          <a class="nav-link active" id="hl" href="/projects">Home</a>
           <%if(!currentUser){ %>
-          <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">contact me</a></button>
+          <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">Contact me</a></button>
           <% }else{ %>
-            <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact/all">contact me</a></button>
+            <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact/all">Contact me</a></button>
             <% } %>
         </div>
       </div>
@@ -53,25 +53,25 @@
                 <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones/new">Add Dr</a>
+                <a class="nav-link active" aria-current="page"name="addDrone" id="fastlinksMobile" href="/drones/new">Add Dr</a>
   </li>
   <li class="nav-item">
-                <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/projects/new">Add Pr</a>
+                <a class="nav-link active" aria-current="page" name="addProject" id="fastlinksMobile" href="/projects/new">Add Pr</a>
              </li>
               <% } %>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
+                <a class="nav-link active" aria-current="page" name="Drone" id="fastlinksMobile" href="/drones">Drones</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/projects" id="fastlinksMobile">home</a>
+                <a class="nav-link" href="/projects" id="fastlinksMobile">Home</a>
               </li>
               <% if(!currentUser){ %>
               <li class="nav-item">
-                <a class="nav-link" href="/contact" id="fastlinksMobile">Contact</a>
+                <a class="nav-link" href="/contact" name="contact" id="fastlinksMobile">Contact</a>
               </li>
               <% }else{ %>
                 <li class="nav-item">
-                  <a class="nav-link" href="/contact/all" id="fastlinksMobile">Contact</a>
+                  <a class="nav-link" href="/contact/all" name="contact" id="fastlinksMobile">Contact</a>
                 </li>
               <% } %>
           </div>
@@ -95,7 +95,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <%if(!currentUser){ %>
+            <% if(!currentUser){ %>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/login">Login</a>
             </li>
@@ -103,31 +103,28 @@
               <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/register">Register</a>
             </li>
             <% }else{ %>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
-              </li>
               <li class="nav-item">
-              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones/new">Add Dr</a>
-</li>
-<li class="nav-item">
-              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/projects/new">Add Pr</a>
-           </li>
-            <% } %>
+                <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page"name="addDrone" id="fastlinksMobile" href="/drones/new">Add Dr</a>
+  </li>
+  <li class="nav-item">
+                <a class="nav-link active" aria-current="page" name="addProject" id="fastlinksMobile" href="/projects/new">Add Pr</a>
+             </li>
+
+              <% } %>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
+              <a class="nav-link active" aria-current="page" name="Drone" id="fastlinksMobile" href="/drones">Drones</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/projects" id="fastlinksMobile">home</a>
             </li>
-            <% if(!currentUser){ %>
+            
             <li class="nav-item">
-              <a class="nav-link" href="/contact" id="fastlinksMobile">Contact</a>
+              <a class="nav-link" href="/contact" name="contact" id="fastlinksMobile">Contact</a>
             </li>
-            <% }else{ %>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact/all" id="fastlinksMobile">Contact</a>
-              </li>
-            <% } %>
+        
         </div>
       </div>
     </div>

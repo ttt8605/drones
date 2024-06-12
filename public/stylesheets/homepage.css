@@ -39,12 +39,7 @@ header{
     margin-top: 20px;
 }
 
-#fastlinksMobile{
-    font-family:'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: larger;
-    color: #f2f2f2 !important;
-}
+
 .offcanvas-body{
     margin-top: 50px;
     background-color: #212529;
@@ -78,6 +73,7 @@ header{
      font-family: 'Roboto',sans-serif;
      font-weight: 300;
      font-size:17px;
+     width: 80px;
 }
 
 /* .but1{
