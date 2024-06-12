@@ -5,7 +5,7 @@ module.exports.contactPublicPage = (req,res)=>{
 }
 
 module.exports.contactAddRequest =  async(req,res,next)=>{
-    const newContact = new Contact(req.body);
+        const newContact = new Contact(req.body);
     await newContact.save();
     req.flash('success','Message sent');
     res.redirect('/projects');

@@ -13,7 +13,8 @@ const validateContact = (req, res, next) => {
     const { error } = ContactSchema.validate(req.body);
     if (error) {
         const msg = error.details.map(el => el.message).join(',');
-        throw new ExpressError(msg, 400);
+        req.flash('error', msg); // Set the flash message
+        return res.redirect('/contact'); // Redirect with the flash message
     } else {
         next();
     }
