@@ -25,9 +25,20 @@ const Pstorage = new CloudinaryStorage({
 
 });
 
+const Sstorage = new CloudinaryStorage({
+    cloudinary,
+    params:{
+       folder:'services',
+        allowedFormats:['jpeg','png','jpg']
+    }
+
+});
+
 
 module.exports={
     cloudinary,
     storage,
-    Pstorage
+    Pstorage,
+    Sstorage
+
 }

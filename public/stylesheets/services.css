@@ -1,0 +1,650 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+  background-color: #252525;
+}
+body {
+    margin-top: 0; /* Reset default margin */
+    padding-top: 0; /* Reset default padding */
+}
+
+main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+header{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     /* margin-top: 20px; */
+     position: relative;
+     background-color: #373737 ;
+     width: 100%;
+     height: 630px;
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+}
+
+.offcanvas-body{
+    margin-top: 50px;
+    background-color: #373737;
+}
+
+.nav-item{
+    margin-top: 20px;
+}
+
+
+.offcanvas-body{
+    margin-top: 50px;
+    background-color: #212529;
+ }
+
+/* menu queries */
+#meniu1{
+    display: block;
+    width: 100%;
+}
+
+#description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#meniu2{
+    display: none;
+}
+
+.media{
+     margin-left: 20px;
+     color: #3A8AC3;
+}
+
+#fastLinks{
+     text-decoration: none;
+     color: #373737;
+     font-family: 'Roboto',sans-serif;
+     font-weight: 300;
+     font-size:17px;
+     width: 80px;
+}
+
+
+
+#description {
+    width: 70%;
+    height: 490px;
+  }
+
+.profile{
+    height: 310px;
+    width: 310px;
+    margin-top: 8px;
+    margin-right: 60px;
+}
+
+.profileText{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #f2f2f2;
+    width: 650px;
+    margin-top: 30px;
+    margin-right: 20px;
+    position: relative;
+    left: 50px;
+}
+.visibleImages{
+    width: 90%;
+}
+
+.twoImgRow{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.img2{
+    
+    width: 600px;
+   height: 460px;
+    margin-top: 80px;
+    border-radius: 20px;
+  }
+
+  .imagesLink{
+    height: 400px;
+    text-decoration: none;
+  }
+  .picture{
+  border-radius: 20px;
+  width: 600px; /* Set the width you desire */
+  height: 460px; /* Set the height you desire */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+  
+  .img2:first-child{
+   margin-right: 5px;
+}
+
+.textAndButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 60px;
+}
+
+  .img2Button{
+    font-family: 'Roboto',sans-serif;
+    color: #f2f2f2;
+    background-color: transparent;
+    border-style: none;
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+    bottom: 8px;
+}
+
+.img2Text{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: #f2f2f2;
+    position: relative;
+    width: 70%;
+}
+
+
+
+
+.letsWork {
+    margin-top: 130px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    position: relative;
+    left: -35px;
+    margin-bottom: 150px;
+}
+
+.proposal {
+    font-family:'Russo One';
+    margin-top: 15px;
+    color: #3A8AC3;
+    font-size: 2.5em;
+}
+
+.contact-link{
+    margin-top: 10px;
+    border-style: none;
+    background-color: #FFD166;
+    width: 125px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#contactButton{
+    color:#252525 !important;
+    background-color: #FFD166;
+    text-decoration: none !important;
+    font-family:'Roboto', sans-serif;
+    font-weight: 500;
+    font-size:larger;
+}
+
+
+
+/* ---- FOOTER ---- */
+#footer{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #373737;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footerText{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(217, 217, 217, 0.5);
+}
+
+   .social{
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+   }
+
+  p{
+   margin-top: 0;
+   margin-bottom: 0rem;  
+  }
+
+  .media{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+/* ---- MEDIA QUERIES ---- */
+
+@media(max-width: 1230px){
+
+   
+    .letsWork {
+        position: relative;
+        left: -5px;
+    }
+}
+
+@media(max-width: 1222px) {
+    .profileText{
+        font-size: 19px;
+    }
+
+    .profile {
+    height: 240px;
+    width: 240px;
+    position: relative;
+    left: -30px;
+    }
+}
+
+@media(max-width:1024px){
+
+.social{
+    width: 215px;
+}
+}
+
+@media(max-width: 991px) {
+
+  .profileText{
+    font-size: 18px;
+  }
+
+  #title{
+    position:relative;
+    left: 60px;
+ }
+}
+
+@media(max-width:911px){
+    #meniu1{
+        display: none;
+    }
+    
+    #meniu2{               
+         display: block;
+         border-bottom-left-radius: 20px;
+         border-bottom-right-radius: 20px;
+     }
+
+     #toggle {
+        margin-top: 10px;
+        margin-right: 15px;
+        background-color: #f2f2f2;
+    }
+
+    #closeBtn {
+      background-color: #f2f2f2;
+    }
+    
+     .container-fluid{
+        background-color: none ;
+        width: 100%;
+        height: 90px;
+     }
+
+     #title {
+        font-size: 45px;
+        position: relative;
+        left: 47px;
+        top: 8px;
+    }
+
+    .profile{
+        margin-left: 95px;
+    }
+
+    .profileText{
+        font-size: 17px;
+        width: 500px;
+        margin-top: 30px; 
+        position: relative; 
+        left: 0px;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    #description{
+        flex-direction: column;
+        margin-top: 100px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .social{
+      width: 220px;
+
+    }
+}
+
+@media(max-width:767px){
+     #closeBtn {
+       background-color: #FFD166;
+     }
+ 
+     #list {
+         background-color: #373737;
+     }
+
+     .social{
+        width: 200px;
+     }
+
+     #contactButton{
+        font-size: large;
+     }
+
+    
+ }
+
+
+@media(max-width:674px){
+    .fastLinks{
+         font-size: 13px;
+    }
+    
+    #title {
+        font-size: 35px;
+        position: relative;
+        left: 25px;
+        top: 4px;
+    }
+
+    header{
+        height: 550px;
+    }
+    
+    .profile{
+        height: 240px;
+         width: 240px;
+    }
+
+    .profileText{
+        font-size: 15px;
+    }
+
+  .img2:first-child{
+    margin-right: 0px;
+  }
+
+    .img2Button{
+         width:83px ;
+    }
+
+
+    #letsWork{
+        margin-top: 70px;
+        position: relative;
+        left: 10px;
+    }
+
+    .proposal{
+        font-size: 2em;
+     }
+
+    #contactButton{
+        font-size: large;
+     }
+
+    #Ylink{
+        font-size: 15px;
+    }
+    
+  .picture{
+    width: 500px;
+    height: 375px;
+  }
+  .textAndButton {
+    width: 500px;
+    bottom: 178px;
+}
+    
+.img2{
+    display: flex;
+    justify-content: center;
+}
+    .img2Button{
+        top: 110px;
+    }
+
+    .img2Text{
+        top: 121px;
+        font-size: 17px;
+        margin-left: 27px;
+    }
+ 
+   
+      #footer {
+     margin-top: 30px;
+     }
+
+     .footerText{
+      font-size: 13px;
+   
+     }
+
+     .social{
+      width: 200px;
+  
+     }
+
+     .media{
+      width: 22px;
+     }
+}
+
+
+@media(max-width: 570px) {
+    .footerText{
+        font-size: 12px;
+       }
+
+       #footer{
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+     } 
+
+     .social{
+        margin-top: 20px;
+        width: 190px;
+     }
+
+    .media{
+     width: 25px;
+     margin-left: 0px;
+     }
+   
+     .img2{
+        margin-top: 0px;
+        height: 400px;
+     }
+     .picture{
+        width: 450px;
+        height:317px ;
+     }
+     .imagesLink{
+        height: 317px;
+     }
+     .textAndButton{
+        width: 450px;
+     }
+    }
+
+@media(max-width: 500px){
+    .profileText{
+        width: 370px;
+        font-size: 14px;
+    }
+
+  
+.letsWork{
+    left: -12px;
+    margin-top: 70px;
+}
+    .proposal{
+        font-size: 1.9em;
+     }
+   
+     .img2{
+        margin-top: 0px;
+        height: 350px;
+     }
+     .picture{
+        width: 400px;
+        height:287px ;
+     }
+     .imagesLink{
+        height: 287px;
+     }
+     .textAndButton{
+        width: 400px;
+     }
+}
+
+@media(max-width:450px){
+    #meniu2{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    } 
+
+    header{
+        height: 500px;
+    }
+
+    .container-fluid{
+        height: 87px;
+    }
+
+    #title{
+        font-size: 30px;
+    }
+
+    .fastLinks{
+         margin-right: 13px;
+         font-size: 12px;
+    }
+
+     .profile{
+         margin-top: 17px;
+         height: 180px;   
+     }
+
+     .profileText {
+         font-size: 13px;
+         width: 297px;
+         margin-top: 0px;
+         text-align: center;
+     }
+
+     
+
+    #Ylink {
+        font-size: 13px;
+    }
+
+    #letsWork{
+        margin-top: 70px;
+        position: relative;
+        left: 17px;
+    }
+
+    .proposal{
+        font-size: 1.8em;
+     }
+     
+     .letsWork{
+        left: -12px;
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+    .twoImgRow{
+        margin-top: 30px;
+    }
+        .proposal{
+            font-size: 1.5em;
+         }
+        
+         .img2{
+            margin-top: 0px;
+            height: 300px;
+         }
+         .img2Text{
+            top: 140px;
+         }
+         .img2Button{
+            top: 128px;
+         }
+         .picture{
+            width: 350px;
+            height:250px ;
+         }
+         .imagesLink{
+            height: 250px;
+         }
+         .textAndButton{
+            width: 350px;
+         }
+}
+
+@media(max-width:400px){
+  
+      
+         .img2{
+            margin-top: 0px;
+            height: 250px;
+         }
+         .img2Text{
+            top: 140px;
+         }
+         .img2Button{
+            top: 128px;
+         }
+         .picture{
+            width: 300px;
+            height:200px ;
+         }
+         .imagesLink{
+            height: 200px;
+         }
+         .textAndButton{
+            width: 300px;
+         }
+}
+
+

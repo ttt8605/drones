@@ -88,11 +88,14 @@ const dronesRoutes = require('./routes/drones');
 const projectsRoutes = require('./routes/projects');
 const contactRoutes = require('./routes/contact');
 const userRoutes = require('./routes/auth');
+const serviciiRoutes = require('./routes/servici');
 
 app.use('/drones', dronesRoutes);
 app.use('/projects', projectsRoutes);
 app.use('/contact', contactRoutes);
+app.use('/services',serviciiRoutes);
 app.use('/', userRoutes);
+
 
 // Handle 404 errors
 app.all('*', (req, res, next) => {

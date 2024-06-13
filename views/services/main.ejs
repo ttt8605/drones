@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    <link rel="stylesheet" href="/stylesheets/header2.css">
    <link rel="stylesheet" href="/stylesheets/header.css">
-    <link rel="stylesheet" href="/stylesheets/homepage.css">
-    
+    <link rel="stylesheet" href="/stylesheets/services.css">
 </head>
 <body>
   <header>          
@@ -28,8 +28,8 @@
               <a class="nav-link active" id="hl" aria-current="page" href="/logout">Logout</a>
             <% } %>
           <a class="nav-link active  " id="hl" aria-current="page" href="/drones">Drones</a>
-          <a class="nav-link active" id="hl" name="Home" href="/projects">Home</a>
-          <a class="nav-link active" id="hl"  href="/services">Services</a>
+          <a class="nav-link active" id="hl"  href="/projects">Home</a>
+          <a class="nav-link active" id="hl" name="Services" href="/services">Services</a>
           <%if(!currentUser){ %>
           <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">Contact me</a></button>
           <% }else{ %>
@@ -67,7 +67,7 @@
                   <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones/new">Add Dr</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Se</a>
+        <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Se</a>
 </li>
     <li class="nav-item">
                   <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/projects/new">Add Pr</a>
@@ -80,8 +80,9 @@
                   <a class="nav-link" href="/projects" name="Home" id="fastlinksMobile">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/services"  id="fastlinksMobile">Services</a>
-                </li>
+                   <a class="nav-link active" id="fastlinksMobile" name="Services" href="/services">Services</a>
+                  </li>
+               
                 <% if(!currentUser){ %>
                 <li class="nav-item">
                   <a class="nav-link" href="/contact" id="fastlinksMobile">Contact</a>
@@ -104,112 +105,65 @@
 
     </header>
 
-    
+
     <main>
-            
-            <div  class="projectIntro">
-           <div>
-            <h2 class="projectTitle">A detailed look into my work</h2>
-            <a  id="Ylink" class=" link-light link-underline-opacity-0 "  href="https://www.youtube.com/@Raresfpv">Check out my youtube channel  &rarr;</a>
-        </div>
-        <div></div>
-     </div>
-   
-     <% let x = 1; %>
-     <section class="visibleImages">
-         <% for (let project of projects) { %>
-             <% if (x < 7) { %>
-                 <% if (x != 3) { %>
-                     <% if (x % 2 === 1) { %>
-                         <div class="twoImgRow">
-                     <% } %>
-                     
-                     <div class="img2">
-                      <a class="imagesLink" href="/projects/<%= project._id %>">
-                        <img class="picture" src="<%=project.images[0].url %>" alt="">
-                        <div class="textAndButton">
-                         <h1 class="img2Text"><%= project.name %></h1>
-                         <button class="img2Button">&rarr;</button>
-                         </div>
-                        </a>
-                     </div>
-                     <% if (x % 2 === 0) { %>
-                         </div> <!-- Close twoImgRow div -->
-                     <% } %>
-                 <% } else { %>
-                     <div class="img1">
-                      <a class="imagesLink1" href="/projects/<%= project._id %>">
-                      <img src="<%=project.images[0].url %>" class="picture1" alt="">
-                      <div class="textAndButton1">
-                        <h1 class="img1Text"><%= project.name %></h1>
-                       <button class="img1Button">&rarr;</button>
-                      </div>
-                         </a>
-                     </div>
-                 <% x++;} %>
-             <% } else { %>
-                 <% if (x === 7) { %>
-                    </section>
-                     <button id="toggle-btn" class="AddMoreButton">Show more</button>
-                     <section id="my-section" class="AddMoreSection">
-                 <% } %>
-                 <% if (x % 2 === 1) { %>
-                     <div class="twoImgRow">
-                       
-                 <% } %>
-                 <div class="img2">
-                  <a class="imagesLink" href="/projects/<%= project._id %>">
-                    <img class="picture" src="<%=project.images[0].url %>" alt="">
-                    <div class="textAndButton">
-                     <h1 class="img2Text"><%= project.name %></h1>
-                     <button class="img2Button">&rarr;</button>
-                     </div>
-                    </a>
-                 </div>
-                 <% if (x % 2 === 0 ) { %>
-                     </div> <!-- Close twoImgRow div -->
-                   
-                 <% } %>
-             <% } %>
-             <% x++; %>
-         <% } %>
-     </section>
-     
-
-                     <div class="letsWork">
-                       <div>
-                           <h2 class="proposal">Lets work together</h2>
-                            <button class="contact-link"><a id="contactButton" href="/contact">contact me</a></button>
-                           </div>
-                        <div></div>
-                    </div>
-              
-
-             <div class="container-fluid" id="footer">
-                 <p class="footerText">2024 © Rarrrres FPV - All rights reserved</p>
-
-                   <div class="social">
-                    <a href="https://www.instagram.com/rares_fpv/"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564108/poze%20site/icons8-instagram_bg7ej2.svg" alt="" class="media"></a>
-                    <a href="https://www.tiktok.com/@_rarrrres_fpv_"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717561720/poze%20site/icons8-tiktok_1_qfhugu.svg" alt="" id="media" class="media"></a>
-                    <a href="https://www.youtube.com/@Raresfpv"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564194/poze%20site/icons8-youtube_enoa6s.svg" alt="" class="media"></a>
-                   </div>
-              </div>
-                         
-    </main>
-
-
+        <% let x = 1; %>
+   <section class="visibleImages">
+<% for(let servici of services){ %>
+    <% if (x % 2 === 1) { %>
+        <div class="twoImgRow">
+    <% } %>
     
-<script src="/javascripts/styling.js"></script>
+    <div class="img2">
+     <a class="imagesLink" href="/services/<%= servici._id %>">
+       <img class="picture" src="<%=servici.images[0].url %>" alt="">
+       <div class="textAndButton">
+        <h1 class="img2Text"><%= servici.name %></h1>
+        <button class="img2Button">&rarr;</button>
+        </div>
+       </a>
+    </div>
+    <% if (x % 2 === 0) { %>
+        </div> <!-- Close twoImgRow div -->
+    <% }x++; %>
+
+    <% } %>
+   </section>
+
+
+
+
+
+    <div class="letsWork">
+        <div>
+            <h2 class="proposal">Lets work together</h2>
+             <button class="contact-link"><a id="contactButton" href="/contact">contact me</a></button>
+            </div>
+         <div></div>
+     </div>
+
+
+<div class="container-fluid" id="footer">
+  <p class="footerText">2024 © Rarrrres FPV - All rights reserved</p>
+
+    <div class="social">
+     <a href="https://www.instagram.com/rares_fpv/"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564108/poze%20site/icons8-instagram_bg7ej2.svg" alt="" class="media"></a>
+     <a href="https://www.tiktok.com/@_rarrrres_fpv_"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717561720/poze%20site/icons8-tiktok_1_qfhugu.svg" alt="" id="media" class="media"></a>
+     <a href="https://www.youtube.com/@Raresfpv"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564194/poze%20site/icons8-youtube_enoa6s.svg" alt="" class="media"></a>
+    </div>
+</div>
+          
+</main>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script>
-const NavElements = document.getElementsByName('Home');
-  
-  // Loop through each element and add the class
-  NavElements.forEach(element => {
-    element.classList.add('border-bottom', 'border-light-subtle');
-  });
+const NavElements = document.getElementsByName('Services');
+
+// Loop through each element and add the class
+NavElements.forEach(element => {
+element.classList.add('border-bottom', 'border-light-subtle');
+});
 </script>
 </body>
 </html>
-
-

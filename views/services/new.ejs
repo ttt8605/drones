@@ -1,0 +1,66 @@
+<% layout('/layouts/boilerplate') %>
+<head>
+    <link rel="stylesheet" href="/stylesheets/new-edit.css">
+  </head>
+
+  <div class="row mb-4">
+    <div class="col-md-6 offset-md-3">
+      <div class="card shadow">
+      <div class="card-body">
+      <h2 class="text-center mb-4 text">New Service</h2>
+  <form action="/services" method="POST" novalidate class="validated-form" enctype="multipart/form-data"  >
+      <div class=" mb-4">
+       <label for="name" class="form-label text">Name of the service</label>
+       <input type="text" name="name" id="name" class="form-control" placeholder="Service Name" required>
+       <div class="valid-feedback">
+        Looks good!
+       </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+     bsCustomFileInput.init();
+   });
+     </script>
+     <div class="mb-3">
+       <div class="form-file custom-file">
+           <input type="file" class="form-file-input" id="image" name="image" multiple>
+           <label class="form-file-label" for="image">
+               <span class="form-file-text custom-file-label">Choose image(s)...</span>
+               <span class="form-file-button">Browse</span>
+           </label>
+       </div>
+   </div>
+   <div class=" mb-3">
+    <label for="link" class="form-label text">Youtube link</label>
+    <input type="url" name="link" id="link" class="form-control" placeholder="youtube link" required>
+    <div class="valid-feedback">
+     Looks good!
+    </div>
+   </div>
+   <div class=" mb-3">
+      <label for="price" class="form-label text">Price</label>
+      <input type="number" name="price" id="price" class="form-control" placeholder="price" required>
+      <div class="valid-feedback">
+       Looks good!
+      </div>
+     </div>
+
+         <div class="mb-3">
+          <label class="form-label text" for="description">Description</label>
+          <textarea class="form-control" name="description" id="description" aria-label="Description" rows="10"  required></textarea>
+          <div class="valid-feedback">
+            Looks good!
+           </div>
+        </div>
+     
+        <div class="mb-3">
+          <button class="btn btn-success btn-block">Add Project</button>
+          </div>
+  
+  </form>
+  
+  
+  </div>
+  
+  </div>
+  

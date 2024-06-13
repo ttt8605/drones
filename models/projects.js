@@ -24,6 +24,7 @@ const projectsSchema = new Schema({
     images:[ImageSchema],
     link:{
         type:String,
+        required:true
     },
     drones:[
         {
