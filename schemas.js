@@ -61,9 +61,9 @@ module.exports.droneSchema = Joi.object({
    }).required()
 
    module.exports.ServiciiSchema = Joi.object({
-    name:Joi.string().required().escapeHTML().noURL(),
+    name:Joi.string().required().escapeHTML(),
     description:Joi.string().required().escapeHTML(),
-    price:Joi.number().required(),
+    price:Joi.string().required().escapeHTML(),
     link: Joi.string().required().escapeHTML(),
     deleteImages:Joi.array()
  }).required()
