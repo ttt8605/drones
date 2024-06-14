@@ -46,7 +46,7 @@
      </div>
      <div class=" mb-3">
       <label for="price2" class="form-label text">Optional Price </label>
-      <input type="number" name="price2" id="price2" class="form-control" placeholder="price" value="0" >
+      <input type="number" name="price2" id="price2" class="form-control" placeholder="price"  >
       <div class="valid-feedback">
        Looks good!
       </div>
@@ -71,13 +71,20 @@
   
   </div>
   <script>
-    document.getElementById('Sform').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting
+    document.addEventListener('DOMContentLoaded', function () {
+        bsCustomFileInput.init();
+    });
 
-    var inputElement = document.getElementById('price2');
-    if (!inputElement.value) {
-        inputElement.value = 0; // Autocomplete value if input is null or empty
-    }
-    this.submit();
-});
-  </script>
+    document.getElementById('Sform').addEventListener('submit', function(event) {
+        if (this.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        } else {
+            var inputElement = document.getElementById('price2');
+            if (!inputElement.value) {
+                inputElement.value = 0; // Autocomplete value if input is null or empty
+            }
+        }
+        this.classList.add('was-validated');
+    });
+</script>
