@@ -16,8 +16,12 @@ name:{
     type:String,
     required:true
 },
-price:{
-    type:String,
+price1:{
+    type:Number,
+    required:true
+},
+price2:{
+    type:Number,
     required:true
 },
 description:{

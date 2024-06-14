@@ -116,9 +116,15 @@
     
     <div class="img2">
      <a class="imagesLink" href="/services/<%= servici._id %>">
+      <div class="textAndButton1">
+        <h1 class="img2Text border-bottom border-light-subtle">
+          <%= servici.name.length > 15 ? servici.name.substring(0, 10) + '...' : servici.name %>
+        </h1>
+        <p class="dummy"></p>
+        </div>
        <img class="picture" src="<%=servici.images[0].url %>" alt="">
-       <div class="textAndButton">
-        <h1 class="img2Text"><%= servici.name %></h1>
+       <div class="textAndButton2">
+        <p class="dummy2"></p>
         <button class="img2Button">&rarr;</button>
         </div>
        </a>

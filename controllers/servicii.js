@@ -19,13 +19,16 @@ module.exports.ServicesNewPage = async(req,res)=>{
 
 module.exports.NewServiceRequest = async(req,res)=>{
     try{
+       if (req.files && Array.isArray(req.files)) {  
         const newService = new Service(req.body)
-
-     newService.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
-     await newService.save();
-     req.flash('success','Service created');
-     res.redirect('/services')
+          newService.images = req.files.map(f => ({ url: f.path, filename: f.filename }));
+           await newService.save();
+           req.flash('success','Service created');
+          res.redirect('/services')
     //  res.redirect(`/projects/${newProject._id}`); // Redirect the user to the newly created project's page
+    }else{
+        throw new Error('No files attached to the request');
+    }
     }catch(err){
         console.error(err);
         req.flash('error', 'Failed to create  service');

@@ -8,9 +8,9 @@
       <div class="card shadow">
       <div class="card-body">
       <h2 class="text-center mb-4 text">New Service</h2>
-  <form action="/services" method="POST" novalidate class="validated-form" enctype="multipart/form-data"  >
+  <form action="/services" method="POST" id="Sform" novalidate class="validated-form" enctype="multipart/form-data"  >
       <div class=" mb-4">
-       <label for="name" class="form-label text">Name of the service</label>
+       <label for="name" class="form-label text">Name of the service </label>
        <input type="text" name="name" id="name" class="form-control" placeholder="Service Name" required>
        <div class="valid-feedback">
         Looks good!
@@ -23,7 +23,7 @@
      </script>
      <div class="mb-3">
        <div class="form-file custom-file">
-           <input type="file" class="form-file-input" id="image" name="image" multiple>
+           <input type="file" class="form-file-input" id="image" name="image" multiple required>
            <label class="form-file-label" for="image">
                <span class="form-file-text custom-file-label">Choose image(s)...</span>
                <span class="form-file-button">Browse</span>
@@ -38,13 +38,20 @@
     </div>
    </div>
    <div class=" mb-3">
-      <label for="price" class="form-label text">Price</label>
-      <input type="text" name="price" id="price" class="form-control" placeholder="price" required>
+      <label for="price1" class="form-label text">Price</label>
+      <input type="number" name="price1" id="price1" class="form-control" placeholder="price" required>
       <div class="valid-feedback">
        Looks good!
       </div>
      </div>
-
+     <div class=" mb-3">
+      <label for="price2" class="form-label text">Optional Price </label>
+      <input type="number" name="price2" id="price2" class="form-control" placeholder="price" value="0" >
+      <div class="valid-feedback">
+       Looks good!
+      </div>
+     </div>
+    
          <div class="mb-3">
           <label class="form-label text" for="description">Description</label>
           <textarea class="form-control" name="description" id="description" aria-label="Description" rows="10"  required></textarea>
@@ -63,4 +70,14 @@
   </div>
   
   </div>
-  
+  <script>
+    document.getElementById('Sform').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from submitting
+
+    var inputElement = document.getElementById('price2');
+    if (!inputElement.value) {
+        inputElement.value = 0; // Autocomplete value if input is null or empty
+    }
+    this.submit();
+});
+  </script>
