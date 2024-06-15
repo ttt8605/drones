@@ -55,7 +55,7 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #meniu2{
@@ -87,20 +87,10 @@ header{
     height: 310px;
     width: 310px;
     margin-top: 8px;
-    margin-right: 60px;
+  
 }
 
-.profileText{
-    font-family: 'Roboto',sans-serif;
-    font-weight: 400;
-    font-size: 23px;
-    color: #f2f2f2;
-    width: 650px;
-    margin-top: 30px;
-    margin-right: 20px;
-    position: relative;
-    left: 50px;
-}
+
 .visibleImages{
     width: 90%;
 }
@@ -272,15 +262,12 @@ width: 70%;
 }
 
 @media(max-width: 1222px) {
-    .profileText{
-        font-size: 19px;
-    }
+ 
 
     .profile {
     height: 240px;
     width: 240px;
-    position: relative;
-    left: -30px;
+
     }
 }
 
@@ -293,9 +280,6 @@ width: 70%;
 
 @media(max-width: 991px) {
 
-  .profileText{
-    font-size: 18px;
-  }
 
   #title{
     position:relative;
@@ -337,19 +321,8 @@ width: 70%;
         top: 8px;
     }
 
-    .profile{
-        margin-left: 95px;
-    }
-
-    .profileText{
-        font-size: 17px;
-        width: 500px;
-        margin-top: 30px; 
-        position: relative; 
-        left: 0px;
-        text-align: center;
-        margin-right: 0px;
-    }
+  
+  
 
     #description{
         flex-direction: column;
@@ -406,9 +379,7 @@ width: 70%;
          width: 240px;
     }
 
-    .profileText{
-        font-size: 15px;
-    }
+  
 
   .img2:first-child{
     margin-right: 0px;
@@ -519,16 +490,19 @@ width: 70%;
      .imagesLink{
         height: 317px;
      }
-     .textAndButton{
-        width: 450px;
+     .textAndButton1{
+        width: 404px;
+        top: -54px;
+    
+     }
+     .textAndButton2{
+        width: 451px;
+        bottom: 178px;
      }
     }
 
 @media(max-width: 500px){
-    .profileText{
-        width: 370px;
-        font-size: 14px;
-    }
+
 
   
 .letsWork{
@@ -550,8 +524,9 @@ width: 70%;
      .imagesLink{
         height: 287px;
      }
-     .textAndButton{
-        width: 400px;
+     .textAndButton2{
+        bottom: 178px;
+        width: 396px;
      }
 }
 
@@ -635,8 +610,14 @@ width: 70%;
          .imagesLink{
             height: 250px;
          }
-         .textAndButton{
-            width: 350px;
+         .textAndButton1{
+            width: 285px;
+            top: -70px;
+        
+         }
+         .textAndButton2{
+            bottom: 187px;
+           width: 351px;
          }
 }
 
@@ -660,8 +641,13 @@ width: 70%;
          .imagesLink{
             height: 200px;
          }
-         .textAndButton{
-            width: 300px;
+         .textAndButton1{
+            width: 269px;
+            top: -85px;
+         }
+         .textAndButton2{
+            bottom: 180px;
+            width: 293px;
          }
 }
 
