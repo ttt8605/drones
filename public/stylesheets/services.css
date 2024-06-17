@@ -137,7 +137,6 @@ header{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 70px;
 }
 
 .img2{
@@ -584,6 +583,11 @@ width: 70%;
         top: -54px;
     
      }
+     .img2Text {
+        top: 112px;
+        font-size: 17px;
+        margin-left: 8px;
+    }
      .textAndButton2{
         width: 451px;
         bottom: 178px;
@@ -694,9 +698,13 @@ width: 70%;
             margin-top: 0px;
             height: 300px;
          }
-         .img2Text{
-            top: 140px;
-         }
+     
+         .img2Text {
+            top: 124px;
+            font-size: 14px;
+            margin-left: 0px;
+            width: 35%;
+        }
          .img2Button{
             top: 128px;
          }
