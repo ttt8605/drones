@@ -35,4 +35,12 @@ const validateService= (req,res,next)=>{
 
 router.get('/new',servicesController.ServicesNewPage)
 
+
+
+router.route('/:id')
+.get(catchAsync(servicesController.ServiceIndividual))
+
+
+
+
  module.exports = router;

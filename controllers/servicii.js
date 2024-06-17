@@ -35,3 +35,14 @@ module.exports.NewServiceRequest = async(req,res)=>{
         res.redirect('/services/new'); // Redirect to a relevant page
     }
 }
+
+module.exports.ServiceIndividual = async (req, res) => {
+    
+    const service = await Service.findById(req.params.id);
+    if (!service) {
+        req.flash('error', 'Cannot find that service');
+        return res.redirect('/services');
+    }
+    res.render('services/individual', { service });
+
+};

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+  background-color: #252525;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #252522;
+  width: 100%;
+  height: 131px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.offcanvas-body{
+    margin-top: 50px;
+    background-color: #212529;
+ }
+ 
+ .nav-item{
+    margin-top: 20px;
+ }
+ 
+ 
+ /* menu queries */
+ #meniu1{
+    display: block;
+    width: 100%;
+ }
+ 
+ #meniu2{
+     display: none;
+ }
+
+
+#fastLinks{
+    text-decoration: none;
+    color: #373737;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size:17px;
+}
+
+
+
+@media(max-width:911px){
+    #meniu1{
+        display: none;
+    }
+
+    #naughty-div{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    #meniu2{               
+         display: block;
+         border-bottom-left-radius: 20px;
+         border-bottom-right-radius: 20px;
+     }
+
+     #toggle {
+        margin-top: 10px;
+        margin-right: 15px;
+        background-color: #f2f2f2;
+    }
+
+    #closeBtn {
+      background-color: #f2f2f2;
+    }
+
+  
+
+
+}
