@@ -99,11 +99,10 @@
 </nav>
 
 <div class="container" id="description">
-  <h3>Services</h3>
+  <h3 class="ImageTitle1">Services</h3>
   <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
-   <h3>provided</h3>
+   <h3 class="ImageTitle2">provided</h3>
      </div>
-
     </header>
 
 
@@ -118,7 +117,7 @@
     <div class="img2">
      <a class="imagesLink" href="/services/<%= servici._id %>">
       <div class="textAndButton1">
-        <h1 class="img2Text border-bottom border-light-subtle">
+        <h1 class="img2Text border-bottom border-2 border-light-subtle">
           <%= servici.name.length > 15 ? servici.name.substring(0, 10) + '...' : servici.name %>
         </h1>
         <p class="dummy"></p>
@@ -164,13 +163,6 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script>
-const NavElements = document.getElementsByName('Services');
-
-// Loop through each element and add the class
-NavElements.forEach(element => {
-element.classList.add('border-bottom', 'border-light-subtle');
-});
-</script>
+<script src="/javascripts/services.js"></script>
 </body>
 </html>
