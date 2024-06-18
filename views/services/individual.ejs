@@ -1,5 +1,133 @@
-<% layout('/layouts/boilerplate') %>
-<header>
-   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaresFpv</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/header2.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/individualServices.css">
-</header>
+</head>
+
+<body>
+    <header>          
+
+        <nav class="navbar navbar-expand-md" id="meniu1">
+          <div class="container-fluid">
+            <div class="leftSide">
+            <a class="navbar-brand" id="title" href="/projects">RaresFPV</a>
+        </div>
+        <div class="rigthSide">
+            <div class="collapse navbar-collapse" id="hyperlinks">
+              <div class="navbar-nav">
+              
+                  <a class="nav-link active  " id="hl" aria-current="page" href="/drones">Drones</a>
+                  <a class="nav-link active" id="hl" name="Home" href="/projects">Home</a>
+                  <a class="nav-link active" id="hl"  href="/services">Services</a>
+                  <%if(!currentUser){ %>
+                  <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">Contact me</a></button>
+                  <% }else{ %>
+                    <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact/all">Contact me</a></button>
+                    <% } %>
+              </div>
+            </div>
+        </div>
+          </div> 
+        </nav>
+        
+        <nav class="navbar  fixed-top" id="meniu2">
+          <div class="container-fluid" >
+            <a class="navbar-brand" id="title" href="/projects">RaresFPV</a>
+            <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <img class="burger" src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717484492/poze%20site/menu_24dp_FILL0_wght400_GRAD0_opsz24_sxp5if.png" alt="">
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+             <div class="offcanvas-body">
+               
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <%if(!currentUser){ %>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/register">Register</a>
+                        </li>
+                        <% }else{ %>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones/new">Add Dr</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Se</a>
+        </li>
+            <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/projects/new">Add Pr</a>
+                       </li>
+                        <% } %>
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/projects" name="Home" id="fastlinksMobile">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/services"  id="fastlinksMobile">Services</a>
+                        </li>
+                        <% if(!currentUser){ %>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/contact" id="fastlinksMobile">Contact</a>
+                        </li>
+                        <% }else{ %>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/contact/all" id="fastlinksMobile">Contact</a>
+                          </li>
+                        <% } %>
+            
+              </div>
+            </div>
+          </div>
+        </nav>
+            </header>
+        
+<main>
+
+<section >
+<div class="leftDiv ">
+    <div><h2 class="ServiceName"><%=service.name %></h2></div>
+    <div> <p class="ServiceDescription"> <%=service.description %></p> </div>
+</div>
+<div class="rigthDiv"></div>
+</section>
+
+<section class="empty">
+  <div class="nonColored "></div>
+<div class="colored"></div>
+</section>
+
+
+
+
+
+
+</main>
+
+<div class="container-fluid" id="footer">
+    <p class="footerText">2024 © Rarrrres FPV - All rights reserved</p>
+
+      <div class="social">
+         <a href="https://www.instagram.com/rares_fpv/"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564108/poze%20site/icons8-instagram_bg7ej2.svg" alt="" class="media"></a>
+         <a href="https://www.tiktok.com/@_rarrrres_fpv_"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717561720/poze%20site/icons8-tiktok_1_qfhugu.svg" alt="" id="media" class="media"></a>
+         <a href="https://www.youtube.com/@Raresfpv"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564194/poze%20site/icons8-youtube_enoa6s.svg" alt="" class="media"></a>
+      </div>
+ </div>
+</body>
+</html>

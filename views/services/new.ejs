@@ -11,7 +11,7 @@
   <form action="/services" method="POST" id="Sform" novalidate class="validated-form" enctype="multipart/form-data"  >
       <div class=" mb-4">
        <label for="name" class="form-label text">Name of the service </label>
-       <input type="text" name="name" id="name" class="form-control" placeholder="Service Name" required>
+       <input type="text" name="name" id="name" class="form-control" placeholder="Service Name" maxlength="25" required>
        <div class="valid-feedback">
         Looks good!
        </div>
@@ -54,7 +54,7 @@
     
          <div class="mb-3">
           <label class="form-label text" for="description">Description</label>
-          <textarea class="form-control" name="description" id="description" aria-label="Description" rows="10"  required></textarea>
+          <textarea class="form-control" name="description" id="description" aria-label="Description" maxlength="1500" rows="10"  required></textarea>
           <div class="valid-feedback">
             Looks good!
            </div>

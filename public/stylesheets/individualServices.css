@@ -7,6 +7,7 @@ body {
   padding-top: 0;
 }
 
+
 header {
   display: flex;
   flex-direction: column;
@@ -35,21 +36,123 @@ header {
  #meniu1{
     display: block;
     width: 100%;
+    padding: 0;
+    background-color: #252522;
+ }
+ .container-fluid{
+    padding: 0;
  }
  
  #meniu2{
      display: none;
  }
 
-
-#fastLinks{
-    text-decoration: none;
-    color: #373737;
-    font-family: 'Roboto',sans-serif;
-    font-weight: 300;
-    font-size:17px;
+.rigthSide{
+    background-color: #373737;
+    width: 50%;
 }
 
+.leftSide{
+    width: 50%;
+}
+
+main{
+   max-width: 100% !important;
+   display: flex;
+   flex-direction: column;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    bottom: 31px;
+}
+.empty{
+    bottom: 0px;
+    height: 100%;
+}
+.colored{
+    background-color: #373737;
+    height: 200px;
+    width: 50%;
+    box-shadow: 0 -40px 0px #373737;
+}
+
+/* leftSide */
+.leftDiv{
+    width: 50%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+   padding-left: 120px;
+
+}
+.ServiceName{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: 'Russo One';
+    font-weight: 500;
+    font-size:30px;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    display: inline-block;
+    padding-bottom: 4px;
+    z-index: 1;
+
+}
+.ServiceName:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 100%; /* Adjust the width to your preference */
+    height: 20px; /* Adjust the height based on the size of the border */
+    background-color: #373737;
+    border-radius: 20px ; /* Creates the curved effect */
+   z-index: -1;
+  
+}
+.ServiceDescription{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size:15px;
+    width: 600px;
+}
+
+/* rigthSide */
+.rigthDiv{
+    width: 50%;
+    background-color: #373737;
+    min-height: 500px;
+    height: auto;
+}
+
+
+#footer{
+    margin-top: 0px !important;
+    border-top-right-radius: 0px !important ;
+}
+/* extra big pro max screens */
+@media(min-width:2000px){
+    .rigthSide{
+        background-color: #252525;
+        width: 50%;
+    }
+    .leftSide{
+        width: 50%;
+    }
+  }
+  
 
 
 @media(max-width:911px){
@@ -79,6 +182,56 @@ header {
     }
 
   
+
+
+}
+
+@media(max-width:767px){
+  
+
+    #contactButton{
+       font-size: large;
+    }
+}
+
+@media(max-width:674px){
+    .fastLinks{
+         font-size: 13px;
+    }
+
+    #title {
+        font-size: 35px;
+        position: relative;
+        left: 25px;
+        top: 4px;
+    }
+    
+    .profile{
+         height: 270px;
+         width: 270px;
+         /* margin-left: 90px; */
+    }
+
+    #contactButton{
+        font-size: large;
+     }
+
+
+}
+
+
+
+@media(max-width:450px){
+
+
+    #title{
+        font-size: 25px;
+    }
+
+    .fastLinks{
+         margin-right: 13px;
+         font-size: 12px;
+    }
 
 
 }
