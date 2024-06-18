@@ -221,6 +221,16 @@ section{
     .container-fluid{
         width: 2000px;
     }
+    .carousel-inner{
+
+        width: 700px;
+    }
+    .w-100{
+      
+        width: 700px !important ; /* Set the width you desire */
+        height: 334px; /* Set the height you desire */
+      
+    }
 
   }
   
@@ -424,9 +434,25 @@ section{
 
     padding-top: 30px;
     width: 85%;
-    
+    margin-bottom: 50px;
 }
 
+.ServiceDescription{
+    width: 600px;
+    margin-bottom: 50px;
+}
+.ServiceDescriptionTitle{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: 'Russo One';
+    font-weight: 500;
+    font-size:30px;
+    margin-bottom: 20px;
+}
+.ServiceDescriptionTitleDiv{
+   display: flex;
+   width: 600px;
+}
 
 }
 
@@ -470,13 +496,56 @@ section{
     #contactButton{
         font-size: large;
      }
+     .carousel-inner{
 
+        width: 460px;
+    }
+    .w-100{
+      
+        width: 460px !important ; /* Set the width you desire */
+        height: 334px; /* Set the height you desire */
+      
+    }
+    .ServiceName{
+        margin-left: 0;
+        position: relative;
+        left: 16px;
+        }
+ 
+        .beforeCarousel {
 
+            padding-top: 30px;
+            width: 460px;
+            
+        }
+
+        .ServiceDescription{
+            width: 460px;
+            margin-bottom: 50px;
+        }
+        .ServiceDescriptionTitle{
+            text-decoration: none;
+            color: #f2f2f2;
+            font-family: 'Russo One';
+            font-weight: 500;
+            font-size:30px;
+            margin-bottom: 20px;
+        }
+        .ServiceDescriptionTitleDiv{
+           display: flex;
+           width: 460px;
+        }
 }
 
+@media(max-width:500px){
+    .ServiceName{
+        margin-left: 0;
+        position: relative;
+        left: 0;
+        }
+}
 
-
-@media(max-width:450px){
+@media(max-width:460px){
 
 
     #title{
@@ -487,6 +556,56 @@ section{
          margin-right: 13px;
          font-size: 12px;
     }
+    .carousel-inner{
+
+        width: 340px;
+    }
+    .w-100{
+      
+        width: 340px !important ; /* Set the width you desire */
+        height: 334px; /* Set the height you desire */
+      
+    }
+    .ServiceName{
+        margin-left: 0;
+        position: relative;
+        left: 0px;
+        font-size: 20px;
+        }
+        .price{
+            font-size: 14px;
+            padding: 15px;
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+        .ytLink{
+            font-size: 10px;
+        }
+ 
+        .beforeCarousel {
+
+            padding-top: 30px;
+            width: 340px;
+            
+        }
+
+        .ServiceDescription{
+            width: 340px;
+            margin-bottom: 50px;
+        }
+        .ServiceDescriptionTitle{
+            text-decoration: none;
+            color: #f2f2f2;
+            font-family: 'Russo One';
+            font-weight: 500;
+            font-size:20px;
+            margin-bottom: 20px;
+        }
+        .ServiceDescriptionTitleDiv{
+           display: flex;
+           width: 340px;
+        }
+    
 
 
 }
