@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/stylesheets/individualServices.css">
 </head>
 
-<body>
+<body class="container-fluid">
     <header>          
 
         <nav class="navbar navbar-expand-md" id="meniu1">
@@ -95,25 +95,88 @@
               </div>
             </div>
           </div>
+         
+              
         </nav>
             </header>
         
 <main>
 
-<section >
+<section class="bigScreens" >
 <div class="leftDiv ">
     <div><h2 class="ServiceName"><%=service.name %></h2></div>
     <div> <p class="ServiceDescription"> <%=service.description %></p> </div>
-</div>
-<div class="rigthDiv"></div>
-</section>
+</div >
+<div class="rigthDiv">
+  <div class="continut">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% service.images.forEach((img, i) => {  %>
+          <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
+              <img src="<%=img.url%>"  class="d-block w-100" alt="">
+          </div>
+          <% }) %>
+  
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
 
-<section class="empty">
+
+  <div class="beforeCarousel">
+  
+
+      <h5 class="price"><%=service.price1%> - <%=service.price2%> $</h5>
+      <a class="ytLink" href="<%=service.link %>">Check out a similar video on my <br> youtube channel &#8599;</a>
+    
+    
+    </div>
+    </div>
+</section>
+</div>
+
+
+<section class="empty" >
   <div class="nonColored "></div>
 <div class="colored"></div>
 </section>
 
+<section class="SmallScreens container">
+  <div class="upperLevel"><h2 class="ServiceName"><%=service.name %></h2></div>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <% service.images.forEach((img, i) => {  %>
+        <div class="carousel-item <%= i === 0 ? 'active' : ''%>">
+            <img src="<%=img.url%>" class="d-block w-100" alt="">
+        </div>
+        <% }) %>
 
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="beforeCarousel">
+  
+
+    <h5 class="price"><%=service.price1%> - <%=service.price2%> $</h5>
+    <a class="ytLink" href="<%=service.link %>">Check out a similar video on my <br> youtube channel &#8599;</a>
+  
+  
+  </div>
+</section>
 
 
 
@@ -129,5 +192,8 @@
          <a href="https://www.youtube.com/@Raresfpv"><img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717564194/poze%20site/icons8-youtube_enoa6s.svg" alt="" class="media"></a>
       </div>
  </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 </html>
+

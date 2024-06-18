@@ -22,6 +22,7 @@ header {
 }
 
 
+
 .offcanvas-body{
     margin-top: 50px;
     background-color: #212529;
@@ -77,11 +78,14 @@ section{
 }
 .colored{
     background-color: #373737;
-    height: 200px;
+    height: 300px;
     width: 50%;
     box-shadow: 0 -40px 0px #373737;
 }
 
+.SmallScreens{
+    display: none;
+}
 /* leftSide */
 .leftDiv{
     width: 50%;
@@ -135,26 +139,219 @@ section{
     background-color: #373737;
     min-height: 500px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 78px;
 }
 
+
+.carousel-inner{
+    border-radius: 20px;
+    width: 600px;
+}
+.w-100{
+    border-radius: 20px;
+    width: 600px !important ; /* Set the width you desire */
+    height: 334px; /* Set the height you desire */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+
+.beforeCarousel{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+   padding-top: 30px;
+    width: 70%;
+}
+.price{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: 'Russo One';
+    font-weight: 500;
+    font-size:20px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-radius: 10px;
+   
+}
+.ytLink{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: 'Russo One';
+    font-weight: 500;
+    font-size:15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-radius: 10px;
+    margin-bottom: 9px;
+}
 
 #footer{
     margin-top: 0px !important;
     border-top-right-radius: 0px !important ;
 }
+.continut{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
 /* extra big pro max screens */
 @media(min-width:2000px){
     .rigthSide{
-        background-color: #252525;
+        
         width: 50%;
     }
     .leftSide{
         width: 50%;
     }
+    .container-fluid{
+        width: 2000px;
+    }
+
   }
   
+  @media(max-width:1464px){
+    .ServiceDescription{
+        font-size:15px;
+        width: 450px;
+    }
+    .price{
+       
+        font-size:17px;
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+   
+    }
+    .ytLink{
+        font-size:14px;
+    }
+    .beforeCarousel {
+
+        padding-top: 10px;
+        
+    }
+    .rigthDiv{
+        padding-top: 60px;
+    }
 
 
+  }
+  @media(max-width:1300px){
+
+    .price{
+       
+        font-size:17px;
+        padding: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+   
+    }
+    .ytLink{
+        font-size:13px;
+    }
+    .beforeCarousel {
+
+        padding-top: 10px;
+        
+    }
+    .rigthDiv{
+        padding-top: 60px;
+    }
+.continut{
+    height: 514px ;
+}
+.carousel-inner{
+    border-radius: 20px;
+    width: 500px;
+}
+.w-100{
+    border-radius: 20px;
+    width: 500px !important ; /* Set the width you desire */
+    height: 334px; /* Set the height you desire */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+  }
+
+  @media(max-width:1220px){
+
+
+.beforeCarousel{
+    width: 75%;
+}
+.ServiceDescription{
+    width: 400px;
+}
+.ServiceName{
+    font-size: 26px;
+}
+#hyperlinks{
+    margin-left: 60px;
+}
+#title{
+    left: 50px;
+}
+.leftDiv{
+    padding-left: 50px;
+}
+.ytLink{
+    font-family: 'Roboto';
+    font-size:12px ;
+}
+.price{
+    font-size: 15px;
+    padding: 19px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.continut{
+    height: 400px;
+}
+  }
+
+  @media(max-width:1003px){
+
+
+    .beforeCarousel{
+        width: 90%;
+    }
+
+    .ytLink{
+        font-family: 'Roboto';
+        font-size:12px ;
+    }
+    .price{
+        font-size: 15px;
+        padding: 19px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .carousel-inner{
+        border-radius: 20px;
+        width: 400px;
+    }
+    .w-100{
+        border-radius: 20px;
+        width: 400px !important ; /* Set the width you desire */
+        height: 334px; /* Set the height you desire */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+      }
 @media(max-width:911px){
     #meniu1{
         display: none;
@@ -181,17 +378,75 @@ section{
       background-color: #f2f2f2;
     }
 
+
+    .bigScreens{
+        display: none;
+    }
+    .empty{
+        display: none;
+    }
+    .SmallScreens{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      
+    }
+    .upperLevel{
+        display: flex;
+        width: 100%;
+    }
+   .ServiceName{
+    margin-left: 30px;
+   }
+   .carousel-inner{
+
+    width: 600px;
+}
+.w-100{
   
+    width: 600px !important ; /* Set the width you desire */
+    height: 334px; /* Set the height you desire */
+  
+}
+.price{
+       
+    font-size:17px;
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+.ytLink{
+    font-size:13px;
+}
+.beforeCarousel {
+
+    padding-top: 30px;
+    width: 85%;
+    
+}
 
 
 }
 
 @media(max-width:767px){
-  
+    .ServiceName{
+       margin-left: 0;
+       position: relative;
+       right: 40px;
+       }
 
     #contactButton{
        font-size: large;
     }
+    .beforeCarousel {
+
+        padding-top: 30px;
+        width: 600px;
+        
+    }
+    
 }
 
 @media(max-width:674px){
