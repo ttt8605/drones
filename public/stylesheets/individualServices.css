@@ -377,43 +377,8 @@ section{
 }
   }
 
-  @media(max-width:1020px){
 
-
-    .beforeCarousel{
-        width: 400px;
-    }
-
-    .ytLink{
-        font-family: 'Roboto';
-        font-size:12px ;
-    }
-    .price{
-        font-size: 15px;
-        padding: 19px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    .carousel-inner{
-        border-radius: 20px;
-        width: 400px;
-    }
-    .w-100{
-        border-radius: 20px;
-        width: 400px !important ; /* Set the width you desire */
-        height: 334px; /* Set the height you desire */
-        object-fit: cover; /* Maintain aspect ratio */
-    }
-
-    .ServiceDescription{
-        width: 375px;
-    }
-    .Description-Buttons{
-        width: 375px;
-        
-    }
-      }
-@media(max-width:911px){
+@media(max-width:1024px){
     #meniu1{
         display: none;
     }
@@ -455,10 +420,10 @@ section{
     }
     .upperLevel{
         display: flex;
-        width: 100%;
+        width: 600px;
     }
    .ServiceName{
-    margin-left: 30px;
+    margin-left: 0;
    }
    .carousel-inner{
 
@@ -484,7 +449,7 @@ section{
 .beforeCarousel {
 
     padding-top: 30px;
-    width: 85%;
+    width: 600px;
     margin-bottom: 50px;
 }
 
@@ -512,7 +477,6 @@ section{
     .ServiceName{
        margin-left: 0;
        position: relative;
-       right: 40px;
        }
 
     #contactButton{
@@ -537,6 +501,9 @@ section{
         position: relative;
         left: 25px;
         top: 4px;
+    }
+    .upperLevel{
+        width: 460px;
     }
     
     .profile{
@@ -598,7 +565,9 @@ section{
 }
 
 @media(max-width:460px){
-
+    .upperLevel{
+        width: 340px;
+    }
 
     #title{
         font-size: 25px;

@@ -49,12 +49,9 @@ module.exports.droneEditForm = async(req,res)=>{
             const{id}=req.params;
     const drone = await Drone.findById(id);
     if(req.isAuthenticated()){
-        if(!drone){
-            req.flash('error',"Ups we couldn't find that drone");
-            return res.redirect('/drones')
-        }else{
+     
             res.render('drones/edit',{drone,sizes,videos,batteries})
-        }
+     
     }else{
         req.flash('error',"Uppps we couldn't find that page, but we think u might like this one ");
         res.redirect(`/drones/${drone._id}`);

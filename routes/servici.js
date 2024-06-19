@@ -39,7 +39,12 @@ router.get('/new',servicesController.ServicesNewPage)
 
 router.route('/:id')
 .get(catchAsync(servicesController.ServiceIndividual))
+.put( isLoggedIn, upload.array('image'),validateService, catchAsync(servicesController.serviceEditRequest))
+.delete( isLoggedIn,catchAsync(servicesController.serviceDeleteRequest))
 
+
+router.route('/:id/edit')
+.get(catchAsync(servicesController.ServiceEditPage))
 
 
 

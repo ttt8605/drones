@@ -115,14 +115,14 @@
            </button>
          </div>
          <div>
-           <form action="/services/<%= service._id %>?_method=DELETE" method="POST">
+           <form action="/services/<%=service._id %>?_method=DELETE" method="POST">
              <button class="btn btn-danger">Delete</button>
            </form>
          </div>
        <% } %>
      </div>
      </div>
-    <div> <p class="ServiceDescription"> <%=service.description %></p> </div>
+    <div> <p class="ServiceDescription"> <%-service.description %></p> </div>
 </div >
 <div class="rigthDiv">
   <div class="continut">
@@ -210,7 +210,7 @@
       <% } %>
     </div>
     </div>
-  <div> <p class="ServiceDescription"> <%=service.description %></p> </div>
+  <div> <p class="ServiceDescription"> <%-service.description %></p> </div>
 </section>
 
 
