@@ -149,8 +149,12 @@
 
   <div class="beforeCarousel">
   
+      <% if(service.price2 === 0){ %>
+      <h5 class="price2"><%=service.price1 %>$</h5>
+      <% }else{ %>
+        <h5 class="price"><%=service.price1 %> - <%=service.price2%>  $</h5>
 
-      <h5 class="price"><%=service.price1%> - <%=service.price2%> $</h5>
+        <% } %>
       <a class="ytLink" href="<%=service.link %>">Check out a similar video on my <br> youtube channel &#8599;</a>
     
     
@@ -188,7 +192,12 @@
   <div class="beforeCarousel">
   
 
-    <h5 class="price"><%=service.price1%> - <%=service.price2%> $</h5>
+    <% if(service.price2 === 0){ %>
+      <h5 class="price2"><%=service.price1 %>$</h5>
+      <% }else{ %>
+        <h5 class="price"><%=service.price1 %> - <%=service.price2%>  $</h5>
+
+        <% } %>
     <a class="ytLink" href="<%=service.link %>">Check out a similar video on my <br> youtube channel &#8599;</a>
      
   

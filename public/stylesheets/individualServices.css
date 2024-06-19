@@ -213,6 +213,21 @@ section{
     border-radius: 10px;
    
 }
+.price2{
+    text-decoration: none;
+    color: #f2f2f2;
+    font-family: 'Russo One';
+    font-weight: 500;
+    font-size:20px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f2f2f2;
+    border-radius: 10px;
+   
+}
 .ytLink{
     text-decoration: none;
     color: #f2f2f2;
@@ -598,6 +613,13 @@ section{
             padding: 15px;
             padding-left: 18px;
             padding-right: 18px;
+        }
+        .price2 {
+            font-size: 17px;
+            padding: 14px;
+            padding-left: 35px;
+            padding-right: 35px;
+          
         }
         .ytLink{
             font-size: 10px;

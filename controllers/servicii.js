@@ -80,8 +80,7 @@ if(req.isAuthenticated()){
 }
 
 module.exports.serviceEditRequest = async(req,res)=>{
-    
-    const{id}=req.params;
+    try{ const{id}=req.params;
     const service = await Service.findByIdAndUpdate(id,req.body,{runValidators: true, new: true});
     const imgs =  req.files.map(f => ({ url: f.path, filename: f.filename }))
     service.images.push(...imgs);
@@ -94,6 +93,11 @@ module.exports.serviceEditRequest = async(req,res)=>{
     }
     req.flash('success','service updated');
     res.redirect(`/services/${service._id}`)
+}catch(err){
+    req.flash('error',err);
+    res.redirect(`/services/${service._id}/edit`)
+}
+   
 }
 
 
