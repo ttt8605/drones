@@ -147,6 +147,18 @@ header{
     border-radius: 20px;
   }
 
+  .img2 {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 2s; /* Apply transition */
+}
+
+.img2.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
+
   .imagesLink{
     height: 400px;
     text-decoration: none;
@@ -223,6 +235,17 @@ width: 70%;
     position: relative;
     left: -35px;
     margin-bottom: 150px;
+}
+
+.letsWork {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 2s; /* Apply transition */
+}
+
+.letsWork.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
 }
 
 .proposal {

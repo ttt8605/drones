@@ -21,12 +21,7 @@
     </button>
     <div class="collapse navbar-collapse" id="hyperlinks">
       <div class="navbar-nav">
-        <%if(!currentUser){ %>
-            <a class="nav-link active" id="hl" aria-current="page" href="/login">Login</a>
-              <a class="nav-link active" id="hl" aria-current="page" href="/register">Register</a>
-            <% }else{ %>
-              <a class="nav-link active" id="hl" aria-current="page" href="/logout">Logout</a>
-            <% } %>
+        
           <a class="nav-link active  " id="hl" aria-current="page" href="/drones">Drones</a>
           <a class="nav-link active" id="hl"  href="/projects">Home</a>
           <a class="nav-link active" id="hl" name="Services" href="/services">Services</a>
@@ -52,14 +47,8 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <%if(!currentUser){ %>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/register">Register</a>
-                </li>
-                <% }else{ %>
+       
+                <% if(currentUser){ %>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
@@ -164,5 +153,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="/javascripts/services.js"></script>
+
 </body>
 </html>

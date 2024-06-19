@@ -8,10 +8,8 @@
       </button>
       <div class="collapse navbar-collapse" id="hyperlinks">
         <div class="navbar-nav">
-          <%if(!currentUser){ %>
-            <a class="nav-link active" id="hl" aria-current="page" href="/login">Login</a>
-              <a class="nav-link active" id="hl" aria-current="page" href="/register">Register</a>
-            <% }else{ %>
+          
+            <% if(currentUser){ %>
               <a class="nav-link active" id="hl" aria-current="page" href="/logout">Logout</a>
               <a class="nav-link active" id="hl" name="addDrone" aria-current="page" href="/drones/new">Add Dr</a>
               <a class="nav-link active" id="hl" name="addProject" aria-current="page" href="/projects/new">Add Pr</a>
@@ -42,14 +40,8 @@
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <%if(!currentUser){ %>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/login">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/register">Register</a>
-              </li>
-              <% }else{ %>
+              
+              <% if(currentUser){ %>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
@@ -102,14 +94,8 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <% if(!currentUser){ %>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/register">Register</a>
-            </li>
-            <% }else{ %>
+            
+            <% if(currentUser){ %>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
@@ -128,7 +114,7 @@
               <a class="nav-link active" aria-current="page" name="Drone" id="fastlinksMobile" href="/drones">Drones</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/projects" id="fastlinksMobile">home</a>
+              <a class="nav-link" href="/projects" id="fastlinksMobile">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/services" id="fastlinksMobile">Services</a>

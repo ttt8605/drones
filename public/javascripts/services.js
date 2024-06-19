@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   
 });
+
+
+//animation----
 document.addEventListener("DOMContentLoaded", function() {
             const container = document.getElementById("description");
 
@@ -35,4 +38,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Initial check in case the element is already in view
             onScroll();
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.img2');
+    
+            const observer = new IntersectionObserver((entries,observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target); // Stop observing once the animation has started
+                    }
+                });
+            });
+    
+            elements.forEach(element => observer.observe(element));
+        });
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.letsWork');
+    
+            const observer = new IntersectionObserver((entries,observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target); // Stop observing once the animation has started
+                    }
+                });
+            });
+    
+            elements.forEach(element => observer.observe(element));
         });

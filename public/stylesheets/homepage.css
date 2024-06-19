@@ -95,11 +95,23 @@ header{
     height: 490px;
   }
 
+
+
 .profile{
     height: 310px;
     width: 310px;
     margin-top: 8px;
     margin-right: 60px;
+}
+.profile {
+    opacity: 0;
+    transform: translateX(-25px); /* Start slightly above */
+    transition: opacity 2s, transform 1.5s; /* Apply transition */
+}
+
+.profile.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
 }
 
 .profileText{
@@ -113,6 +125,17 @@ header{
     position: relative;
     left: 50px;
 }
+.profileText {
+    opacity: 0;
+    transform: translateX(25px); /* Start slightly above */
+    transition: opacity 2s, transform 1.5s; /* Apply transition */
+}
+
+.profileText.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
 
 .projectIntro{
     margin-top: 100px;
@@ -125,6 +148,18 @@ header{
     left: -35px;
     /* margin-left: 10px; */
 }
+
+.projectIntro {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 2s; /* Apply transition */
+}
+
+.projectIntro.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
 
 .projectTitle{
     margin-top: 15px;
@@ -148,6 +183,19 @@ header{
     margin-top: 130px;
    
   }
+
+
+
+  .img1 {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 2s; /* Apply transition */
+}
+
+.img1.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
   .picture1{
     border-radius: 20px;
     width: 100%; /* Set the width you desire */
@@ -191,6 +239,18 @@ header{
     margin-top: 80px;
     border-radius: 20px;
   }
+
+  .img2 {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 2s; /* Apply transition */
+}
+
+.img2.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
+}
+
 
   .imagesLink{
     height: 400px;
@@ -285,6 +345,16 @@ header{
     position: relative;
     left: -35px;
     margin-bottom: 150px;
+}
+.letsWork {
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 2s; /* Apply transition */
+}
+
+.letsWork.in-view {
+    opacity: 1;
+    transform: translateY(0); /* Move to the original position */
 }
 
 .proposal {
