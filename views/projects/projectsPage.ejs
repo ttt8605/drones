@@ -126,7 +126,7 @@
                      
                      <div class="img2">
                       <a class="imagesLink" href="/projects/<%= project._id %>">
-                        <img class="picture" src="<%=project.images[0].url %>" alt="">
+                        <img class="picture" src="<%=project.images[0].url %>" alt="" loading="lazy">
                         <div class="textAndButton">
                          <h1 class="img2Text"><%= project.name %></h1>
                          <button class="img2Button">&rarr;</button>
@@ -139,7 +139,7 @@
                  <% } else { %>
                      <div class="img1">
                       <a class="imagesLink1" href="/projects/<%= project._id %>">
-                      <img src="<%=project.images[0].url %>" class="picture1" alt="">
+                      <img src="<%=project.images[0].url %>" class="picture1" alt="" loading="lazy">
                       <div class="textAndButton1">
                         <h1 class="img1Text"><%= project.name %></h1>
                        <button class="img1Button">&rarr;</button>
@@ -159,7 +159,7 @@
                  <% } %>
                  <div class="img2">
                   <a class="imagesLink" href="/projects/<%= project._id %>">
-                    <img class="picture" src="<%=project.images[0].url %>" alt="">
+                    <img class="picture" src="<%=project.images[0].url %>" alt="" loading="lazy">
                     <div class="textAndButton">
                      <h1 class="img2Text"><%= project.name %></h1>
                      <button class="img2Button">&rarr;</button>

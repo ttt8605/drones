@@ -104,7 +104,24 @@
 
 <section class="bigScreens" >
 <div class="leftDiv ">
-    <div><h2 class="ServiceName"><%=service.name %></h2></div>
+      <h2 class="ServiceName"><%=service.name %></h2>
+      <div class="Description-Buttons">
+      <h3 class="ServiceDescriptionTitle">Description:</h3>
+      <div class="editDelete">
+       <% if (currentUser) { %>
+         <div class="edit">
+           <button class="btn btn-warning">
+             <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/services/<%= service._id %>/edit">Edit</a>
+           </button>
+         </div>
+         <div>
+           <form action="/services/<%= service._id %>?_method=DELETE" method="POST">
+             <button class="btn btn-danger">Delete</button>
+           </form>
+         </div>
+       <% } %>
+     </div>
+     </div>
     <div> <p class="ServiceDescription"> <%=service.description %></p> </div>
 </div >
 <div class="rigthDiv">
@@ -176,7 +193,23 @@
      
   
   </div>
-  <div class="ServiceDescriptionTitleDiv"> <h3 class="ServiceDescriptionTitle">Description:</h3></div>
+  <div class="ServiceDescriptionTitleDiv">
+     <h3 class="ServiceDescriptionTitle">Description:</h3>
+     <div class="editDelete">
+      <% if (currentUser) { %>
+        <div class="edit">
+          <button class="btn btn-warning">
+            <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/services/<%= service._id %>/edit">Edit</a>
+          </button>
+        </div>
+        <div>
+          <form action="/services/<%= service._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+      <% } %>
+    </div>
+    </div>
   <div> <p class="ServiceDescription"> <%=service.description %></p> </div>
 </section>
 
