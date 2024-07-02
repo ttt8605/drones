@@ -151,12 +151,19 @@ header{
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
     transition: opacity 2s, transform 2s; /* Apply transition */
+    position: relative;
+    overflow: hidden;
 }
 
 .img2.in-view {
     opacity: 1;
     transform: translateY(0); /* Move to the original position */
 }
+  
+.img2:hover {
+    top: 2px;
+  }
+
 
 
   .imagesLink{
@@ -197,15 +204,45 @@ header{
     font-weight: 500;
     font-size: 30px;
     position: relative;
-    bottom: 8px;
+    bottom: 60px;
    border-style: solid;
     border-radius: 5px;
     padding-left: 10px;
     border-color: #f2f2f2;
     padding-right: 10px;
     border-width: 1px;
+    transition: transform 0.3s ease-in-out;
 
 }
+.img2:hover .img2Button {
+    animation: spin 0.5s linear ;
+  }
+
+  @keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+        border-color: transparent;
+    }
+    10%{
+        border-color: transparent;
+    }
+    30%{
+        border-color: transparent;
+    }
+    60%{
+        border-color: transparent;
+    }
+    90%{
+        border-color: transparent;
+    }
+    100% { 
+        transform: rotate(360deg); 
+       border-color: #F2F2F2;
+    }
+  }
+  
+
+  
 
 .img2Text{
     font-family: 'Roboto',sans-serif;
@@ -262,11 +299,17 @@ width: 70%;
     width: 125px;
     height: 35px;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
+
+.contact-link:hover{
+    background-color: #ffd166cb !important;
+    top: 2px;
+ }
 
 #contactButton{
     color:#252525 !important;
-    background-color: #FFD166;
     text-decoration: none !important;
     font-family:'Roboto', sans-serif;
     font-weight: 500;
@@ -774,6 +817,10 @@ width: 70%;
     margin-bottom: 15px;
 }
 
+.NiceLink:hover{
+    color:#ffffff !important ;
+    opacity: 1;
+}
   p{
    margin-top: 0;
    margin-bottom: 0rem;  

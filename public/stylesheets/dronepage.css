@@ -148,6 +148,10 @@ a{
     font-family:'Russo One';
     color: #3A8AC3;
     font-size: 2em;
+    transition: color 0.3s ease; 
+}
+.droneSection:hover .droneName{
+    color: #f2f2f2;
 }
 
 .droneWidth{

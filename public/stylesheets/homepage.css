@@ -76,19 +76,6 @@ header{
      width: 80px;
 }
 
-/* .but1{
-     background-color: #FFD166;
-     color: #252525;
-     border-radius: 12px;
-     width: 116px;
-     height: 40px;
-     border-style: none;
-} */
-
-/* hr{
-  color: #f2f2f2;
-  width: 50%;
-} */
 
 #description {
     width: 70%;
@@ -167,6 +154,12 @@ header{
     font-size: 2.4em;
 }
 
+
+#Ylink:hover{
+  opacity: 0.7;
+}
+
+
 .twoImgRow{
     display: flex;
     justify-content: space-evenly;
@@ -176,26 +169,28 @@ header{
     margin-top: 70px;
 }
 
-.img1{
-   
+.img1 {
     width: 100%;
     height: 455px;
     margin-top: 130px;
-   
-  }
-
-
-
-  .img1 {
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
     transition: opacity 2s, transform 2s; /* Apply transition */
+    position: relative; /* Ensure the top property works correctly */
 }
 
 .img1.in-view {
     opacity: 1;
     transform: translateY(0); /* Move to the original position */
 }
+
+.img1:hover {
+    top: 2px; /* Slightly move up on hover */
+    transition: top 0.2s; /* Apply a quick transition for the hover effect */
+}
+
+
+
   .picture1{
     border-radius: 20px;
     width: 100%; /* Set the width you desire */
@@ -229,15 +224,27 @@ header{
     position: relative;
     margin-right: 50px;
     bottom: 14px;
+    transition: transform 0.3s ease-in-out;
 }
 
-
+.img1:hover .img1Button {
+    animation: spin 0.5s linear ;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 .img2{
     
     width: 600px;
    height: 460px;
     margin-top: 80px;
     border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+ 
   }
 
   .img2 {
@@ -250,6 +257,10 @@ header{
     opacity: 1;
     transform: translateY(0); /* Move to the original position */
 }
+  
+  .img2:hover {
+    top: 2px;
+  }
 
 
   .imagesLink{
@@ -291,7 +302,19 @@ header{
     font-size: 30px;
     position: relative;
     bottom: 8px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.img2:hover .img2Button {
+    animation: spin 0.5s linear ;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+
 
 .img2Text{
     font-family: 'Roboto',sans-serif;
@@ -300,8 +323,8 @@ header{
     color: #f2f2f2;
     position: relative;
     width: 70%;
+   
 }
-
 
 .AddMoreButton{
     border-style: none;
@@ -313,6 +336,13 @@ header{
     height: 50px;
     border-radius: 10px;
     margin-top: 80px;
+    position: relative;
+    overflow: hidden;
+ 
+}
+.AddMoreButton:hover{
+    background-color: #3a8ac3c2;
+    top: 2px;
 }
 
   .AddMoreSection{
@@ -371,16 +401,25 @@ header{
     width: 125px;
     height: 35px;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+ 
 }
 
 #contactButton{
     color:#252525 !important;
-    background-color: #FFD166;
+   
     text-decoration: none !important;
     font-family:'Roboto', sans-serif;
     font-weight: 500;
     font-size:larger;
 }
+
+.contact-link:hover{
+   background-color: #ffd166cb !important;
+   top: 2px;
+}
+
 
 
 
@@ -928,6 +967,11 @@ header{
          margin-bottom: 15px;
       
      
+}
+
+.NiceLink:hover{
+    color:#ffffff !important ;
+    opacity: 1;
 }
 
   p{

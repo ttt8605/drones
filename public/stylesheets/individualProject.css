@@ -292,6 +292,10 @@ a{
 .YoutubeLink{
        color: rgba(217, 217, 217, 0.5);
        font-size: 1.2em;
+       transition: color 0.3s ease; /* Changed from color to background-color */
+}
+.YoutubeLink:hover{
+    color:#d9d9d9 ;
 }
 
 .lowerSection{

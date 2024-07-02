@@ -79,9 +79,6 @@ button:focus{
     color: #f2f2f2 !important;
     width: 80px;
  }
- 
-
-
 
 #contact{
    width: 130px;
@@ -98,7 +95,14 @@ button:focus{
      border-radius: 10px;
      border-color: #FFD166;
      margin-top: -40px;
+     transition: background-color 0.4s ease; /* Changed from color to background-color */
+
+    
 }
+#contact a:hover{
+   background-color: #3A8AC3 ;
+}
+
 
 #drones {
   
