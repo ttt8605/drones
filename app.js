@@ -16,10 +16,15 @@ const path = require('path');
 const methodOverride = require('method-override');
 const mongoSanitize = require('express-mongo-sanitize');
 const helmet = require('helmet');
+const MongoStore = require("connect-mongo")
+
+
+const dbUrl = process.env.DB_URL;
+// const dbUrl = 'mongodb://127.0.0.1:27017/Drones';
 
 // Setting up mongoose/mongodb
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/Drones')
+mongoose.connect(dbUrl)
 .then(() => {
     console.log('Mongo connection open');
 })
@@ -49,8 +54,18 @@ app.use(methodOverride('_method'));
 // Sanitize data to prevent MongoDB Operator Injection
 app.use(mongoSanitize());
 
+
 // Session setup
+const store = MongoStore.create({
+    mongoUrl: dbUrl,
+    touchAfter: 24 * 60 * 60,
+    crypto: {
+        secret: 'thisshouldbeabettersecret!'
+    }
+});
+
 const sessionConfig = {
+    store,
     name: 'session',
     secret: process.env.SESSION_SECRET || 'thisshouldbeabettersecret',
     resave: false,

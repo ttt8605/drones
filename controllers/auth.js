@@ -2,7 +2,13 @@ const User = require('../models/user');
 
 
 module.exports.userCreateForm = (req,res)=>{
-    res.render('auth/register');
+    if(req.isAuthenticated()){
+        res.render('auth/register');
+    }else{
+        req.flash('error',"Uppps we couldn't find that page, but we think u might like this one ");
+        res.redirect('/projects');
+    }
+    
 }
 
 module.exports.userCreateRequest =  async(req,res)=>{
