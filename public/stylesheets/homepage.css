@@ -1095,3 +1095,18 @@ header{
 
 
 
+
+        @media(max-width: 400px){
+            .twoImgRow{
+              height: 550px;
+            }
+            .picture1{
+                height: 252px;
+                margin-top: 38px;
+            }
+            .picture{
+                height: 250px;
+               
+            }
+            }
+            

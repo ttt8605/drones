@@ -537,3 +537,11 @@ p{
 }
 
 
+
+@media(max-width: 400px){
+.twoImgRow{
+  height: 550px;
+}
+}
+
+
