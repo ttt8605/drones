@@ -516,7 +516,9 @@ header{
     }
 
     .profile{
-        margin-left: 95px;
+        margin-left: 0px;
+        left: 0px;
+        margin-right: 0px;
     }
 
     .profileText{
@@ -767,7 +769,7 @@ header{
      }
 
      .profileText {
-         font-size: 13px;
+         font-size: 14px;
          width: 297px;
          margin-top: 0px;
          text-align: center;
@@ -779,7 +781,7 @@ header{
     }
     
     .projectTitle{
-        font-size: 20px;
+        font-size: 21px;
     }
 
     #Ylink {
@@ -798,14 +800,14 @@ header{
      
      .letsWork{
         left: -12px;
-        margin-top: 70px;
-        margin-bottom: 100px;
+        margin-top: 50px;
+        margin-bottom: 0px;
     }
     .twoImgRow{
         margin-top: 30px;
     }
         .proposal{
-            font-size: 1.5em;
+            font-size: 1.7em;
          }
          .img1{
             margin-top: 0px;
@@ -884,14 +886,14 @@ header{
             top: 128px;
          }
          .picture{
-            width: 300px;
-            height:200px ;
+            width: 350px;
+            height:220px ;
          }
          .imagesLink{
             height: 200px;
          }
          .textAndButton{
-            width: 300px;
+            width: 350px;
          }
 }
 

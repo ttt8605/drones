@@ -19,8 +19,8 @@ const helmet = require('helmet');
 const MongoStore = require("connect-mongo")
 
 
-const dbUrl = process.env.DB_URL;
-// const dbUrl = 'mongodb://127.0.0.1:27017/Drones';
+// const dbUrl = process.env.DB_URL;
+const dbUrl = 'mongodb://127.0.0.1:27017/Drones';
 
 // Setting up mongoose/mongodb
 const mongoose = require('mongoose');
@@ -126,6 +126,6 @@ app.use((err, req, res, next) => {
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+app.listen(PORT,'0.0.0.0', () => {
+    console.log(`Server running at http://0.0.0.0:${PORT}/`);
 });

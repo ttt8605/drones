@@ -21,9 +21,8 @@
     </button>
     <div class="collapse navbar-collapse" id="hyperlinks">
       <div class="navbar-nav">
-       
+        <a class="nav-link active" id="hl" name="Home" href="/projects">Home</a>
           <a class="nav-link active  " id="hl" aria-current="page" href="/drones">Drones</a>
-          <a class="nav-link active" id="hl" name="Home" href="/projects">Home</a>
           <a class="nav-link active" id="hl"  href="/services">Services</a>
           <%if(!currentUser){ %>
           <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">Contact me</a></button>
@@ -63,10 +62,10 @@
                </li>
                 <% } %>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
+                  <a class="nav-link" href="/projects" name="Home" id="fastlinksMobile">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/projects" name="Home" id="fastlinksMobile">Home</a>
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/services"  id="fastlinksMobile">Services</a>
