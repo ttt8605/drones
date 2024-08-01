@@ -25,6 +25,7 @@ const dbUrl = process.env.DB_URL;
 // Setting up mongoose/mongodb
 const mongoose = require('mongoose');
 mongoose.connect(dbUrl)
+
 .then(() => {
     console.log('Mongo connection open');
 })
