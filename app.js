@@ -54,21 +54,21 @@ app.use(methodOverride('_method'));
 
 // Sanitize data to prevent MongoDB Operator Injection
 app.use(mongoSanitize());
-
+const secret = process.env.SESSION_SECRET || 'thisshouldbeabettersecret';
 
 // Session setup
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     touchAfter: 24 * 60 * 60,
     crypto: {
-        secret: 'thisshouldbeabettersecret!'
+        secret,
     }
 });
 
 const sessionConfig = {
     store,
     name: 'session',
-    secret: process.env.SESSION_SECRET || 'thisshouldbeabettersecret',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
