@@ -60,14 +60,14 @@ const secret = process.env.SESSION_SECRET || 'thisshouldbeabettersecret';
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
+    collectionName: 'sessions', // Ensure correct collection name
     ttl: 60 * 60 * 24, // 1 day in seconds
     autoRemove: 'native', // Automatically remove expired sessions
     touchAfter: 24 * 60 * 60,
     crypto: {
-        secret: process.env.SESSION_SECRET || 'thisshouldbeabettersecret!'
+        secret
     }
 });
-
 const sessionConfig = {
     store,
     name: 'session',
@@ -76,7 +76,8 @@ const sessionConfig = {
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        secure: true,
+        secure: process.env.NODE_ENV === 'production',
+        path: '/', // Default path for cookies
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
