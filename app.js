@@ -19,8 +19,7 @@ const helmet = require('helmet');
 const MongoStore = require("connect-mongo")
 
 
-const dbUrl = process.env.DB_URL;
-// const dbUrl = 'mongodb://127.0.0.1:27017/Drones';
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/Drones';
 
 // Setting up mongoose/mongodb
 const mongoose = require('mongoose');
@@ -54,14 +53,16 @@ app.use(methodOverride('_method'));
 
 // Sanitize data to prevent MongoDB Operator Injection
 app.use(mongoSanitize());
-const secret = process.env.SESSION_SECRET || 'thisshouldbeabettersecret';
+
 
 // Session setup
+const secret = process.env.SESSION_SECRET || 'thisshouldbeabettersecret';
+
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     touchAfter: 24 * 60 * 60,
     crypto: {
-        secret,
+        secret: process.env.SESSION_SECRET || 'thisshouldbeabettersecret!'
     }
 });
 
@@ -73,7 +74,7 @@ const sessionConfig = {
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-         //  secure:true,
+        secure:true,
         secure: process.env.NODE_ENV === 'production',
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
@@ -126,7 +127,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
 });
