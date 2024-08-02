@@ -457,8 +457,7 @@ header{
     .profile {
     height: 240px;
     width: 240px;
-    position: relative;
-    left: -30px;
+    margin-right: 0px;
     }
 }
 
@@ -516,7 +515,7 @@ header{
     }
 
     .profile{
-        margin-left: 95px;
+        margin-left: 0px;
     }
 
     .profileText{
@@ -779,7 +778,7 @@ header{
     }
     
     .projectTitle{
-        font-size: 20px;
+        font-size: 21px;
     }
 
     #Ylink {
@@ -805,7 +804,8 @@ header{
         margin-top: 30px;
     }
         .proposal{
-            font-size: 1.5em;
+            font-size: 1.6em;
+            
          }
          .img1{
             margin-top: 0px;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Rarrres FPV</title>
+    <link rel="icon" href="https://res.cloudinary.com/dnbqzrigq/image/upload/v1722607912/poze%20site/Ellipse_4_fhfvlv.svg" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    <link rel="stylesheet" href="/stylesheets/header2.css">
    <link rel="stylesheet" href="/stylesheets/header.css">
@@ -21,9 +22,9 @@
     </button>
     <div class="collapse navbar-collapse" id="hyperlinks">
       <div class="navbar-nav">
-        
+        <a class="nav-link active" id="hl"  href="/projects">Home</a>
           <a class="nav-link active  " id="hl" aria-current="page" href="/drones">Drones</a>
-          <a class="nav-link active" id="hl"  href="/projects">Home</a>
+         
           <a class="nav-link active" id="hl" name="Services" href="/services">Services</a>
           <%if(!currentUser){ %>
           <button type="button" class="btn btn-sm" id="contact"><a class="nav-link" href="/contact">Contact me</a></button>
@@ -63,11 +64,12 @@
                </li>
                 <% } %>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="/projects" name="Home" id="fastlinksMobile">Home</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/drones">Drones</a>
+                </li>
+               
                 <li class="nav-item">
                    <a class="nav-link active" id="fastlinksMobile" name="Services" href="/services">Services</a>
                   </li>
@@ -89,7 +91,7 @@
 
 <div class="container" id="description">
   <h3 class="ImageTitle1">Services</h3>
-  <img src="https://raw.githubusercontent.com/ttt8605/Rarresfpv/3d06525b959c53a62bda92f3e4e2e227e4a07d5d/poze/Ellipse%203.svg" alt="" class="profile">
+  <img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1722607912/poze%20site/Ellipse_4_fhfvlv.svg" alt="" class="profile">
    <h3 class="ImageTitle2">provided</h3>
      </div>
     </header>
@@ -114,7 +116,7 @@
        <img class="picture" src="<%=servici.images[0].url %>" alt="" loading="lazy">
        <div class="textAndButton2">
         <p class="dummy2"></p>
-        <button class="img2Button">&#8599;</button>
+        <button class="img2Button">&rarr;</button>
         </div>
        </a>
     </div>
