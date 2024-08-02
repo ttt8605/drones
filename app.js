@@ -107,6 +107,10 @@ const contactRoutes = require('./routes/contact');
 const userRoutes = require('./routes/auth');
 const serviciiRoutes = require('./routes/servici');
 
+app.get('/', (req, res) => {
+    res.redirect('/projects');
+});
+
 app.use('/drones', dronesRoutes);
 app.use('/projects', projectsRoutes);
 app.use('/contact', contactRoutes);
