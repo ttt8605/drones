@@ -30,7 +30,6 @@ module.exports.NewServiceRequest = async(req,res)=>{
         throw new Error('No files attached to the request');
     }
     }catch(err){
-        console.error(err);
         req.flash('error', 'Failed to create  service');
         res.redirect('/services/new'); // Redirect to a relevant page
     }

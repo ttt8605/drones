@@ -34,7 +34,6 @@ module.exports.projectNewRequest =  async(req,res)=>{
             throw new Error('No files attached to the request');
         }
     } catch (err) {
-        console.error(err);
         req.flash('error', 'Failed to create  project');
         res.redirect('/projects'); // Redirect to a relevant page
     }
