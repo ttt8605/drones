@@ -420,11 +420,11 @@ p{
 
 @media(max-width: 400px){
     .leftDiv {
-        width: 277px;
-        height: 197px;
+        width: 320px;
+        height: 300px;
     }
     .secondDiv {
-        width: 277px;
+        width: 320px;
         height: 295px;
     }
     .SecondTitle {
@@ -441,10 +441,10 @@ p{
         font-size: 1.5em;
     }
     .rightDiv {
-        width: 272px;
+        width: 320px;
         height: 270px;
         position: relative;
-        margin-top: 50px;
+        margin-top: 0px;
     }
 }
 
