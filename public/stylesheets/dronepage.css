@@ -232,7 +232,7 @@ a{
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        margin-top: 100px;
+        margin-top: 36px;
         width: 100%;  /* old: width: 90% */
     }
 
@@ -390,8 +390,9 @@ a{
     }
 
 .FirstTitle{
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
+
 
 .SecondTitle{
     font-size: 1.1em;
@@ -443,7 +444,7 @@ p{
         width: 272px;
         height: 270px;
         position: relative;
-        margin-top: 85px;
+        margin-top: 50px;
     }
 }
 
