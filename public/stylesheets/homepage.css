@@ -58,6 +58,7 @@ header{
     justify-content: space-between;
 }
 
+
 #meniu2{
     display: none;
 }
@@ -82,7 +83,14 @@ header{
     height: 490px;
   }
 
-
+.title1{
+    color:#f2f2f2
+}
+.title2{
+    color: #3A8AC3;
+    position: relative;
+    right: 13px;
+}
 
 .profile{
     height: 310px;
@@ -101,9 +109,14 @@ header{
     transform: translateY(0); /* Move to the original position */
 }
 
+
+
 .profileText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: 'Roboto',sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 23px;
     color: #f2f2f2;
     width: 650px;
@@ -111,18 +124,20 @@ header{
     margin-right: 20px;
     position: relative;
     left: 50px;
-}
-.profileText {
     opacity: 0;
     transform: translateX(25px); /* Start slightly above */
     transition: opacity 2s, transform 1.5s; /* Apply transition */
 }
-
 .profileText.in-view {
     opacity: 1;
     transform: translateY(0); /* Move to the original position */
 }
-
+.span2{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    color: #3A8AC3;
+}
 
 .descriptionSection {
     border-radius: 20px;
@@ -652,6 +667,11 @@ header{
         left: 25px;
         top: 4px;
     }
+    .title2{
+
+        right: 10px;
+    }
+    
 
     header{
         height: 550px;
@@ -664,6 +684,11 @@ header{
 
     .profileText{
         font-size: 15px;
+    }
+    .span2{
+      
+        font-size: 20px;
+        
     }
 
   .img2:first-child{
@@ -838,6 +863,11 @@ header{
     #title{
         font-size: 30px;
     }
+    .title2{
+
+        right: 8px;
+    }
+    
 
     .fastLinks{
          margin-right: 13px;
@@ -856,6 +886,11 @@ header{
          text-align: center;
      }
 
+     .span2{
+      
+        font-size: 16px;
+        
+    }
      .projectIntro{
         position: relative;
         left: 17px;
