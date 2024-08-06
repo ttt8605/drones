@@ -124,6 +124,56 @@ header{
 }
 
 
+.descriptionSection {
+    border-radius: 20px;
+    width: 100%;
+    background-image: url('https://res.cloudinary.com/dnbqzrigq/image/upload/v1722958942/poze%20site/PCNA23_0393_fine_6_wyvukv.png');
+    background-size: cover; /* Default for larger screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    max-height: 600px;
+    margin-top: 50px;
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(-20px); /* Start slightly above */
+    transition: opacity 2s, transform 1.5s; /* Apply transition */
+}
+
+.descriptionSection.in-view {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position */
+}
+
+.container-xxl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
+    max-height: 600px;
+    height: 100%;
+}
+
+.AboutMeImg{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: #f2f2f2;
+
+}
+
+.ParagraphImg{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #f2f2f2;
+  
+    width: 70%;
+}
+
 .projectIntro{
     margin-top: 100px;
     display: flex;
@@ -424,11 +474,13 @@ header{
 
 
 /* ---- MEDIA QUERIES ---- */
-@media(max-width: 1400px){
-    /* .img2{
-        width: 500px;
-        height: 450px;
-    } */
+@media(min-width: 1400px){
+
+    .ParagraphImg{
+
+        font-size: 20px;
+
+    }
 
 }
 
@@ -478,6 +530,38 @@ header{
     position:relative;
     left: 60px;
  }
+
+ .descriptionSection{
+    max-height: 600px;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+.container-xxl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: inherit;
+    max-height: 600px;
+    height: 100%;
+}
+
+.AboutMeImg{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: #f2f2f2;
+
+}
+
+.ParagraphImg{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #f2f2f2;
+    width: 70%;
+}
+
 }
 
 @media(max-width:911px){
@@ -1001,6 +1085,42 @@ header{
           width: 280px;
         }
     }
+
+    @media (max-width:800px){
+        .descriptionSection{
+            max-height: 600px;
+            margin-top: 50px;
+            padding: 40px;
+            height: 600px;
+        }
+        
+        .container-xxl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: inherit;
+            max-height: 600px;
+            height: 100%;
+        }
+        
+        .AboutMeImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            color: #f2f2f2;
+       
+        }
+        
+        .ParagraphImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #f2f2f2;
+            width: 80%;
+            text-align: center;
+            margin-left: 10%;
+        }
+    }
     @media(max-width:767px){
         .social{
            width: 280px;
@@ -1058,9 +1178,118 @@ header{
         height: 26px;
     }
        
+
+    }
+    @media(max-width:610px){
+        .descriptionSection{
+            max-height: 600px;
+            margin-top: 50px;
+            padding: 30px;
+            height: 587px;
+        }
+        
+        .container-xxl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: inherit;
+            max-height: 600px;
+            height: 100%;
+        }
+        
+        .AboutMeImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            color: #f2f2f2;
+       
+        }
+        
+        .ParagraphImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #f2f2f2;
+            width: 100%;
+            text-align: center;
+            margin-left: 0px;
+        }
+    }
+    
+
+    @media(max-width: 450px){
+        .descriptionSection{
+            max-height: 600px;
+            margin-top: 50px;
+            padding: 30px;
+            height: 587px;
+        }
+        
+        .container-xxl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: inherit;
+            max-height: 600px;
+            height: 100%;
+        }
+        
+        .AboutMeImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            color: #f2f2f2;
+       
+        }
+        
+        .ParagraphImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            color: #f2f2f2;
+            width: 100%;
+            text-align: center;
+            margin-left: 0px;
+        }
     }
         @media(max-width: 400px) {
           
+
+            .descriptionSection{
+                max-height: 600px;
+                margin-top: 50px;
+                padding: 20px;
+                height: 587px;
+            }
+            
+            .container-xxl{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: inherit;
+                max-height: 600px;
+                height: 100%;
+            }
+            
+            .AboutMeImg{
+                font-family: 'Roboto',sans-serif;
+                font-weight: 400;
+                font-size: 23px;
+                color: #f2f2f2;
+                margin-top: 20px;
+           
+            }
+            
+            .ParagraphImg{
+                font-family: 'Roboto',sans-serif;
+                font-weight: 300;
+                font-size: 14px;
+                color: #f2f2f2;
+                width: 100%;
+                text-align: center;
+                margin-left: 0px;
+            }
+
     .titleFooter{
         color: #F2F2F2;
         /* width: 235px; */

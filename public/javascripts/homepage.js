@@ -71,6 +71,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
     elements.forEach(element => observer.observe(element));
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.descriptionSection');
+
+    const observer = new IntersectionObserver((entries,observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target); // Stop observing once the animation has started
+            }
+        });
+    });
+
+    elements.forEach(element => observer.observe(element));
+});
 
 
 
