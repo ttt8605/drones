@@ -18,10 +18,20 @@
     left: 120px;
 }
 
+.title1{
+    color:#f2f2f2
+}
+.title2{
+    color: #3A8AC3;
+    position: relative;
+    right: 13px;
+}
+
 #title a {
     text-decoration: none !important;
-    color: #f2f2f2;
+    /* color: #f2f2f2; */
 }
+
 /* cancel the default burger button from bootstrap */
 .burger{
     width: 40px;

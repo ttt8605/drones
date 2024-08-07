@@ -76,8 +76,6 @@ header{
      width: 80px;
 }
 
-
-
 #description {
     width: 70%;
     height: 490px;
@@ -112,20 +110,17 @@ header{
          top: -80px;
         right: -31px;
     }
+    
 .swap .ImageTitle1 {
     bottom: 80px;
     left: 31px;
 }
 
 .swap .ImageTitle2 {
- 
     top: 79px;
     right: 30px;
 }
 }
-
-
-
 
 .visibleImages{
     width: 90%;
@@ -165,11 +160,11 @@ header{
   }
 
 
-
   .imagesLink{
     height: 400px;
     text-decoration: none;
   }
+
   .picture{
   border-radius: 20px;
   width: 600px; /* Set the width you desire */
@@ -180,6 +175,7 @@ header{
   .img2:first-child{
    margin-right: 5px;
 }
+
 .textAndButton1{
     display: flex;
     flex-direction: row;
@@ -214,6 +210,7 @@ header{
     transition: transform 0.3s ease-in-out;
 
 }
+
 .img2:hover .img2Button {
     animation: spin 0.5s linear ;
   }
@@ -241,9 +238,6 @@ header{
     }
   }
   
-
-  
-
 .img2Text{
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
@@ -251,16 +245,16 @@ header{
     color: #f2f2f2;
     position: relative;
     width: 27%;
-   
+
 }
+
 .dummy{
     width: 50%;
 }
+
 .dummy2{
 width: 70%;
 }
-
-
 
 .letsWork {
     margin-top: 130px;
@@ -296,8 +290,8 @@ width: 70%;
     margin-top: 10px;
     border-style: none;
     background-color: #FFD166;
-    width: 125px;
-    height: 35px;
+    width: 130px;
+    height: 40px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;

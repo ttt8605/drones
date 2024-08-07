@@ -7,3 +7,8 @@ stop server
 
 brew services stop mongodb-community@7.0
 
+update repo///
+1. git status
+2.git add .
+3.git commit -m"sda"
+4.git push heroku updates:main  

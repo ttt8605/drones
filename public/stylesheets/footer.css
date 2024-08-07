@@ -1,4 +1,8 @@
 /* ---- FOOTER ---- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+
 #footer{
     display: flex;
     width: 100%;
@@ -55,19 +59,20 @@
     font-family:'Russo One';
     font-weight: 400;
     font-size: 40px;
-
 }
+
 
 .NiceLink{
      
          font-family:'Roboto', sans-serif;
-         font-weight: 500;
+         font-weight: 400;
          font-size: medium;
          color: #f2f2f2 !important;
          opacity:0.7;
          margin-bottom: 15px;
          transition: opacity 0.3s ease; 
 }
+
 .NiceLink:hover{
     opacity: 1;
 }
