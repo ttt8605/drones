@@ -259,19 +259,12 @@ button:focus{
      border-radius:8px;
     }
 
-    /* header{
-        height: 500px;
-    } */
-
     .container-fluid{
         height: 64px;
     }
 
     #title{
         font-size: 25px;
-    }
-    .title2{
-        margin-left: 8px;
     }
 
     .fastLinks{
