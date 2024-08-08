@@ -232,6 +232,7 @@ button:focus{
         left: 25px;
         top: 4px;
     }
+  
 
     #contactButton{
         font-size: large;
@@ -259,6 +260,9 @@ button:focus{
      border-radius:8px;
     }
 
+    .title2{
+        right: 6px;
+    }
     .container-fluid{
         height: 64px;
     }

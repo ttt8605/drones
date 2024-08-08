@@ -390,6 +390,9 @@ section{
 #title{
     left: 50px;
 }
+.beforeCarousel{
+    bottom: 20px;
+}
 .leftDiv{
     padding-left: 50px;
 }
@@ -494,6 +497,9 @@ section{
     width: 600px;
     margin-bottom: 50px;
     bottom: 0px;
+}
+.ServiceName{
+    margin-top: 80px;
 }
 
 .ServiceDescription{
