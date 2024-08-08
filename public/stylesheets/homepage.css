@@ -97,14 +97,13 @@ header{
     height: 310px;
     width: 310px;
     margin-top: 8px; 
-    margin-right: 60px;
+    margin-left: 60px;
+    opacity: 0;
+    transform: translateX(25px); /* Start slightly above */
+    transition: opacity 2s, transform 1.5s; /* Apply transition */
+    order:2;
 }
 
-.profile {
-    opacity: 0;
-    transform: translateX(-25px); /* Start slightly above */
-    transition: opacity 2s, transform 1.5s; /* Apply transition */
-}
 
 .profile.in-view {
     opacity: 1;
@@ -121,12 +120,10 @@ header{
     color: #f2f2f2;
     width: 650px;
     margin-top: 30px;
-    margin-right: 20px;
-    position: relative;
-    left: 30px;
     opacity: 0;
-    transform: translateX(25px); /* Start slightly above */
+    transform: translateX(-25px); /* Start slightly above */
     transition: opacity 2s, transform 1.5s; /* Apply transition */
+    order:1;
 }
 
 .profileText.in-view {
@@ -567,7 +564,7 @@ header{
 }
 
 
-@media(max-width:911px){
+@media(max-width:915px){
     #meniu1{
         display: none;
     }
@@ -603,7 +600,9 @@ header{
 
     .profile{
         margin-left: 0px;
+        order:1;
     }
+    
 
     .profileText{
         font-size: 17px;
@@ -613,6 +612,7 @@ header{
         left: 0px;
         text-align: center;
         margin-right: 0px;
+        order:2;
     }
 
     #description{

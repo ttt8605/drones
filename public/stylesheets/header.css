@@ -270,6 +270,9 @@ button:focus{
     #title{
         font-size: 25px;
     }
+    .title2{
+        margin-left: 8px;
+    }
 
     .fastLinks{
          margin-right: 13px;

@@ -456,5 +456,10 @@ p{
     .secondDiv {
         margin-right: 30px;
     }
+
+    .w-100{
+        position: relative;
+        right: 10px;
+    }
 }
 
