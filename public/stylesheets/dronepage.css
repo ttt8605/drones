@@ -264,8 +264,8 @@ a{
     
     #meniu2{               
          display: block;
-         border-bottom-left-radius: 20px;
-         border-bottom-right-radius: 20px;
+         /* border-bottom-left-radius: 20px;
+         border-bottom-right-radius: 20px; */
      }
 
      #toggle {
@@ -321,10 +321,11 @@ a{
 
 
 @media(max-width:450px){
-    #meniu2{
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    } 
+    header {
+        height: 93px;
+        background-color: #373737;
+        border-radius: 20px;
+       } 
 
     #title{
         font-size: 25px;
@@ -451,4 +452,9 @@ p{
     }
 }
 
+@media(max-width: 350px){
+    .secondDiv {
+        margin-right: 30px;
+    }
+}
 
