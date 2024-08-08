@@ -2,7 +2,10 @@
     <% if(!currentUser){ %>
   <nav class="navbar navbar-expand-md" id="meniu1">
     <div class="container-fluid">
-      <a class="navbar-brand" id="title" href="/projects">RaresFPV</a>
+      <a class="navbar-brand" id="title" href="/projects">
+        <span class="title1">Rares</span>
+        <span class="title2">FPV</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -11,8 +14,8 @@
           
             <% if(currentUser){ %>
               <a class="nav-link active" id="hl" aria-current="page" href="/logout">Logout</a>
-              <a class="nav-link active" id="hl" name="addDrone" aria-current="page" href="/drones/new">Add Dr</a>
-              <a class="nav-link active" id="hl" name="addProject" aria-current="page" href="/projects/new">Add Pr</a>
+              <a class="nav-link active" id="hl" name="addDrone" aria-current="page" href="/drones/new">Add drone</a>
+              <a class="nav-link active" id="hl" name="addProject" aria-current="page" href="/projects/new">Add project</a>
             <% } %>
             <a class="nav-link active" id="hl" href="/projects">Home</a>
           <a class="nav-link active" id="hl" aria-current="page" name="Drone" href="/drones">Drones</a>
@@ -30,7 +33,10 @@
     <!-- mobile menu -->
     <nav class="navbar  fixed-top" id="meniu2">
       <div class="container-fluid" id="noughty-div" >
-        <a class="navbar-brand" id="title" href="/projects">RaresFPV</a>
+        <a class="navbar-brand" id="title" href="/projects">
+          <span class="title1">Rares</span>
+          <span class="title2">FPV</span>
+        </a>
         <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
           <img class="burger" src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717484492/poze%20site/menu_24dp_FILL0_wght400_GRAD0_opsz24_sxp5if.png" alt="">
         </button>
@@ -46,13 +52,13 @@
                 <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page"name="addDrone" id="fastlinksMobile" href="/drones/new">Add Dr</a>
+                <a class="nav-link active" aria-current="page"name="addDrone" id="fastlinksMobile" href="/drones/new">Add drone</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Se</a>
+    <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Service</a>
 </li>
   <li class="nav-item">
-                <a class="nav-link active" aria-current="page" name="addProject" id="fastlinksMobile" href="/projects/new">Add Pr</a>
+                <a class="nav-link active" aria-current="page" name="addProject" id="fastlinksMobile" href="/projects/new">Add project</a>
              </li>
               <% } %>
               <li class="nav-item">
@@ -84,7 +90,10 @@
   <!-- mobile menu -->
   <nav class="navbar  fixed-top" id="meniuLog">
     <div class="container-fluid" id="noughty-div" >
-      <a class="navbar-brand" id="title" href="/projects">RaresFPV</a>
+      <a class="navbar-brand" id="title" href="/projects">
+        <span class="title1">Rares</span>
+        <span class="title2">FPV</span>
+      </a>
       <button class="navbar-toggler" id="toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <img class="burger" src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1717484492/poze%20site/menu_24dp_FILL0_wght400_GRAD0_opsz24_sxp5if.png" alt="">
       </button>
@@ -100,13 +109,13 @@
                 <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/logout">Logout</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page"name="addDrone" id="fastlinksMobile" href="/drones/new">Add Dr</a>
+                <a class="nav-link active" aria-current="page"name="addDrone" id="fastlinksMobile" href="/drones/new">Add drone</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Se</a>
+    <a class="nav-link active" aria-current="page" id="fastlinksMobile" href="/services/new">Add Service</a>
 </li>
   <li class="nav-item">
-                <a class="nav-link active" aria-current="page" name="addProject" id="fastlinksMobile" href="/projects/new">Add Pr</a>
+                <a class="nav-link active" aria-current="page" name="addProject" id="fastlinksMobile" href="/projects/new">Add project</a>
              </li>
 
               <% } %>

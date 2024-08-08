@@ -76,8 +76,6 @@ header{
      width: 80px;
 }
 
-
-
 #description {
     width: 70%;
     height: 490px;
@@ -112,20 +110,17 @@ header{
          top: -80px;
         right: -31px;
     }
+    
 .swap .ImageTitle1 {
     bottom: 80px;
     left: 31px;
 }
 
 .swap .ImageTitle2 {
- 
     top: 79px;
     right: 30px;
 }
 }
-
-
-
 
 .visibleImages{
     width: 90%;
@@ -165,11 +160,11 @@ header{
   }
 
 
-
   .imagesLink{
     height: 400px;
     text-decoration: none;
   }
+
   .picture{
   border-radius: 20px;
   width: 600px; /* Set the width you desire */
@@ -180,6 +175,7 @@ header{
   .img2:first-child{
    margin-right: 5px;
 }
+
 .textAndButton1{
     display: flex;
     flex-direction: row;
@@ -214,6 +210,7 @@ header{
     transition: transform 0.3s ease-in-out;
 
 }
+
 .img2:hover .img2Button {
     animation: spin 0.5s linear ;
   }
@@ -241,9 +238,6 @@ header{
     }
   }
   
-
-  
-
 .img2Text{
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
@@ -251,16 +245,16 @@ header{
     color: #f2f2f2;
     position: relative;
     width: 27%;
-   
+
 }
+
 .dummy{
     width: 50%;
 }
+
 .dummy2{
 width: 70%;
 }
-
-
 
 .letsWork {
     margin-top: 130px;
@@ -296,8 +290,8 @@ width: 70%;
     margin-top: 10px;
     border-style: none;
     background-color: #FFD166;
-    width: 125px;
-    height: 35px;
+    width: 130px;
+    height: 40px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -321,8 +315,6 @@ width: 70%;
 /* ---- MEDIA QUERIES ---- */
 
 @media(max-width: 1230px){
-
-   
     .letsWork {
         position: relative;
         left: -5px;
@@ -330,27 +322,23 @@ width: 70%;
 }
 
 @media(max-width: 1222px) {
- 
-
     .profile {
     height: 270px;
     width: 280px;
-
     }
+
     .ImageTitle1, .ImageTitle2 {
         font-size: 40px;
     }
+
     .swap .ImageTitle1{
         bottom: 80px;
         left: 45px;
     }
-    
 }
 
 
 @media(max-width: 991px) {
-
-
   #title{
     position:relative;
     left: 60px;
@@ -361,7 +349,6 @@ width: 70%;
     #meniu1{
         display: none;
     }
-    
     
     #meniu2{               
          display: block;
@@ -395,26 +382,22 @@ width: 70%;
     .profile {
         height: 270px;
         width: 280px;
-    
         }
+
         .ImageTitle1, .ImageTitle2 {
             font-size: 40px;
         }
+
         .swap .ImageTitle1{
             bottom: 80px;
             left: 34px;
         }
-        
-  
 
     #description{
-     
         margin-top: 100px;
-   
     }
-
-
 }
+
 
 @media(max-width:767px){
      #closeBtn {
@@ -425,15 +408,13 @@ width: 70%;
          background-color: #373737;
      }
 
-
      #contactButton{
         font-size: large;
      }
-
-    
  }
- @media(max-width:689px){
 
+
+ @media(max-width:689px){
  .ImageTitle1, .ImageTitle2 {
     color: #F2F2F2;
     font-family: 'Russo One';
@@ -453,6 +434,8 @@ width: 70%;
     right: 30px;
 }
 }
+
+
 @media(max-width:674px){
     .fastLinks{
          font-size: 13px;
@@ -465,6 +448,9 @@ width: 70%;
         top: 4px;
     }
 
+    .title2{
+        right: 8px;
+    }
     header{
         height: 550px;
     }
@@ -473,8 +459,6 @@ width: 70%;
         height: 240px;
          width: 240px;
     }
-
-  
 
   .img2:first-child{
     margin-right: 0px;
@@ -485,7 +469,6 @@ width: 70%;
          font-size: 19px;
     }
 
-
     #letsWork{
         margin-top: 70px;
         position: relative;
@@ -493,7 +476,7 @@ width: 70%;
     }
 
     .proposal{
-        font-size: 2em;
+        font-size: 2.2em;  /* de la 2em la 2.2em !! */
      }
 
     #contactButton{
@@ -508,11 +491,12 @@ width: 70%;
     width: 500px;
     height: 375px;
   }
+
   .textAndButton1 {
     width: 500px;
    top: -40px ;
-
 }
+
 .textAndButton2 {
     width: 500px;
     bottom: 178px;
@@ -522,6 +506,7 @@ width: 70%;
     display: flex;
     justify-content: center;
 }
+
     .img2Button{
         top: 110px;
     }
@@ -531,18 +516,15 @@ width: 70%;
         font-size: 20px;
         margin-left: 8px;
     }
- 
-   
 }
 
 
 @media(max-width: 570px) {
-   
-   
      .img2{
         margin-top: 0px;
         height: 400px;
      }
+
      .picture{
         width: 450px;
         height:317px ;
@@ -561,45 +543,49 @@ width: 70%;
     top: 79px;
     right: 30px;
 }
+
      .imagesLink{
         height: 317px;
      }
+
      .textAndButton1{
         width: 404px;
         top: -54px;
-    
      }
+
      .img2Text {
         top: 112px;
         font-size: 17px;
         margin-left: 8px;
     }
+
      .textAndButton2{
         width: 451px;
         bottom: 178px;
      }
     }
 
+
 @media(max-width: 500px){
-
-
-  
 .letsWork{
     left: -12px;
     margin-top: 70px;
 }
+
     .proposal{
-        font-size: 1.9em;
+        font-size: 2em; /* de la 1.9em la 2em */
      }
    
      .img2{
         margin-top: 0px;
         height: 350px;
      }
+
      .picture{
         width: 400px;
         height:287px ;
      }
+
      .ImageTitle1, .ImageTitle2 {
         font-size: 28px;
     }
@@ -607,11 +593,13 @@ width: 70%;
      .imagesLink{
         height: 287px;
      }
+
      .textAndButton2{
         bottom: 178px;
         width: 396px;
      }
 }
+
 
 @media(max-width:450px){
     #meniu2{
@@ -631,7 +619,6 @@ width: 70%;
         font-size: 30px;
     }
 
-
     .fastLinks{
          margin-right: 13px;
          font-size: 12px;
@@ -641,9 +628,11 @@ width: 70%;
          margin-top: 17px;
          height: 180px;   
      }
+
      .ImageTitle1, .ImageTitle2 {
         font-size: 23px;
     }
+
     .ImageTitle1{
         bottom: 44px !important;
         left: 21px !important;
@@ -665,7 +654,7 @@ width: 70%;
     }
 
     .proposal{
-        font-size: 1.8em;
+        font-size: 1.8em; /* de la 1.5em la 1.8em */
      }
      
      .letsWork{
@@ -673,12 +662,10 @@ width: 70%;
         margin-top: 70px;
         margin-bottom: 100px;
     }
+
     .twoImgRow{
         margin-top: 30px;
     }
-        .proposal{
-            font-size: 1.5em;
-         }
         
          .img2{
             margin-top: 0px;
@@ -691,54 +678,65 @@ width: 70%;
             margin-left: 0px;
             width: 35%;
         }
+
          .img2Button{
             top: 128px;
          }
+
          .picture{
             width: 350px;
             height:250px ;
          }
+
          .imagesLink{
             height: 250px;
          }
+
          .textAndButton1{
             width: 285px;
             top: -70px;
         
          }
+
          .textAndButton2{
             bottom: 187px;
            width: 351px;
          }
 }
 
+
 @media(max-width:400px){
-  
-      
          .img2{
             margin-top: 0px;
             height: 250px;
          }
+
          .img2Text{
             top: 140px;
          }
+
          .img2Button{
             top: 128px;
          }
+
          .ImageTitle1, .ImageTitle2 {
             font-size: 20px;
         }
+
          .picture{
             width: 300px;
             height:200px ;
          }
+
          .imagesLink{
             height: 200px;
          }
+
          .textAndButton1{
             width: 269px;
             top: -85px;
          }
+
          .textAndButton2{
             bottom: 180px;
             width: 293px;
@@ -760,14 +758,16 @@ width: 70%;
     justify-content: center;
     align-items: center;
     margin-top: 120px;
-   
 }
+
 #mobile{
     display: none;
   }
+
   #desktop{
     display: block;
   }
+
 .media{
     width: 30px;
     height: 30px;
@@ -788,7 +788,6 @@ width: 70%;
     margin-bottom:10px ;
    }
 
-
 .UpperPart{
     width: 80%;
     display: flex;
@@ -804,11 +803,9 @@ width: 70%;
     font-family:'Russo One';
     font-weight: 400;
     font-size: 40px;
-
 }
 
-.NiceLink{
-     
+.NiceLink{ 
     font-family:'Roboto', sans-serif;
     font-weight: 500;
     font-size: medium;
@@ -821,10 +818,12 @@ width: 70%;
     color:#ffffff !important ;
     opacity: 1;
 }
+
   p{
    margin-top: 0;
    margin-bottom: 0rem;  
   }
+
 
   @media(max-width:1024px){
     .social{
@@ -833,21 +832,18 @@ width: 70%;
     }
 
 
-
-    
     @media(max-width:911px){
-   
-    
          .container-fluid{
             width: 100%;
             height: 90px;
          }
     
-    
         .social{
           width: 280px;
         }
     }
+
+
     @media(max-width:767px){
         .social{
            width: 280px;
@@ -859,6 +855,7 @@ width: 70%;
       #mobile{
         display: block;
       }
+
       #desktop{
         display: none;
       }
@@ -875,8 +872,8 @@ width: 70%;
         justify-content: space-around;
         align-items: center;
         margin-top: 180px;
-       
     }
+
     .titleFooter{
         color: #F2F2F2;
         /* width: 235px; */
@@ -885,8 +882,8 @@ width: 70%;
         font-family:'Russo One';
         font-weight: 300;
         font-size: 34px;
-    
     }
+
     .rigthSectionFooter{
         display: flex;
         justify-content: space-evenly;
@@ -894,20 +891,22 @@ width: 70%;
         align-items:center ;
         height: 83%;
     }
+
     .leftSectionFooter{
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         height: 83%;
     }
+
     .media{
         width: 26px;
         height: 26px;
     }
-       
     }
-        @media(max-width: 400px) {
-          
+
+
+@media(max-width: 400px) {   
     .titleFooter{
         color: #F2F2F2;
         /* width: 235px; */
@@ -916,15 +915,17 @@ width: 70%;
         font-family:'Russo One';
         font-weight: 300;
         font-size: 26px;
-
     }
+
     .NiceLink{
         font-weight: 400;
         font-size: 15px;
     }
+
     .footerText{
         font-size: 14px;
     }
+
     .rigthSectionFooter{
         display: flex;
         justify-content: space-evenly;
@@ -932,8 +933,9 @@ width: 70%;
         align-items:center ;
         height: 83%;
     }
+
     .media{
         width: 26px;
         height: 26px;
     }
-        }
+ }

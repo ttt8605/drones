@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
+
 body {
   background-color: #252525;
 }
+
 body {
     margin-top: 0; /* Reset default margin */
     padding-top: 0; /* Reset default padding */
@@ -58,7 +60,6 @@ header{
     justify-content: space-between;
 }
 
-
 #meniu2{
     display: none;
 }
@@ -77,7 +78,6 @@ header{
      width: 80px;
 }
 
-
 #description {
     width: 70%;
     height: 490px;
@@ -86,6 +86,7 @@ header{
 .title1{
     color:#f2f2f2
 }
+
 .title2{
     color: #3A8AC3;
     position: relative;
@@ -95,21 +96,19 @@ header{
 .profile{
     height: 310px;
     width: 310px;
-    margin-top: 8px;
-    margin-right: 60px;
-}
-.profile {
+    margin-top: 8px; 
+    margin-left: 60px;
     opacity: 0;
-    transform: translateX(-25px); /* Start slightly above */
+    transform: translateX(25px); /* Start slightly above */
     transition: opacity 2s, transform 1.5s; /* Apply transition */
+    order:2;
 }
+
 
 .profile.in-view {
     opacity: 1;
     transform: translateY(0); /* Move to the original position */
 }
-
-
 
 .profileText{
     display: flex;
@@ -121,20 +120,20 @@ header{
     color: #f2f2f2;
     width: 650px;
     margin-top: 30px;
-    margin-right: 20px;
-    position: relative;
-    left: 50px;
     opacity: 0;
-    transform: translateX(25px); /* Start slightly above */
+    transform: translateX(-25px); /* Start slightly above */
     transition: opacity 2s, transform 1.5s; /* Apply transition */
+    order:1;
 }
+
 .profileText.in-view {
     opacity: 1;
     transform: translateY(0); /* Move to the original position */
 }
+
 .span2{
     font-family: 'Roboto',sans-serif;
-    font-weight: 400;
+    font-weight: 500; /* de la 400 la 500 */
     font-size: 23px;
     color: #3A8AC3;
 }
@@ -150,8 +149,8 @@ header{
     flex-direction: column;
     justify-content: space-between;
     aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-    max-height: 600px;
-    margin-top: 50px;
+    max-height: 800px;
+    margin-top: 70px;
     padding: 50px;
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
@@ -168,7 +167,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     width: inherit;
-    max-height: 600px;
+    max-height: 700px; /* de la 600 la 700 */
     height: 100%;
 }
 
@@ -254,20 +253,17 @@ header{
     transition: top 0.2s; /* Apply a quick transition for the hover effect */
 }
 
-
-
   .picture1{
     border-radius: 20px;
     width: 100%; /* Set the width you desire */
     height: 460px; /* Set the height you desire */
     object-fit: cover; /* Maintain aspect ratio */
   }
+
   .imagesLink1{
     height: 460px;
     text-decoration: none;
   }
-  
-
 
   .img1Text{
     font-family: 'Roboto',sans-serif;
@@ -309,7 +305,6 @@ header{
     border-radius: 20px;
     position: relative;
     overflow: hidden;
- 
   }
 
   .img2 {
@@ -332,6 +327,7 @@ header{
     height: 400px;
     text-decoration: none;
   }
+
   .picture{
   border-radius: 20px;
   width: 600px; /* Set the width you desire */
@@ -378,8 +374,6 @@ header{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-  
-
 
 .img2Text{
     font-family: 'Roboto',sans-serif;
@@ -388,7 +382,6 @@ header{
     color: #f2f2f2;
     position: relative;
     width: 70%;
-   
 }
 
 .AddMoreButton{
@@ -403,8 +396,8 @@ header{
     margin-top: 80px;
     position: relative;
     overflow: hidden;
- 
 }
+
 .AddMoreButton:hover{
     background-color: #3a8ac3c2;
     top: 2px;
@@ -441,6 +434,7 @@ header{
     left: -35px;
     margin-bottom: 150px;
 }
+
 .letsWork {
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
@@ -463,17 +457,15 @@ header{
     margin-top: 10px;
     border-style: none;
     background-color: #FFD166;
-    width: 125px;
-    height: 35px;
+    width: 130px;
+    height: 40px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
- 
 }
 
 #contactButton{
     color:#252525 !important;
-   
     text-decoration: none !important;
     font-family:'Roboto', sans-serif;
     font-weight: 500;
@@ -490,13 +482,9 @@ header{
 
 /* ---- MEDIA QUERIES ---- */
 @media(min-width: 1400px){
-
     .ParagraphImg{
-
         font-size: 20px;
-
     }
-
 }
 
 @media(max-width: 1230px){
@@ -527,8 +515,6 @@ header{
     margin-right: 0px;
     }
 }
-
-
 
 
 @media(max-width: 991px) {
@@ -566,7 +552,6 @@ header{
     font-weight: 500;
     font-size: 26px;
     color: #f2f2f2;
-
 }
 
 .ParagraphImg{
@@ -576,10 +561,10 @@ header{
     color: #f2f2f2;
     width: 70%;
 }
-
 }
 
-@media(max-width:911px){
+
+@media(max-width:915px){
     #meniu1{
         display: none;
     }
@@ -615,7 +600,9 @@ header{
 
     .profile{
         margin-left: 0px;
+        order:1;
     }
+    
 
     .profileText{
         font-size: 17px;
@@ -625,6 +612,7 @@ header{
         left: 0px;
         text-align: center;
         margin-right: 0px;
+        order:2;
     }
 
     #description{
@@ -633,8 +621,6 @@ header{
         justify-content: space-evenly;
         align-items: center;
     }
-
-
 }
 
 @media(max-width:767px){
@@ -667,12 +653,12 @@ header{
         left: 25px;
         top: 4px;
     }
+
     .title2{
 
         right: 10px;
     }
     
-
     header{
         height: 550px;
     }
@@ -685,10 +671,9 @@ header{
     .profileText{
         font-size: 15px;
     }
+
     .span2{
-      
-        font-size: 20px;
-        
+        font-size: 20px; 
     }
 
   .img2:first-child{
@@ -721,7 +706,7 @@ header{
     }
 
     .proposal{
-        font-size: 2em;
+        font-size: 2.2em; /* de la 2em la 2.2em */
      }
 
     #contactButton{
@@ -736,6 +721,7 @@ header{
     width: 500px;
     height: 375px;
   }
+
   .textAndButton {
     width: 500px;
     bottom: 178px;
@@ -745,6 +731,7 @@ header{
     display: flex;
     justify-content: center;
 }
+
     .img2Button{
         top: 110px;
     }
@@ -760,43 +747,49 @@ header{
         height: 40px;
         margin-top: 17px;
      }
-
-   
 }
 
 
 @media(max-width: 570px) {
-    
     .img1{
         margin-top: 0px;
     }
+
      .img1Text{
         margin-left: 30px;
      }
+
      .img1Button{
         margin-right:27px ;
      }
+
      .picture1{
         height: 400px;
      }
+
      .imagesLink1{
         height: 400px;
      }
+
      .img2{
         margin-top: 0px;
         height: 400px;
      }
+
      .picture{
         width: 450px;
         height:317px ;
      }
+
      .imagesLink{
         height: 317px;
      }
+
      .textAndButton{
         width: 450px;
      }
     }
+
 
 @media(max-width: 500px){
     .profileText{
@@ -807,44 +800,56 @@ header{
     .projectTitle{
         font-size: 25px;
     }
+
 .letsWork{
     left: -12px;
     margin-top: 70px;
 }
+
     .proposal{
-        font-size: 1.9em;
+        font-size: 2em; /* de la 1.9em la 2em */
      }
+
      .img1{
         margin-top: 0px;
         height: 350px;
     }
+
      .img1Text{
         margin-left: 30px;
      }
+
      .img1Button{
         margin-right:27px ;
      }
+     
      .imagesLink1{
         height: 350px;
      }
+
      .picture1{
         height: 350px;
      }
+
      .img2{
         margin-top: 0px;
         height: 350px;
      }
+
      .picture{
         width: 400px;
         height:287px ;
      }
+
      .imagesLink{
         height: 287px;
      }
+
      .textAndButton{
         width: 400px;
      }
 }
+
 
 @media(max-width:450px){
     #meniu2{
@@ -867,7 +872,6 @@ header{
 
         right: 8px;
     }
-    
 
     .fastLinks{
          margin-right: 13px;
@@ -886,11 +890,10 @@ header{
          text-align: center;
      }
 
-     .span2{
-      
+     .span2{    
         font-size: 16px;
-        
     }
+
      .projectIntro{
         position: relative;
         left: 17px;
@@ -911,7 +914,7 @@ header{
     }
 
     .proposal{
-        font-size: 1.8em;
+        font-size: 1.8em; /* de la 1.5em la 1.8em */
      }
      
      .letsWork{
@@ -919,96 +922,115 @@ header{
         margin-top: 70px;
         margin-bottom: 100px;
     }
+
     .twoImgRow{
         margin-top: 30px;
     }
-        .proposal{
-            font-size: 1.6em;
-            
-         }
+
          .img1{
             margin-top: 0px;
             height: 350px;
         }
+
          .img1Text{
           
             margin-left: 30px;
          }
+
          .textAndButton1{
             bottom: 55px;
          }
+
          .img1Button{
             margin-right:27px ;
             bottom: 13px;
          }
+
          .imagesLink1{
             height: 300px;
          }
+
          .picture1{
             height: 300px;
          }
+
          .img2{
             margin-top: 0px;
             height: 300px;
          }
+
          .img2Text{
             top: 140px;
          }
+
          .img2Button{
             top: 128px;
          }
+
          .picture{
             width: 350px;
             height:250px ;
          }
+
          .imagesLink{
             height: 250px;
          }
+
          .textAndButton{
             width: 350px;
          }
 }
 
+
 @media(max-width:400px){
-  
          .img1{
             margin-top: 0px;
             height: 300px;
-        }
+        }  
+
          .img1Text{
-          
             margin-left: 30px;
          }
+
          .textAndButton1{
             bottom: 55px;
          }
+
          .img1Button{
             margin-right:27px ;
             bottom: 13px;
          }
+
          .imagesLink1{
             height: 250px;
          }
+
          .picture1{
             height: 250px;
          }
+
          .img2{
             margin-top: 0px;
             height: 250px;
          }
+
          .img2Text{
             top: 140px;
          }
+
          .img2Button{
             top: 128px;
          }
+
          .picture{
             width: 300px;
             height:200px ;
          }
+
          .imagesLink{
             height: 200px;
          }
+
          .textAndButton{
             width: 300px;
          }
@@ -1073,8 +1095,8 @@ header{
     font-family:'Russo One';
     font-weight: 400;
     font-size: 40px;
-
 }
+
 
 .NiceLink{
      

@@ -24,8 +24,6 @@ header{
    margin-top: 20px;
 }
 
-
-
 #accordionExample{
     display: flex;
     flex-direction: row;
@@ -33,6 +31,7 @@ header{
     align-items: center;
     margin: 20px;
  }
+
  @media(min-width: 1400px) {
     #accordionExample{
         margin: 51px;
@@ -119,7 +118,7 @@ header{
      font-size:17px;
 }
 
-#profile{
+/* #profile{
    width: 100%;
   display: flex;
   justify-content: center;
@@ -130,7 +129,7 @@ header{
 .profile{
     height: 310px;
     width: 310px;
-}
+} */
 
 #wrapper{
     width: 100%;
@@ -268,7 +267,7 @@ a{
     flex-direction: column;
     width: 40%;
     height: 90px;
-    margin-top: 50px;
+    margin-top: 20px; /* de la 50 la 20 */
 }
 
 .rightSide-upperSection{
@@ -276,7 +275,7 @@ a{
     flex-direction: column;
     width: 40%;
     height: 90px;
-    margin-top: 50px;
+    margin-top: 20px; /* de la 50 la 20 */
 }
 
 .FirstTitle{
@@ -294,7 +293,7 @@ a{
     width: 90%;
     text-align: left;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: medium;
     margin-left: 32px;
     margin-top: 62px;
@@ -407,12 +406,7 @@ a{
     #contactButton{
         font-size: large;
      }
-
-
 }
-
-
-
 
 
 @media(max-width:450px){
@@ -457,7 +451,6 @@ a{
 }
 
 @media(max-width:570px){
- 
     #accordion{
       width: 370px;
     }
@@ -502,7 +495,7 @@ a{
 }
 
 .SecondTitle{
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .lowerSection{
@@ -511,7 +504,6 @@ a{
     position: relative;
     margin-left: 14px !important;
     margin-top: 14px !important;
- 
 }
 
 p{
@@ -521,26 +513,41 @@ p{
 #leftDiv{
     margin-top: 0px;
 }
-
 }
+
 
 @media(max-width:420px){
     .a{
         width: 293px;
         margin-bottom: 0px;
     }
+
+    #accordion{
+        width: 310px;
+      }
+
     .leftDiv {
         width: 300px;
         height: 197px;
     }
+
     .secondDiv {
         width: 300px;
         height: 295px;
         margin-left: 36px;
         margin-top: 83px;
     }
+
     #drone1{
         margin-bottom: 85px;
+    }
+
+    .FirstTitle{
+        font-size: 1.3em;
+    }
+    
+    .SecondTitle{
+        font-size: 1em;
     }
 
     .w-100{
@@ -552,17 +559,19 @@ p{
     .leftDiv {
         width: 277px;
         height: 197px;
-      
     }
+
     .secondDiv {
         width: 277px;
         height: 273px;
         margin-left: -11px;
-        margin-top: 76px;
+        /* margin-top: 76px; */
     }
+
     #accordion{
-       width: 277px;
+       width: 300px;
     }
+
     #wrapper:nth-last-child(2) {
         margin-bottom: 100px;
     }
@@ -570,6 +579,7 @@ p{
     .SecondTitle {
         font-size: 0.9em;
     }
+    
     .a {
         width: 264px;
         margin-bottom: 0px;
@@ -578,22 +588,26 @@ p{
     .leftSide-upperSection {
         margin-top: 24px;
     }
+
     .rightSide-upperSection {
         margin-top: 24px;
     }
+
     .droneWidth {
         font-size: 1.3em;
     }
+
     .droneName {
         font-size: 1.5em;
     }
+
     #drone1{
         margin-bottom: 110px;
     }
+
     .rightDiv {
         width: 258px;
         height: 270px;
-
     }
 } 
 

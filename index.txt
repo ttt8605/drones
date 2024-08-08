@@ -7,3 +7,25 @@ stop server
 
 brew services stop mongodb-community@7.0
 
+update repo///
+1. git status
+2.git add .
+3.git commit -m"sda"
+4.git push heroku updates:main  
+
+
+De modificat 
+1. dronepage.css :
+.droneSection:hover .droneName{
+    color: #f2f2f2;
+    opacity: 0.7;
+}
+
+2. modifica asa in header.css ca sa rezolvi dronele
+
+  (max-width: 450px) {
+    header {
+        height: 93px;
+        background-color: #373737;
+        border-radius: 20px;
+    }

@@ -18,27 +18,43 @@
     left: 120px;
 }
 
+.title1{
+    color:#f2f2f2
+}
+
+.title2{
+    color: #3A8AC3;
+    position: relative;
+    right: 13px;
+}
+
 #title a {
     text-decoration: none !important;
-    color: #f2f2f2;
+    /* color: #f2f2f2; */
 }
+
 /* cancel the default burger button from bootstrap */
 .burger{
     width: 40px;
 }
+
 .navbar-toggler{
     border: 0px !important;
     border-color: transparent !important;
 }
+
 button:focus{
     outline: 0px;
 }
+
 #toggle{
     background-color: transparent !important;
 }
+
 .navbar-toggler:focus{
     box-shadow: none;
 }
+
 /* --- */
 #hyperlinks{
     color: #f2f2f2;
@@ -63,11 +79,11 @@ button:focus{
      transition: color 0.4s ease; 
     }
 
-    
 #hl a {
     text-decoration: none !important;
     color:#3A8AC3 !important;
 }
+
 #hl:hover{
     color: #3A8AC3 !important;
 }
@@ -95,20 +111,19 @@ button:focus{
      border-radius: 10px;
      border-color: #FFD166;
      margin-top: -40px;
-     transition: background-color 0.4s ease; /* Changed from color to background-color */
-
-    
+     transition: background-color 0.4s ease; /* Changed from color to background-color */ 
 }
+
 #contact a:hover{
    background-color: #3A8AC3 ;
 }
 
-
 #drones {
-  
      text-align: center;
      padding-bottom: 10px;
 }
+
+
 
 /* ---- MEDIA BREAKPOINTS ---- */
 @media(max-width: 1230px) {
@@ -173,7 +188,7 @@ button:focus{
     
     #meniu2{               
          display: block;
-     }s
+     }
 
      .container-fluid{
         background-color:none ;
@@ -192,8 +207,6 @@ button:focus{
 
 
 @media(max-width:767px){
-  
- 
      #closeBtn {
        background-color: #f2f2f2;
      }
@@ -219,6 +232,7 @@ button:focus{
         left: 25px;
         top: 4px;
     }
+  
 
     #contactButton{
         font-size: large;
@@ -234,16 +248,21 @@ button:focus{
 }
 
 @media(max-width:450px){
+    header {
+     height: 93px;
+     background-color: #373737;
+     border-radius: 20px;
+    } 
+
     .but1{
      width: 100px;
      height: 31px;
      border-radius:8px;
     }
 
-    header{
-        height: 500px;
+    .title2{
+        right: 6px;
     }
-
     .container-fluid{
         height: 64px;
     }
