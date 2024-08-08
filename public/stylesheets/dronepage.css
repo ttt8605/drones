@@ -44,7 +44,7 @@ header{
      font-size:17px;
 }
 
-#profile{
+/* #profile{
    width: 100%;
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ header{
 .profile{
     height: 310px;
     width: 310px;
-}
+} */
 
 #wrapper{
     width: 100%;
@@ -79,6 +79,7 @@ header{
     margin-top: 100px;
     width: 100%;  /* old: width: 90% */
 }
+
 .droneSection2{
   display: none;
 }
@@ -102,13 +103,13 @@ header{
     flex-direction: column;
 
 }
+
 .w-100{
     border-radius: 20px;
     width: 500px; /* Set the width you desire */
     height: 334px; /* Set the height you desire */
     object-fit: cover; /* Maintain aspect ratio */
 }
-
 
 .rightDiv{
     width: 500px;  
@@ -129,6 +130,7 @@ header{
     width: 500px;
     height: 100px;
 }
+
 #link{
     width: 100%;
     display: flex;
@@ -152,8 +154,7 @@ a{
     transition: color 0.3s ease; 
 }
 
-
-.droneName:hover {
+.droneSection:hover .droneName{
     color: #f2f2f2;
     opacity: 0.7;
 }
@@ -285,17 +286,15 @@ a{
       #list {
         background-color: #373737;
     }
-
-
 }
 
-@media(max-width:767px){
-  
 
+@media(max-width:767px){
      #contactButton{
         font-size: large;
      }
  }
+
 
 @media(max-width:674px){
     .fastLinks{
@@ -318,11 +317,7 @@ a{
     #contactButton{
         font-size: large;
      }
-
-
 }
-
-
 
 
 @media(max-width:450px){
@@ -355,11 +350,13 @@ a{
     }
 }
 
+
 @media(max-width:700px){
     .droneSection{
         flex-direction:column;
     }
 }
+
 
 @media(max-width:570px){
     .a{
@@ -397,7 +394,6 @@ a{
     font-size: 1.3em;
 }
 
-
 .SecondTitle{
     font-size: 1.1em;
 }
@@ -407,7 +403,6 @@ a{
     font-size: small;
     margin-left: 14px !important;
     margin-top: 14px !important;
-
 }
 
 p{
@@ -417,9 +412,7 @@ p{
 #leftDiv{
     margin-top: 0px;
 }
-
 }
-
 
 
 @media(max-width: 400px){
@@ -427,23 +420,29 @@ p{
         width: 320px !important;
         height: 300px !important;
     }
+
     .secondDiv {
         width: 320px !important;
         height: 295px !important;
     }
+
     .SecondTitle {
         font-size: 0.9em;
     }
+
     .a {
         width: 257px;
         position: relative;
     }
+
     .droneWidth {
         font-size: 1.3em;
     }
+
     .droneName {
         font-size: 1.5em;
     }
+
     .rightDiv {
         width: 320px !important;
         height: 270px;
