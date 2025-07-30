@@ -1316,8 +1316,6 @@ header{
             flex-direction: column;
             justify-content: space-between;
             width: inherit;
-            max-height: 600px;
-            height: 100%;
         }
         
         .AboutMeImg{
