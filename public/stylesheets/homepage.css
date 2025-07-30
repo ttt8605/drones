@@ -1167,21 +1167,27 @@ header{
     }
 
     @media (max-width:800px){
-       
+       .descriptionSection{
+        margin-top: 0px !important;
+        padding: 0px !important;
+        height: 100vh !important;
+       }
         
         .container-xxl{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             width: inherit;
-            max-height: 600px;
-            height: 100%;
+            max-height: 260px;
+           
         }
         
         .AboutMeImg{
             font-family: 'Roboto',sans-serif;
-            font-weight: 400;
-            font-size: 25px;
+            font-weight: 500;
+            font-size: 27px;
+            color: #3A8AC3 !important;
+            margin-top: 30px;
             
        
         }
