@@ -574,13 +574,14 @@ header{
     font-family: 'Roboto',sans-serif;
     font-weight: 500;
     font-size: 32px;
+    color: #3A8AC3;
 }
 
 .ParagraphImg{
     font-family: 'Roboto',sans-serif;
     font-weight: 300;
     font-size: 16px;
-    color: #3A8AC3;
+    color: #f2f2f2;
     width: 77%;
 }
 }
