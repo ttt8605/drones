@@ -1402,6 +1402,10 @@ header{
         width: 26px;
         height: 26px;
     }
+
+    main{
+        margin-top: 0px;
+    }
         }
 
 
