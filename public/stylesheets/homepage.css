@@ -134,9 +134,9 @@ header{
 .span2{
     font-family: 'Roboto',sans-serif;
     font-weight: 500; /* de la 400 la 500 */
-    font-size: 27px;
+    font-size: 34px;
     color: #3A8AC3;
-    word-spacing: 2px;
+    word-spacing: 1px;
     margin-top: 30px;
 }
 
@@ -153,6 +153,9 @@ header{
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
     transition: opacity 2s, transform 1.5s; /* Apply transition */
+}
+.imgDescriptionSection{
+    width: 100%;
 }
 
 .descriptionSection.in-view {
@@ -171,8 +174,8 @@ header{
 
 .AboutMeImg{
     font-family: 'Roboto',sans-serif;
-    font-weight: 400;
-    font-size: 33px;
+    font-weight: 500;
+    font-size: 35px;
     color: #3A8AC3;
 
 }
@@ -182,7 +185,7 @@ header{
     font-weight: 300;
     font-size: 18px;
     color: #f2f2f2;
-    width: 60%;
+    width: 70%;
     letter-spacing: 0.5px;
 }
 
