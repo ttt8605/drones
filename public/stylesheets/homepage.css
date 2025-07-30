@@ -1340,19 +1340,19 @@ header{
           
 
             .descriptionSection{
-                max-height: 600px;
+                
                 margin-top: 50px;
                 padding: 20px;
-                height: 587px;
+              
             }
             
             .container-xxl{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 width: inherit;
                 max-height: 600px;
-                height: 100%;
+                
             }
             
             .AboutMeImg{
