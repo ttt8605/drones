@@ -1263,12 +1263,14 @@ header{
     }
     @media(max-width:610px){
         .descriptionSection{
-            max-height: 600px;
             margin-top: 50px;
             padding: 30px;
-            height: 587px;
+          
         }
         
+        main{
+            margin-top: 30px;
+        }
         .container-xxl{
             display: flex;
             flex-direction: column;
