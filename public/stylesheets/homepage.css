@@ -556,9 +556,7 @@ header{
  }
 
  .descriptionSection{
-    max-height: 600px;
-    margin-top: 50px;
-    padding: 40px;
+    max-height: 422px;
 }
 
 .container-xxl{
@@ -569,7 +567,9 @@ header{
     max-height: 600px;
     height: 100%;
 }
-
+.span2{
+    font-size: 28px;
+}
 .AboutMeImg{
     font-family: 'Roboto',sans-serif;
     font-weight: 500;
