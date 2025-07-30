@@ -16,7 +16,7 @@ main{
      justify-content: center;
      align-items: center;
      flex-direction: column;
-     margin-top: 150px;
+     margin-top: 120px;
 }
 
 header{
@@ -508,13 +508,34 @@ header{
 
 @media(max-width: 1222px) {
     .profileText{
-        font-size: 19px;
+        font-size: 22px;
     }
 
     .profile {
     height: 240px;
     width: 240px;
     margin-right: 0px;
+    }
+
+    .span2{
+        font-size: 32px;
+    }
+
+    .profileText{
+        margin-top: 62px;
+    }
+    .descriptionSection{
+        max-height: 425px;
+    }
+    .container-xxl{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .projectIntro{
+        margin-top: 30px;
+    }
+    .ParagraphImg{
+        font-size: 16px;
     }
 }
 
