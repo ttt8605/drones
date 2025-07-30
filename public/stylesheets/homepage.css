@@ -115,10 +115,10 @@ header{
     flex-direction: column;
     justify-content: center;
     font-family: 'Roboto',sans-serif;
-    font-weight: 300;
-    font-size: 23px;
+    font-weight: 100;
+    font-size: 21px;
     color: #f2f2f2;
-    width: 650px;
+    width: 470px;
     margin-top: 30px;
     opacity: 0;
     transform: translateX(-25px); /* Start slightly above */
@@ -134,17 +134,15 @@ header{
 .span2{
     font-family: 'Roboto',sans-serif;
     font-weight: 500; /* de la 400 la 500 */
-    font-size: 23px;
+    font-size: 27px;
     color: #3A8AC3;
+    word-spacing: 2px;
+    margin-top: 30px;
 }
 
 .descriptionSection {
     border-radius: 20px;
     width: 100%;
-    background-image: url('https://res.cloudinary.com/dnbqzrigq/image/upload/v1722958942/poze%20site/PCNA23_0393_fine_6_wyvukv.png');
-    background-size: cover; /* Default for larger screens */
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
