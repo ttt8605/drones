@@ -145,11 +145,11 @@ header{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     aspect-ratio: 16 / 9; /* Maintain aspect ratio */
     max-height: 800px;
     margin-top: 70px;
-    padding: 50px;
+    padding: 0px;
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
     transition: opacity 2s, transform 1.5s; /* Apply transition */
@@ -170,6 +170,7 @@ header{
     width: inherit;
     max-height: 200px; 
     height: 100%;
+    margin-top: 50px;
 }
 
 .AboutMeImg{
