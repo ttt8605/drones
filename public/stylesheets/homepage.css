@@ -147,8 +147,8 @@ header{
     flex-direction: column;
     justify-content: center;
     aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-    max-height: 800px;
-    margin-top: 70px;
+    max-height: 506px;
+    margin-top: 0px;
     padding: 0px;
     opacity: 0;
     transform: translateY(-20px); /* Start slightly above */
