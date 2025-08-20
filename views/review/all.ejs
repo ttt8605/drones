@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/contact2.css">
+  </head>
+<% layout('/layouts/boilerplate') %>
+<h1>All reviews</h1>
+<% for(let message of review) { %>
+    <div class="card w-75 mb-3">
+        <div class="card-body">
+            <h5 class="card-title mb-3"><b> Name:</b> <%= message.name %></h5>
+            <h6 class="card-title mb-3"><b>Rating:</b>  <%= message.starRating %> ⭐️</h6>   
+            <p class="card-text"> <b>Message:</b> <%= message.message %></p>
+            <div class="container text-start mt-4 mb-2">
+                <div class="row align-self-start " id="buttons">
+                    <div class="col-2" id="but">
+                        <form action="/review/<%= message._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<% } %>

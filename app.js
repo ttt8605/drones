@@ -107,6 +107,7 @@ const projectsRoutes = require('./routes/projects');
 const contactRoutes = require('./routes/contact');
 const userRoutes = require('./routes/auth');
 const serviciiRoutes = require('./routes/servici');
+const reviewRoutes = require('./routes/reviews')
 
 app.get('/', (req, res) => {
     res.redirect('/projects');
@@ -116,6 +117,7 @@ app.use('/drones', dronesRoutes);
 app.use('/projects', projectsRoutes);
 app.use('/contact', contactRoutes);
 app.use('/services',serviciiRoutes);
+app.use('/review',reviewRoutes);
 app.use('/', userRoutes);
 
 

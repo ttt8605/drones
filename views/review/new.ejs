@@ -1,0 +1,68 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/review.css">
+</head>
+<% layout('/layouts/boilerplate') %>
+     
+     <div class="container" id="profile">
+        <img src="https://res.cloudinary.com/dnbqzrigq/image/upload/v1753795113/poze%20site/profile_fqnxsi.svg" alt="" class="profile">
+       </div>
+
+           <div class="mainpart">
+         <div class="container1">
+                <h1 id="text">Add a review <br>
+                       and let others know <br> about your experience👋 </h1>
+            </div>
+
+            <div class="container2">
+              <form action="/review" method="POST" novalidate class="validated-form" >
+  
+                <div class="mb-3" id="input">
+                  <label for="name" class="form-label">Your name</label>
+                  <input type="text" class="form-control" placeholder="Your name" name="name" id="name" required>
+                </div>
+                <div class="mb-3" id="input">
+                  <div class="ReviewRangeRatingCustomDiv">
+                  <label for="name" class="form-label">Add a rating:</label>
+                 <div id="rangeValue"></div>
+                  </div>
+                 <input class="form-range" type="range" id="starRating" name="starRating" min="1" max="5" value="3">
+                </div>
+      
+                
+                <div class="mb-3" id="input">
+                  <label for="message" class="form-label">Review</label>
+                  <textarea rows="10" cols="25"  class="form-control" id="message" name="message" maxlength="500" required></textarea>
+                </div>
+  
+                <div class="container3">
+                 <button id="button">Submit &rarr;</button>
+                </div>
+
+              </form>
+            </div>
+            </div>
+  
+            <script>
+                      
+const rangeInput = document.getElementById('starRating');
+const rangeOutput = document.getElementById('rangeValue');
+
+function updateStars(value) {
+    let stars = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= value) {
+            stars += '<span style="color: gold;">★</span>';
+        } else {
+            stars += '<span style="color: lightgray;">★</span>';
+        }
+    }
+    rangeOutput.innerHTML = stars ;
+}
+
+updateStars(rangeInput.value);
+
+rangeInput.addEventListener('input', function() {
+    updateStars(this.value);
+});
+
+              </script>

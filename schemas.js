@@ -60,6 +60,12 @@ module.exports.droneSchema = Joi.object({
       message:Joi.string().required().escapeHTML().noURL()
    }).required()
 
+     module.exports.ReviewSchema = Joi.object({
+      name:Joi.string().required().escapeHTML().noURL(),
+      starRating:Joi.number().min(1).max(5).required(),
+      message:Joi.string().required().escapeHTML().noURL()
+   }).required()
+
    module.exports.ServiciiSchema = Joi.object({
     name:Joi.string().required().escapeHTML(),
     description:Joi.string().required().escapeHTML(),
