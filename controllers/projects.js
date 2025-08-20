@@ -2,7 +2,7 @@ const Project = require('../models/projects');
 const Drone = require('../models/drone');
 const ExpressError =require('../utils/ExpressErrors');
 const {cloudinary}=require("../cloudinary")
-
+const Review = require('../models/review');
 
 module.exports.projectCreateForm =async(req,res)=>{
 
@@ -42,7 +42,11 @@ module.exports.projectNewRequest =  async(req,res)=>{
 
 module.exports.projectPublicPage = async(req,res)=>{
     const projects = await Project.find({});
-    res.render('projects/projectsPage',{projects});
+    const review = await Review.find({});
+    const totalReviews = review.length;
+    const totalRating = review.reduce((sum, r) => sum + r.starRating, 0);
+    const averageRating = totalReviews ? (totalRating / totalReviews).toFixed(2) : 0;
+    res.render('projects/projectsPage',{projects,review,totalReviews,averageRating});
 }
 
 

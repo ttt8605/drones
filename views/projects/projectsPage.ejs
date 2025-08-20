@@ -211,7 +211,29 @@
              <% x++; %>
          <% } %>
      </section>
-     
+     <section class="ReviewsSection">
+              <h2 class="ReviewsSectionH2">Client reviews</h2>
+              <h3 class="ReviewsSectionRatings"><span class="ReviewsSectionRatingsSpansN">Overall rating:</span> <span class="ReviewsSectionRatingsSpans"><%=averageRating%> ⭐️</span><span class="ReviewsSectionRatingsSpansN"> based on</span> <span class="ReviewsSectionRatingsSpans"><%=totalReviews%></span> <span class="ReviewsSectionRatingsSpansN">reviews</span></h3>
+        <div class="review-carousel-div">
+        <% review.forEach((r, i) => { %>
+            <div class="review-carousel <%= i === 0 ? 'active' : '' %>">
+              <div class="review-carousel-stars">
+               <% for (let s = 0; s < r.starRating; s++) { %>
+                    <span class="star">⭐️</span>
+                <% } %>
+                </div>
+                <h1 class="review-carousel-H1"><%= r.name %></h1>
+                <p class="review-carousel-p"><%= r.message %></p>
+            </div>
+        <% }); %>
+       <div class="review-carousel-buttons">
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+        </div>
+    </div>
+    <div class="addReviewBtn"><a class="addReviewBtnLink" href="/review">Leave a review &#8599;</a></div>
+     </section>
+    
 
                      <div class="letsWork">
                        <div>
@@ -283,9 +305,8 @@
     
 <script src="/javascripts/styling.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="/javascripts/homepage.js">
+<script src="/javascripts/homepage.js"></script>
 
-</script>
 </body>
 </html>
 
