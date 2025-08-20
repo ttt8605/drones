@@ -1009,6 +1009,18 @@ header{
      .textAndButton{
         width: 400px;
      }
+     .ReviewsSectionH2{
+        font-size: 27px;
+     }
+     .ReviewsSectionRatings{
+        font-size: 17px;
+     }
+     .review-carousel-p{
+        font-size: 17px;
+     }
+     .review-carousel-div{
+        height: 999px;
+     }
 }
 
 
