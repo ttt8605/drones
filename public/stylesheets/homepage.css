@@ -526,7 +526,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 40px; /* space between buttons */
-    margin-top: 520px; /* push buttons below carousel cards */
+    margin-top: 511px; /* push buttons below carousel cards */
     z-index: 5; /* above cards */
 
 }
@@ -674,6 +674,13 @@ header{
 }
 
 
+  @media(max-width:1024px){
+    .social{
+        width: 280px;
+    }
+    }
+
+
 @media(max-width: 991px) {
   /* .profile{
     height: 200px;
@@ -780,6 +787,71 @@ header{
     }
 }
 
+
+    
+    @media(max-width:911px){
+   
+    
+         .container-fluid{
+            width: 100%;
+            height: 90px;
+         }
+    
+    
+        .social{
+          width: 280px;
+        }
+        .review-carousel{
+            height: 70%;
+        }
+        .review-carousel-div{
+            height: 755px;
+        }
+         .review-carousel-buttons{
+        margin-top: 635px;
+    }
+        
+    }
+
+
+    @media (max-width:800px){
+       .descriptionSection{
+        margin-top: 0px !important;
+        padding: 0px !important;
+        height: 100vh !important;
+       }
+        
+        .container-xxl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: inherit;
+            max-height: 260px;
+           
+        }
+        
+        .AboutMeImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 500;
+            font-size: 27px;
+            color: #3A8AC3 !important;
+            margin-top: 30px;
+            
+       
+        }
+        
+        .ParagraphImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 17px;
+            color: #f2f2f2;
+            width: 100%;
+            
+           
+        }
+    }
+
+
 @media(max-width:767px){
      #closeBtn {
        background-color: #FFD166;
@@ -796,8 +868,27 @@ header{
      .img1Text{
         font-size: 17px;
      }
+
+         .social{
+           width: 280px;
+        }
+          .review-carousel-div{
+            height: 650px;
+        }
+         .review-carousel-buttons{
+        margin-top: 597px;
+    }
  }
 
+@media screen and (max-width: 700px) {
+  .review-carousel {
+    height: auto !important; /* let JS adjust it */
+    transition: height 0.3s ease, opacity 0.5s ease;
+  }
+  .review-container {
+    transition: height 0.4s ease; /* smooth resizing */
+}
+}
 
 @media(max-width:674px){
     .fastLinks{
@@ -857,7 +948,7 @@ header{
     }
 
     .addReviewBtn{
-        margin-top: 0px;
+        margin-top: 40px;
     }
 
     #letsWork{
@@ -908,6 +999,121 @@ header{
         height: 40px;
         margin-top: 17px;
      }
+
+      #mobile{
+        display: block;
+      }
+      #desktop{
+        display: none;
+      }
+
+      #footer2{
+        display: flex;
+        width: 100%;
+        height: 180px;
+        background-color: #373737;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 120px;
+       
+    }
+    .titleFooter{
+        color: #F2F2F2;
+        /* width: 235px; */
+        text-align:start;
+        padding-bottom: 10px;
+        font-family:'Russo One';
+        font-weight: 300;
+        font-size: 34px;
+    
+    }
+    .rigthSectionFooter{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items:center ;
+        height: 83%;
+    }
+    .leftSectionFooter{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 83%;
+    }
+    .media{
+        width: 26px;
+        height: 26px;
+    }
+       .review-carousel-div{
+            height: 653px;
+        }
+         .review-carousel-buttons{
+        margin-top: 607px;
+    }
+       
+}
+
+    @media(max-width:610px){
+        .descriptionSection{
+            margin-top: 50px;
+            padding: 30px;
+          
+        }
+        
+        main{
+            margin-top: 30px;
+        }
+        .container-xxl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: inherit;
+            margin: 0px;
+          
+        }
+        
+        .AboutMeImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            color: #f2f2f2;
+       
+        }
+        
+        .ParagraphImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: #f2f2f2;
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+
+
+
+
+    @media(max-width:589px){
+        .review-carousel{
+            padding: 30px;
+        }
+        
+           .addReviewBtn{
+            margin-top: 69px;
+           }
+           .review-carousel-buttons{
+            margin-top: 663px;
+           }
+
+
+           .review-carousel-div{
+            height: 715px;
+           }
+
 }
 
 
@@ -1018,10 +1224,22 @@ header{
      .review-carousel-p{
         font-size: 17px;
      }
-     .review-carousel-div{
-        height: 999px;
-     }
 }
+
+
+
+    @media(max-width: 480px){
+        .imgDescriptionSection{
+            display: none;
+        }
+        .ReviewsSection{
+            width: 90%;
+        }
+    }
+
+
+
+
 
 
 @media(max-width:450px){
@@ -1152,6 +1370,41 @@ header{
          .textAndButton{
             width: 350px;
          }
+
+            .descriptionSection{
+           
+          
+            padding: 30px;
+            height: 587px;
+        }
+        
+        .container-xxl{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: inherit;
+        }
+        
+        .AboutMeImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            color: #f2f2f2;
+       
+        }
+        
+        .ParagraphImg{
+            font-family: 'Roboto',sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            color: #f2f2f2;
+            width: 100%;
+            text-align: center;
+            margin-left: 0px;
+        }
+        .review-carousel{
+            width: 95%;
+        }
 }
 
 
@@ -1207,6 +1460,78 @@ header{
          .textAndButton{
             width: 300px;
          }
+
+                  .review-carousel{
+            width: 100%;
+        }
+
+            .descriptionSection{
+                
+                margin-top: 50px;
+                padding: 20px;
+              
+            }
+            
+            .container-xxl{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: inherit;
+                max-height: 600px;
+                
+            }
+            
+            .AboutMeImg{
+                font-family: 'Roboto',sans-serif;
+                font-weight: 400;
+                font-size: 23px;
+                color: #f2f2f2;
+                margin-top: 20px;
+           
+            }
+            
+            .ParagraphImg{
+                font-family: 'Roboto',sans-serif;
+                font-weight: 300;
+                font-size: 14px;
+                color: #f2f2f2;
+                width: 100%;
+                text-align: center;
+                margin-left: 0px;
+            }
+
+    .titleFooter{
+        color: #F2F2F2;
+        /* width: 235px; */
+        text-align:start;
+        padding-bottom: 10px;
+        font-family:'Russo One';
+        font-weight: 300;
+        font-size: 26px;
+
+    }
+    .NiceLink{
+        font-weight: 400;
+        font-size: 15px;
+    }
+    .footerText{
+        font-size: 14px;
+    }
+    .rigthSectionFooter{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items:center ;
+        height: 83%;
+    }
+    .media{
+        width: 26px;
+        height: 26px;
+    }
+
+    main{
+        margin-top: 0px;
+    }
 }
 
 
@@ -1293,314 +1618,7 @@ header{
    margin-bottom: 0rem;  
   }
 
-  @media(max-width:1024px){
-    .social{
-        width: 280px;
-    }
-    }
 
 
  
     
-    @media(max-width:911px){
-   
-    
-         .container-fluid{
-            width: 100%;
-            height: 90px;
-         }
-    
-    
-        .social{
-          width: 280px;
-        }
-        .review-carousel{
-            height: 70%;
-        }
-        .review-carousel-div{
-            height: 755px;
-        }
-         .review-carousel-buttons{
-        margin-top: 635px;
-    }
-        
-    }
-
-    
-
-    @media (max-width:800px){
-       .descriptionSection{
-        margin-top: 0px !important;
-        padding: 0px !important;
-        height: 100vh !important;
-       }
-        
-        .container-xxl{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: inherit;
-            max-height: 260px;
-           
-        }
-        
-        .AboutMeImg{
-            font-family: 'Roboto',sans-serif;
-            font-weight: 500;
-            font-size: 27px;
-            color: #3A8AC3 !important;
-            margin-top: 30px;
-            
-       
-        }
-        
-        .ParagraphImg{
-            font-family: 'Roboto',sans-serif;
-            font-weight: 300;
-            font-size: 17px;
-            color: #f2f2f2;
-            width: 100%;
-            
-           
-        }
-    }
-    @media(max-width:767px){
-        .social{
-           width: 280px;
-        }
-          .review-carousel-div{
-            height: 874px;
-        }
-         .review-carousel-buttons{
-        margin-top: 706px;
-    }
-    }
-
-
-    @media(max-width:674px){
-      #mobile{
-        display: block;
-      }
-      #desktop{
-        display: none;
-      }
-
-      #footer2{
-        display: flex;
-        width: 100%;
-        height: 180px;
-        background-color: #373737;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        flex-direction: row;
-        align-content: center;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 120px;
-       
-    }
-    .titleFooter{
-        color: #F2F2F2;
-        /* width: 235px; */
-        text-align:start;
-        padding-bottom: 10px;
-        font-family:'Russo One';
-        font-weight: 300;
-        font-size: 34px;
-    
-    }
-    .rigthSectionFooter{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items:center ;
-        height: 83%;
-    }
-    .leftSectionFooter{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        height: 83%;
-    }
-    .media{
-        width: 26px;
-        height: 26px;
-    }
-       .review-carousel-div{
-            height: 974px;
-        }
-         .review-carousel-buttons{
-        margin-top: 794px;
-    }
-       
-
-    }
-    @media(max-width:610px){
-        .descriptionSection{
-            margin-top: 50px;
-            padding: 30px;
-          
-        }
-        
-        main{
-            margin-top: 30px;
-        }
-        .container-xxl{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: inherit;
-            margin: 0px;
-          
-        }
-        
-        .AboutMeImg{
-            font-family: 'Roboto',sans-serif;
-            font-weight: 400;
-            font-size: 25px;
-            color: #f2f2f2;
-       
-        }
-        
-        .ParagraphImg{
-            font-family: 'Roboto',sans-serif;
-            font-weight: 300;
-            font-size: 16px;
-            color: #f2f2f2;
-            width: 100%;
-            margin-left: 0px;
-        }
-    }
-
-    @media(max-width:589px){
-        .review-carousel{
-            padding: 30px;
-        }
-         .review-carousel-div{
-            height: 1074px;
-        }
-         .review-carousel-buttons{
-        margin-top: 854px;
-    }
-}
-    @media(max-width: 480px){
-        .imgDescriptionSection{
-            display: none;
-        }
-        .ReviewsSection{
-            width: 90%;
-        }
-    }
-
-    @media(max-width: 450px){
-        .descriptionSection{
-           
-          
-            padding: 30px;
-            height: 587px;
-        }
-        
-        .container-xxl{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: inherit;
-        }
-        
-        .AboutMeImg{
-            font-family: 'Roboto',sans-serif;
-            font-weight: 400;
-            font-size: 25px;
-            color: #f2f2f2;
-       
-        }
-        
-        .ParagraphImg{
-            font-family: 'Roboto',sans-serif;
-            font-weight: 300;
-            font-size: 14px;
-            color: #f2f2f2;
-            width: 100%;
-            text-align: center;
-            margin-left: 0px;
-        }
-        .review-carousel{
-            width: 95%;
-        }
-    }
-        @media(max-width: 400px) {
-          .review-carousel{
-            width: 100%;
-        }
-
-            .descriptionSection{
-                
-                margin-top: 50px;
-                padding: 20px;
-              
-            }
-            
-            .container-xxl{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                width: inherit;
-                max-height: 600px;
-                
-            }
-            
-            .AboutMeImg{
-                font-family: 'Roboto',sans-serif;
-                font-weight: 400;
-                font-size: 23px;
-                color: #f2f2f2;
-                margin-top: 20px;
-           
-            }
-            
-            .ParagraphImg{
-                font-family: 'Roboto',sans-serif;
-                font-weight: 300;
-                font-size: 14px;
-                color: #f2f2f2;
-                width: 100%;
-                text-align: center;
-                margin-left: 0px;
-            }
-
-    .titleFooter{
-        color: #F2F2F2;
-        /* width: 235px; */
-        text-align:start;
-        padding-bottom: 10px;
-        font-family:'Russo One';
-        font-weight: 300;
-        font-size: 26px;
-
-    }
-    .NiceLink{
-        font-weight: 400;
-        font-size: 15px;
-    }
-    .footerText{
-        font-size: 14px;
-    }
-    .rigthSectionFooter{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items:center ;
-        height: 83%;
-    }
-    .media{
-        width: 26px;
-        height: 26px;
-    }
-
-    main{
-        margin-top: 0px;
-    }
-        }
-
-
-
