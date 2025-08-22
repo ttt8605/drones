@@ -1155,6 +1155,12 @@ header{
      .textAndButton{
         width: 450px;
      }
+     .titleFooter{
+font-size: 23px !important;
+}
+.NiceLink{
+    font-size: 12px !important;
+}
     }
 
 
@@ -1538,7 +1544,9 @@ header{
 
     .review-carousel-buttons {
    margin-top: -64px !important;
+   
 }
+
 }
 
 
