@@ -526,7 +526,7 @@ header{
     display: flex;
     justify-content: center;
     gap: 40px; /* space between buttons */
-    margin-top: 511px; /* push buttons below carousel cards */
+    margin-top: 0px !important; /* push buttons below carousel cards */
     z-index: 5; /* above cards */
 
 }
