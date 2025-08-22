@@ -1532,6 +1532,10 @@ header{
     main{
         margin-top: 0px;
     }
+
+    .review-carousel-buttons {
+   margin-top: -64px;
+}
 }
 
 
