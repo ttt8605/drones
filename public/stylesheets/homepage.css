@@ -1405,6 +1405,9 @@ header{
         .review-carousel{
             width: 95%;
         }
+    .review-carousel-buttons {
+        margin-top: -14px;
+    }
 }
 
 
