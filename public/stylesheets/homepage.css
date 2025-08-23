@@ -301,12 +301,12 @@ header{
   
 .img2{
     
-    width: 600px;
+  
    height: 460px;
     margin-top: 80px;
     border-radius: 20px;
     position: relative;
-    overflow: hidden;
+   
   }
 
   .img2 {
@@ -320,21 +320,35 @@ header{
     transform: translateY(0); /* Move to the original position */
 }
   
-  .img2:hover {
-    top: 2px;
-  }
+
 
 
   .imagesLink{
-    height: 400px;
     text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   border-style: solid;
+   border-color: #F2F2F2;
+   border-width: 1px;
+   border-radius: 12px;
+    height: 33px;
+    padding-left: 20px;
+    padding-right: 10px;
+     transition: border-color 0.5s ease;
+  }
+
+  .imagesLink:hover{
+    border-color:#3A8AC3;
   }
 
   .picture{
   border-radius: 20px;
   width: 600px; /* Set the width you desire */
   height: 460px; /* Set the height you desire */
-  object-fit: cover; /* Maintain aspect ratio */
+    background-position: center;
+    background-repeat: no-repeat;/* Maintain aspect ratio */
+
 }
   
   .img2:first-child{
@@ -345,8 +359,6 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    position: relative;
-    bottom: 60px;
 }
 
 .textAndButton1{
@@ -368,15 +380,18 @@ header{
     transition: transform 0.3s ease-in-out;
 }
 
-.img2:hover .img2Button {
-    animation: spin 0.5s linear ;
+
+.imagesLink:hover .img2Button {
+    animation: shake 1s linear infinite ;
   }
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-
+ @keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(0px); }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
 .img2Text{
     font-family: 'Roboto',sans-serif;
     font-weight: 500;
@@ -923,14 +938,19 @@ header{
     .span2{
         font-size: 20px; 
     }
+    .img2{
+        height: 390px;
+    }
+     .imagesLink{
+        padding-left: 10px;
+        padding-right: 10px;
 
+     }
   .img2:first-child{
     margin-right: 0px;
   }
 
-    .img2Button{
-         width:83px ;
-    }
+  
 
     .projectIntro{
         margin-top: 70px;
@@ -979,19 +999,10 @@ header{
     bottom: 178px;
 }
     
-.img2{
-    display: flex;
-    justify-content: center;
-}
-
-    .img2Button{
-        top: 110px;
-    }
 
     .img2Text{
-        top: 121px;
+        top: 2px;
         font-size: 17px;
-        margin-left: 27px;
     }
  
      .AddMoreButton{
@@ -1113,6 +1124,9 @@ header{
            .review-carousel-div{
             height: 715px;
            }
+           .visibleImages{
+            margin-top: 50px;
+           }
 
 }
 
@@ -1148,9 +1162,7 @@ header{
         height:317px ;
      }
 
-     .imagesLink{
-        height: 317px;
-     }
+   
 
      .textAndButton{
         width: 450px;
@@ -1215,7 +1227,7 @@ font-size: 23px !important;
      }
 
      .imagesLink{
-        height: 287px;
+        padding-right: 3px;
      }
 
      .textAndButton{
@@ -1320,9 +1332,7 @@ font-size: 23px !important;
         margin-bottom: 100px;
     }
 
-    .twoImgRow{
-        margin-top: 30px;
-    }
+  
 
          .img1{
             margin-top: 0px;
@@ -1353,26 +1363,18 @@ font-size: 23px !important;
 
          .img2{
             margin-top: 0px;
-            height: 300px;
+            height: 330px;
          }
 
-         .img2Text{
-            top: 140px;
-         }
-
-         .img2Button{
-            top: 128px;
-         }
+       
+         
 
          .picture{
             width: 350px;
             height:250px ;
          }
 
-         .imagesLink{
-            height: 250px;
-         }
-
+        
          .textAndButton{
             width: 350px;
          }
@@ -1414,6 +1416,10 @@ font-size: 23px !important;
     .review-carousel-buttons {
         margin-top: -14px;
     }
+
+    .review-carousel-div{
+        height: 667px;
+    }
 }
 
 
@@ -1446,25 +1452,17 @@ font-size: 23px !important;
 
          .img2{
             margin-top: 0px;
-            height: 250px;
+            height: 270px;
          }
 
-         .img2Text{
-            top: 140px;
-         }
-
-         .img2Button{
-            top: 128px;
-         }
+         
 
          .picture{
             width: 300px;
             height:200px ;
          }
 
-         .imagesLink{
-            height: 200px;
-         }
+        
 
          .textAndButton{
             width: 300px;
@@ -1548,6 +1546,14 @@ font-size: 23px !important;
 }
 
 }
+
+@media (max-width: 360px){
+       .review-carousel-div{
+            height: 720px;
+       }
+}
+    
+
 
 
 /* ---- FOOTER ---- */

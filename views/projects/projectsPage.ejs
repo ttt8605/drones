@@ -156,34 +156,39 @@
      <section class="visibleImages">
          <% for (let project of projects) { %>
              <% if (x < 7) { %>
-                 <% if (x != 3) { %>
+                 
                      <% if (x % 2 === 1) { %>
                          <div class="twoImgRow">
                      <% } %>
                      
                      <div class="img2">
-                      <a class="imagesLink" href="/projects/<%= project._id %>">
-                        <img class="picture" src="<%=project.images[0].url %>" alt="" loading="lazy">
-                        <div class="textAndButton">
-                         <h1 class="img2Text"><%= project.name %></h1>
-                         <button class="img2Button">&rarr;</button>
-                         </div>
+                     
+                        <% 
+                              let videoID = null;
+                                 const ytMatch = project.link.match(/(?:youtube\.com\/.*v=|youtu\.be\/)([^&\n?#]+)/);
+                                if (ytMatch) { videoID = ytMatch[1]; }
+                                %>
+                               <% if (videoID) { %>
+                               <iframe  class="picture"
+                                       src="https://www.youtube.com/embed/<%= videoID %>"
+                                       title="YouTube video" frameborder="0"
+                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                       allowfullscreen>
+                               </iframe>
+                             <% } %>
+                     
+                      
+                         <a class="imagesLink" href="/projects/<%= project._id %>">
+                         <p class="img2Text"><%= project.name %></p>
+                        <button class="img2Button">&rarr;</button>
                         </a>
+                     
+                       
                      </div>
                      <% if (x % 2 === 0) { %>
                          </div> <!-- Close twoImgRow div -->
                      <% } %>
-                 <% } else { %>
-                     <div class="img1">
-                      <a class="imagesLink1" href="/projects/<%= project._id %>">
-                      <img src="<%=project.images[0].url %>" class="picture1" alt="" loading="lazy">
-                      <div class="textAndButton1">
-                        <h1 class="img1Text"><%= project.name %></h1>
-                       <button class="img1Button">&rarr;</button>
-                      </div>
-                         </a>
-                     </div>
-                 <% x++;} %>
+                 
              <% } else { %>
                  <% if (x === 7) { %>
                     </section>
@@ -195,13 +200,26 @@
                        
                  <% } %>
                  <div class="img2">
-                  <a class="imagesLink" href="/projects/<%= project._id %>">
-                    <img class="picture" src="<%=project.images[0].url %>" alt="" loading="lazy">
-                    <div class="textAndButton">
-                     <h1 class="img2Text"><%= project.name %></h1>
-                     <button class="img2Button">&rarr;</button>
-                     </div>
-                    </a>
+                  
+                        <% 
+                              let videoID = null;
+                                 const ytMatch = project.link.match(/(?:youtube\.com\/.*v=|youtu\.be\/)([^&\n?#]+)/);
+                                if (ytMatch) { videoID = ytMatch[1]; }
+                                %>
+                               <% if (videoID) { %>
+                               <iframe  class="picture"
+                                       src="https://www.youtube.com/embed/<%= videoID %>"
+                                       title="YouTube video" frameborder="0"
+                                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                       allowfullscreen>
+                               </iframe>
+                             <% } %>
+                     
+                      
+                         <a class="imagesLink" href="/projects/<%= project._id %>">
+                         <p class="img2Text"><%= project.name %></p>
+                        <button class="img2Button">&rarr;</button>
+                        </a>
                  </div>
                  <% if (x % 2 === 0 ) { %>
                      </div> <!-- Close twoImgRow div -->
