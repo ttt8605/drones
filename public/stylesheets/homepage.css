@@ -376,7 +376,7 @@ header{
     font-weight: 500;
     font-size: 30px;
     position: relative;
-    bottom: 8px;
+    bottom: 6px;
     transition: transform 0.3s ease-in-out;
 }
 

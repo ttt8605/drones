@@ -525,8 +525,8 @@ a{
     width: 90%;
     font-size: small;
     position: relative;
-    margin-left: 21px !important;
-    margin-top: 23px !important;
+    margin-left: 26px !important;
+    margin-top: 17px !important;
  
 }
 
@@ -585,9 +585,7 @@ p{
         margin-left: -11px;
         margin-top: 86px;
     }
-    .lowerSection:nth-last-child(1){
-        margin-top:4px !important;
-    }
+    
     #accordion{
        width: 277px;
     }
