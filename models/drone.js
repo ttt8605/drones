@@ -2,7 +2,8 @@ const { name } = require('ejs');
 const mongoose = require('mongoose');
 const { type } = require('os');
 const{Schema}=mongoose;
-const Project = require('./projects')
+const Project = require('./projects');
+const { required } = require('joi');
 
 const ImageSchema = new Schema({
     url:String,
@@ -38,6 +39,10 @@ description:{
 specification:{
     type:String,
     required:true
+},
+priority:{
+   type:Number,
+   required:true
 },
 projects:[
     {

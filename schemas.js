@@ -39,6 +39,7 @@ module.exports.droneSchema = Joi.object({
        video:Joi.string().required().escapeHTML(),
        description:Joi.string().required().escapeHTML(),
        specification: Joi.string().required().escapeHTML(),
+       priority:Joi.number().required(),
        deleteImages:Joi.array()
     }).required()
 
